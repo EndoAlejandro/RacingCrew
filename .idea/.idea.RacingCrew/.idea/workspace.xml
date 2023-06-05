@@ -9,8 +9,12 @@
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainRace.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainRace.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/VehicleComponents/VehiclePhysics.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/VehicleComponents/VehiclePhysics.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/VehicleComponents/WheelPhysics.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/VehicleComponents/WheelPhysics.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/Scalable Grid Prototype Materials/Materials/Prototype_Scaling_Dark_Blue.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ThirdParty/Scalable Grid Prototype Materials/Materials/Prototype_Scaling_Dark_Blue.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/Scalable Grid Prototype Materials/Materials/Prototype_Scaling_Light_Sea_Green.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ThirdParty/Scalable Grid Prototype Materials/Materials/Prototype_Scaling_Light_Sea_Green.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/Scalable Grid Prototype Materials/Materials/Prototype_Scaling_Mantis.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ThirdParty/Scalable Grid Prototype Materials/Materials/Prototype_Scaling_Mantis.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/Scalable Grid Prototype Materials/Materials/Prototype_Scaling_Orange.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ThirdParty/Scalable Grid Prototype Materials/Materials/Prototype_Scaling_Orange.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/DynamicsManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/DynamicsManager.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,6 +22,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/VehicleComponents/VehicleSphere.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/VehicleComponents/WheelPhysics.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="ProjectId" id="2Qc8Qati2gc73ctkMXjUIKqmzqt" />
@@ -92,7 +97,7 @@
       <updated>1685641495987</updated>
       <workItem from="1685641498201" duration="688000" />
       <workItem from="1685728617133" duration="3290000" />
-      <workItem from="1685782646183" duration="2308000" />
+      <workItem from="1685782646183" duration="8154000" />
     </task>
     <servers />
   </component>

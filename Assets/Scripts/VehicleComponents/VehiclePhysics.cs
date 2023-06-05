@@ -7,10 +7,6 @@ namespace VehicleComponents
     public class VehiclePhysics : MonoBehaviour
     {
         [Header("Vehicle")]
-        [SerializeField] private float speed = 1f;
-
-        [SerializeField] private float steering = 1f;
-
         [Header("Suspension")]
         [SerializeField] private float suspensionDistance = 2f;
 
@@ -21,17 +17,15 @@ namespace VehicleComponents
         [Range(0f, 60f)]
         [SerializeField] private float steerAngle = 45f;
 
+        [SerializeField] private float steerForce = 1f;
         [SerializeField] private float tireGrip;
-
         [SerializeField] private float tireMass;
 
         [Header("Acceleration")]
-        [SerializeField] private float acceleration;
-
-        [SerializeField] private float maxSpeed;
-
         [SerializeField] private AnimationCurve accelerationCurve;
 
+        [SerializeField] private float acceleration;
+        [SerializeField] private float maxSpeed;
 
         public float SuspensionDistance => suspensionDistance;
         public float SpringStrength => springStrength;
@@ -41,15 +35,15 @@ namespace VehicleComponents
         public float MaxSpeed => maxSpeed;
         public float Acceleration => acceleration;
         public float SteerAngle => steerAngle;
+        public float SteerForce => steerForce;
         public AnimationCurve AccelerationCurve => accelerationCurve;
         public Rigidbody Rigidbody { get; private set; }
 
         private void Awake() => Rigidbody = GetComponent<Rigidbody>();
 
-        private void FixedUpdate()
+        private void Update()
         {
-            /*Rigidbody.AddForceAtPosition(new Vector3(horizontal, 0f, vertical),
-                transform.position + transform.forward * -2f);*/
+            Rigidbody.centerOfMass = Vector3.zero;
         }
     }
 }

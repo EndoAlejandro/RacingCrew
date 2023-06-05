@@ -8,11 +8,11 @@ TagManager:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Sphere
   - Water
   - UI
-  - 
-  - 
+  - Ground
+  - Vehicle
   - 
   - 
   - 

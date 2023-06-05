@@ -24,10 +24,11 @@ namespace VehicleComponents
         {
             if (!canSteer) return;
 
-            var horizontal = Input.GetAxisRaw("Horizontal");
+            var horizontal = Input.GetAxis("Horizontal");
             var angle = _vehiclePhysics.SteerAngle * horizontal;
-
-            transform.localRotation = Quaternion.Euler(new Vector3(0f, angle, 0f));
+            var desired = Quaternion.Euler(new Vector3(0f, angle, 0f));
+            var lerp = Quaternion.Lerp(transform.localRotation, desired, Time.deltaTime * _vehiclePhysics.SteerForce);
+            transform.localRotation = lerp;
         }
 
         private void FixedUpdate()
@@ -35,15 +36,15 @@ namespace VehicleComponents
             if (!Physics.Raycast(transform.position, -_vehiclePhysics.transform.up, out _hit,
                     _vehiclePhysics.SuspensionDistance)) return;
 
-            Acceleration();
             var worldVelocity = _vehiclePhysics.Rigidbody.GetPointVelocity(transform.position);
             Grip(worldVelocity);
             Suspension(worldVelocity);
+            Acceleration();
         }
 
         private void Acceleration()
         {
-            var vertical = Input.GetAxisRaw("Vertical");
+            var vertical = Input.GetAxis("Vertical");
 
             // if (!(vertical > 0f)) return;
             var accelerationDirection = transform.forward;
@@ -53,7 +54,8 @@ namespace VehicleComponents
             var torque = _vehiclePhysics.AccelerationCurve.Evaluate(normalizedSpeed) * vertical;
             _accelerationForce = accelerationDirection * (torque * _vehiclePhysics.Acceleration);
 
-            _vehiclePhysics.Rigidbody.AddForceAtPosition(_accelerationForce, transform.position);
+            _vehiclePhysics.Rigidbody.AddForceAtPosition(_accelerationForce, transform.position,
+                ForceMode.Acceleration);
         }
 
         private void Grip(Vector3 worldVelocity)
@@ -65,7 +67,7 @@ namespace VehicleComponents
             var desiredAcceleration = desiredVelocityChange / Time.fixedDeltaTime;
 
             _steeringForce = steeringDirection * _vehiclePhysics.TireMass * desiredAcceleration;
-            _vehiclePhysics.Rigidbody.AddForceAtPosition(_steeringForce, transform.position);
+            _vehiclePhysics.Rigidbody.AddForceAtPosition(_steeringForce, transform.position, ForceMode.Acceleration);
         }
 
         private void Suspension(Vector3 worldVelocity)
@@ -77,7 +79,7 @@ namespace VehicleComponents
             var force = (offset * _vehiclePhysics.SpringStrength) - (velocity * _vehiclePhysics.Damp);
 
             _suspensionForce = springDirection * force;
-            _vehiclePhysics.Rigidbody.AddForceAtPosition(_suspensionForce, transform.position);
+            _vehiclePhysics.Rigidbody.AddForceAtPosition(_suspensionForce, transform.position, ForceMode.Acceleration);
         }
 
         private void OnDrawGizmos()
