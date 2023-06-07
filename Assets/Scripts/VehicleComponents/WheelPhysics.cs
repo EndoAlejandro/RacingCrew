@@ -25,7 +25,7 @@ namespace VehicleComponents
             if (!canSteer) return;
 
             var horizontal = Input.GetAxis("Horizontal");
-            var angle = _vehiclePhysics.SteerAngle * horizontal;
+            var angle = _vehiclePhysics.SteeringAngle * horizontal;
             var desired = Quaternion.Euler(new Vector3(0f, angle, 0f));
             var lerp = Quaternion.Lerp(transform.localRotation, desired, Time.deltaTime * _vehiclePhysics.SteerForce);
             transform.localRotation = lerp;
@@ -33,7 +33,7 @@ namespace VehicleComponents
 
         private void FixedUpdate()
         {
-            if (!Physics.Raycast(transform.position, -_vehiclePhysics.transform.up, out _hit,
+            if (!Physics.Raycast(transform.position + transform.up * 0.25f, -_vehiclePhysics.transform.up, out _hit,
                     _vehiclePhysics.SuspensionDistance)) return;
 
             var worldVelocity = _vehiclePhysics.Rigidbody.GetPointVelocity(transform.position);

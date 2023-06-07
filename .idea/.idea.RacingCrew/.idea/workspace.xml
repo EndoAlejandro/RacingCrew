@@ -6,15 +6,64 @@
   <component name="ChangeListManager">
     <list default="true" id="89d28beb-5f3b-4b70-bf77-826042fca131" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.RacingCrew/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.RacingCrew/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainRace.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainRace.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PhysicsMaterials/Vehicle.physicMaterial" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PhysicsMaterials/Vehicle.physicMaterial" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainRace.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainRace.unity.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/VehicleComponents/VehiclePhysics.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/VehicleComponents/VehiclePhysics.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/VehicleComponents/WheelPhysics.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/VehicleComponents/WheelPhysics.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/Scalable Grid Prototype Materials/Materials/Prototype_Scaling_Dark_Blue.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ThirdParty/Scalable Grid Prototype Materials/Materials/Prototype_Scaling_Dark_Blue.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/Scalable Grid Prototype Materials/Materials/Prototype_Scaling_Light_Sea_Green.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ThirdParty/Scalable Grid Prototype Materials/Materials/Prototype_Scaling_Light_Sea_Green.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/Scalable Grid Prototype Materials/Materials/Prototype_Scaling_Mantis.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ThirdParty/Scalable Grid Prototype Materials/Materials/Prototype_Scaling_Mantis.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/Scalable Grid Prototype Materials/Materials/Prototype_Scaling_Orange.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ThirdParty/Scalable Grid Prototype Materials/Materials/Prototype_Scaling_Orange.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/DynamicsManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/DynamicsManager.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/PolygonParticles/Prefabs/FX_BloodSplat_01.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ThirdParty/PolygonParticles/Prefabs/FX_BloodSplat_01.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/PolygonParticles/Prefabs/FX_BloodSplat_Small_01.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ThirdParty/PolygonParticles/Prefabs/FX_BloodSplat_Small_01.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/PolygonParticles/Prefabs/FX_Cartoony_Footstep_01.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ThirdParty/PolygonParticles/Prefabs/FX_Cartoony_Footstep_01.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/PolygonParticles/Prefabs/FX_Cartoony_Jump_01.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ThirdParty/PolygonParticles/Prefabs/FX_Cartoony_Jump_01.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/PolygonParticles/Prefabs/FX_Cartoony_Jump_Up_01.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ThirdParty/PolygonParticles/Prefabs/FX_Cartoony_Jump_Up_01.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/PolygonParticles/Prefabs/FX_Cartoony_Sprint_01.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ThirdParty/PolygonParticles/Prefabs/FX_Cartoony_Sprint_01.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/PolygonParticles/Prefabs/FX_Confetti_01.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ThirdParty/PolygonParticles/Prefabs/FX_Confetti_01.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/PolygonParticles/Prefabs/FX_Fireworks_01.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ThirdParty/PolygonParticles/Prefabs/FX_Fireworks_01.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/PolygonParticles/Prefabs/FX_Fireworks_Group_01.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ThirdParty/PolygonParticles/Prefabs/FX_Fireworks_Group_01.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/PolygonParticles/Prefabs/FX_Fireworks_Large_Red_01.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ThirdParty/PolygonParticles/Prefabs/FX_Fireworks_Large_Red_01.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/PolygonParticles/Prefabs/FX_Fireworks_Medium_Blue_01.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ThirdParty/PolygonParticles/Prefabs/FX_Fireworks_Medium_Blue_01.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/PolygonParticles/Prefabs/FX_Fireworks_Small_Orange_01.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ThirdParty/PolygonParticles/Prefabs/FX_Fireworks_Small_Orange_01.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/PolygonParticles/Prefabs/FX_Fog_Big_01.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ThirdParty/PolygonParticles/Prefabs/FX_Fog_Big_01.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/PolygonParticles/Prefabs/FX_GroundCrack_Blast_01.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ThirdParty/PolygonParticles/Prefabs/FX_GroundCrack_Blast_01.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/PolygonParticles/Prefabs/FX_Gunshot_01.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ThirdParty/PolygonParticles/Prefabs/FX_Gunshot_01.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/PolygonParticles/Prefabs/FX_Gunshot_Heavy_Repeating_01.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ThirdParty/PolygonParticles/Prefabs/FX_Gunshot_Heavy_Repeating_01.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/PolygonParticles/Prefabs/FX_Gunshot_Heavy_Repeating_Tracers_01.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ThirdParty/PolygonParticles/Prefabs/FX_Gunshot_Heavy_Repeating_Tracers_01.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/PolygonParticles/Prefabs/FX_Gunshot_Heavy_Repeating_Tracers_Impact_01.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ThirdParty/PolygonParticles/Prefabs/FX_Gunshot_Heavy_Repeating_Tracers_Impact_01.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/PolygonParticles/Prefabs/FX_Gunshot_Heavy_Single_Tracers_01.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ThirdParty/PolygonParticles/Prefabs/FX_Gunshot_Heavy_Single_Tracers_01.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/PolygonParticles/Prefabs/FX_Gunshot_Repeating.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ThirdParty/PolygonParticles/Prefabs/FX_Gunshot_Repeating.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/PolygonParticles/Prefabs/FX_Gunshot_Shotgun_01.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ThirdParty/PolygonParticles/Prefabs/FX_Gunshot_Shotgun_01.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/PolygonParticles/Prefabs/FX_Gunshot_Sniper_Line_01.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ThirdParty/PolygonParticles/Prefabs/FX_Gunshot_Sniper_Line_01.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/PolygonParticles/Scenes/Demo_01.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ThirdParty/PolygonParticles/Scenes/Demo_01.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/PolygonStreetRacer/Materials/Alternates/PolygonStreetRacer_Mat_01_C.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ThirdParty/PolygonStreetRacer/Materials/Alternates/PolygonStreetRacer_Mat_01_C.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/PolygonStreetRacer/Materials/Alternates/PolygonStreetRacer_Mat_04_C.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ThirdParty/PolygonStreetRacer/Materials/Alternates/PolygonStreetRacer_Mat_04_C.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/PolygonStreetRacer/Materials/Cars/PolygonStreetRacer_Mat_Bike_Vinyl_02_Police_White.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ThirdParty/PolygonStreetRacer/Materials/Cars/PolygonStreetRacer_Mat_Bike_Vinyl_02_Police_White.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/PolygonStreetRacer/Materials/Cars/PolygonStreetRacer_Mat_Truck_Vinyl_02_Police_White.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ThirdParty/PolygonStreetRacer/Materials/Cars/PolygonStreetRacer_Mat_Truck_Vinyl_02_Police_White.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/PolygonStreetRacer/Materials/Cars/PolygonStreetRacer_Mat_Veh_Pearl_04.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ThirdParty/PolygonStreetRacer/Materials/Cars/PolygonStreetRacer_Mat_Veh_Pearl_04.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/PolygonStreetRacer/Materials/Cars/PolygonStreetRacer_Mat_Veh_Vinyl_07_Race_Yellow.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ThirdParty/PolygonStreetRacer/Materials/Cars/PolygonStreetRacer_Mat_Veh_Vinyl_07_Race_Yellow.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/PolygonStreetRacer/Materials/Cars/PolygonStreetRacer_Mat_Veh_Vinyl_09_Patriot.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ThirdParty/PolygonStreetRacer/Materials/Cars/PolygonStreetRacer_Mat_Veh_Vinyl_09_Patriot.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/PolygonStreetRacer/Materials/Cars/PolygonStreetRacer_Mat_Veh_Vinyl_11_Flames.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ThirdParty/PolygonStreetRacer/Materials/Cars/PolygonStreetRacer_Mat_Veh_Vinyl_11_Flames.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/PolygonStreetRacer/Materials/Cars/PolygonStreetRacer_Mat_Veh_Vinyl_14_Tiger.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ThirdParty/PolygonStreetRacer/Materials/Cars/PolygonStreetRacer_Mat_Veh_Vinyl_14_Tiger.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/PolygonStreetRacer/Materials/Cars/PolygonStreetRacer_Mat_Veh_Vinyl_18_Police_Black.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ThirdParty/PolygonStreetRacer/Materials/Cars/PolygonStreetRacer_Mat_Veh_Vinyl_18_Police_Black.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/PolygonStreetRacer/Materials/Cars/PolygonStreetRacer_Mat_Veh_Vinyl_19_Police_White.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ThirdParty/PolygonStreetRacer/Materials/Cars/PolygonStreetRacer_Mat_Veh_Vinyl_19_Police_White.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/PolygonStreetRacer/Materials/Misc/Water_Mat.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ThirdParty/PolygonStreetRacer/Materials/Misc/Water_Mat.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/PolygonStreetRacer/Materials/TyreMarks/TyreMark_Corner_01.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ThirdParty/PolygonStreetRacer/Materials/TyreMarks/TyreMark_Corner_01.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/PolygonStreetRacer/Materials/TyreMarks/TyreMark_Corner_02.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ThirdParty/PolygonStreetRacer/Materials/TyreMarks/TyreMark_Corner_02.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/PolygonStreetRacer/Materials/TyreMarks/TyreMark_Corner_03.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ThirdParty/PolygonStreetRacer/Materials/TyreMarks/TyreMark_Corner_03.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/PolygonStreetRacer/Materials/TyreMarks/TyreMark_Corner_Sharp_01.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ThirdParty/PolygonStreetRacer/Materials/TyreMarks/TyreMark_Corner_Sharp_01.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/PolygonStreetRacer/Materials/TyreMarks/TyreMark_Corner_Sharp_02.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ThirdParty/PolygonStreetRacer/Materials/TyreMarks/TyreMark_Corner_Sharp_02.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/PolygonStreetRacer/Materials/TyreMarks/TyreMark_Straight_01.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ThirdParty/PolygonStreetRacer/Materials/TyreMarks/TyreMark_Straight_01.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/PolygonStreetRacer/Materials/TyreMarks/TyreMark_Straight_02.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ThirdParty/PolygonStreetRacer/Materials/TyreMarks/TyreMark_Straight_02.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/PolygonStreetRacer/Prefabs/Vehicles/Presets/SM_Veh_Hatch_Preset_01.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ThirdParty/PolygonStreetRacer/Prefabs/Vehicles/Presets/SM_Veh_Hatch_Preset_01.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/PolygonStreetRacer/Prefabs/Vehicles/Presets/SM_Veh_Muscle_Preset_04.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ThirdParty/PolygonStreetRacer/Prefabs/Vehicles/Presets/SM_Veh_Muscle_Preset_04.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/PolygonStreetRacer/Prefabs/Vehicles/Presets/SM_Veh_Ute_Preset_03.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ThirdParty/PolygonStreetRacer/Prefabs/Vehicles/Presets/SM_Veh_Ute_Preset_03.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/PolygonStreetRacer/Prefabs/Vehicles/Presets/SM_Veh_Ute_Preset_04.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ThirdParty/PolygonStreetRacer/Prefabs/Vehicles/Presets/SM_Veh_Ute_Preset_04.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/PolygonStreetRacer/Scenes/Demo_01.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ThirdParty/PolygonStreetRacer/Scenes/Demo_01.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/SimpleRacer/Demo/SimpleRacerDemo.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ThirdParty/SimpleRacer/Demo/SimpleRacerDemo.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/GraphicsSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/GraphicsSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2022.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2022.dwlt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,7 +100,7 @@
 }</component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
-      <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2021.3.11f1\Editor\Unity.exe" />
+      <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2022.3.0f1\Editor\Unity.exe" />
       <option name="PROGRAM_PARAMETERS" value="-projectPath C:\Users\alejo\Documents\GitHub\RacingCrew -debugCodeOptimization" />
       <option name="WORKING_DIRECTORY" value="C:\Users\alejo\Documents\GitHub\RacingCrew" />
       <option name="PASS_PARENT_ENVS" value="1" />
@@ -59,7 +108,7 @@
       <method v="2" />
     </configuration>
     <configuration name="Unit Tests (batch mode)" type="RunUnityExe" factoryName="Unity Executable">
-      <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2021.3.11f1\Editor\Unity.exe" />
+      <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2022.3.0f1\Editor\Unity.exe" />
       <option name="PROGRAM_PARAMETERS" value="-runTests -batchmode -projectPath C:\Users\alejo\Documents\GitHub\RacingCrew -testResults Logs/results.xml -testPlatform EditMode -debugCodeOptimization" />
       <option name="WORKING_DIRECTORY" value="C:\Users\alejo\Documents\GitHub\RacingCrew" />
       <option name="PASS_PARENT_ENVS" value="1" />
@@ -76,10 +125,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="26604">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" />
+      <option name="pid" value="26604" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
@@ -98,6 +147,7 @@
       <workItem from="1685641498201" duration="688000" />
       <workItem from="1685728617133" duration="3290000" />
       <workItem from="1685782646183" duration="8154000" />
+      <workItem from="1686045457088" duration="2009000" />
     </task>
     <servers />
   </component>
