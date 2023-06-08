@@ -56,7 +56,7 @@ namespace VehicleComponents
         private void Acceleration()
         {
             if (wheelPosition.ToString().Contains("Front")) return;
-            
+
             var vertical = Input.GetAxis("Vertical");
 
             var accelerationDirection = transform.forward;
@@ -66,8 +66,9 @@ namespace VehicleComponents
             var torque = _vehiclePhysics.AccelerationCurve.Evaluate(normalizedSpeed) * vertical;
             _accelerationForce = accelerationDirection * (torque * _vehiclePhysics.Acceleration);
 
-            _vehiclePhysics.Rigidbody.AddForceAtPosition(_accelerationForce, transform.position,
-                ForceMode.Acceleration);
+            var positionForce = transform.position;
+            positionForce.y = _vehiclePhysics.transform.position.y + 0f;
+            _vehiclePhysics.Rigidbody.AddForceAtPosition(_accelerationForce, positionForce, ForceMode.Acceleration);
         }
 
         private void Grip(Vector3 worldVelocity)
@@ -75,7 +76,7 @@ namespace VehicleComponents
             var steeringDirection = transform.right;
             var steeringVelocity = Vector3.Dot(steeringDirection, worldVelocity);
 
-            var desiredVelocityChange = -steeringVelocity * _vehiclePhysics.TireGrip;
+            var desiredVelocityChange = -steeringVelocity * _vehiclePhysics.CurrentGrip;
             var desiredAcceleration = desiredVelocityChange / Time.fixedDeltaTime;
 
             _steeringForce = steeringDirection * _vehiclePhysics.TireMass * desiredAcceleration;

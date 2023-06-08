@@ -36,12 +36,13 @@ namespace VehicleComponents
         public float SuspensionDistance => suspensionDistance;
         public float SpringStrength => springStrength;
         public float Damp => damp;
-        public float TireGrip => tireGrip;
+        public float CurrentGrip { get; private set; }
         public float TireMass => tireMass;
         public float MaxSpeed => maxSpeed;
         public float Acceleration => acceleration;
         public float SteeringAngle => steeringAngle;
         public float SteerForce => steerForce;
+
         public AnimationCurve AccelerationCurve => accelerationCurve;
         public Rigidbody Rigidbody { get; private set; }
 
@@ -55,25 +56,34 @@ namespace VehicleComponents
         {
             var horizontal = Input.GetAxis("Horizontal");
 
+            var targetGrip = tireGrip;
+            if (horizontal != 0f && Input.GetKey(KeyCode.LeftShift)) targetGrip = 0f;
+
+            CurrentGrip = Mathf.Lerp(CurrentGrip, targetGrip, Time.deltaTime * 10f);
+
             switch (horizontal)
             {
                 case > 0f:
                     AckermannLeftAngle = Mathf.Rad2Deg * Mathf.Atan(wheelBase / (turnRadius + (rearTrack / 2))) *
-                                     horizontal;
+                                         horizontal;
                     AckermannRightAngle = Mathf.Rad2Deg * Mathf.Atan(wheelBase / (turnRadius - (rearTrack / 2))) *
-                                      horizontal;
+                                          horizontal;
+
+                    Rigidbody.centerOfMass = Vector3.left;
                     break;
                 case < 0f:
-                    AckermannLeftAngle = Mathf.Rad2Deg * Mathf.Atan(wheelBase / (turnRadius - (rearTrack / 2))) *
-                                     horizontal;
+                    AckermannLeftAngle = Mathf.Rad2Deg * Mathf.Atan(wheelBase / (turnRadius - rearTrack / 2)) *
+                                         horizontal;
                     AckermannRightAngle = Mathf.Rad2Deg * Mathf.Atan(wheelBase / (turnRadius + (rearTrack / 2))) *
-                                      horizontal;
+                                          horizontal;
+                    Rigidbody.centerOfMass = Vector3.right;
                     break;
                 default:
+                    Rigidbody.centerOfMass = Vector3.zero;
                     AckermannLeftAngle = 0f;
                     AckermannRightAngle = 0f;
                     break;
-            } 
+            }
         }
 
         private void OnCollisionEnter(Collision other)
