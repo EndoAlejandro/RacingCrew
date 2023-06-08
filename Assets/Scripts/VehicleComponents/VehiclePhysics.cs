@@ -27,6 +27,12 @@ namespace VehicleComponents
         [SerializeField] private float acceleration;
         [SerializeField] private float maxSpeed;
 
+        [Header("Ackermann Steering")]
+        [SerializeField] private float wheelBase;
+
+        [SerializeField] private float rearTrack;
+        [SerializeField] private float turnRadius;
+
         public float SuspensionDistance => suspensionDistance;
         public float SpringStrength => springStrength;
         public float Damp => damp;
@@ -39,16 +45,35 @@ namespace VehicleComponents
         public AnimationCurve AccelerationCurve => accelerationCurve;
         public Rigidbody Rigidbody { get; private set; }
 
-        private void Awake() => Rigidbody = GetComponent<Rigidbody>();
+        public float AckermannLeftAngle { get; private set; }
+        public float AckermannRightAngle { get; private set; }
 
-        private void Start()
-        {
-            // Rigidbody.centerOfMass = Vector3.up * 0f;
-        }
+        private void Awake() => Rigidbody = GetComponent<Rigidbody>();
+        private void Start() => Rigidbody.centerOfMass = Vector3.zero;
 
         private void Update()
         {
-            // Rigidbody.AddRelativeTorque(transform.up * (Input.GetAxis("Horizontal") * SteerForce));
+            var horizontal = Input.GetAxis("Horizontal");
+
+            switch (horizontal)
+            {
+                case > 0f:
+                    AckermannLeftAngle = Mathf.Rad2Deg * Mathf.Atan(wheelBase / (turnRadius + (rearTrack / 2))) *
+                                     horizontal;
+                    AckermannRightAngle = Mathf.Rad2Deg * Mathf.Atan(wheelBase / (turnRadius - (rearTrack / 2))) *
+                                      horizontal;
+                    break;
+                case < 0f:
+                    AckermannLeftAngle = Mathf.Rad2Deg * Mathf.Atan(wheelBase / (turnRadius - (rearTrack / 2))) *
+                                     horizontal;
+                    AckermannRightAngle = Mathf.Rad2Deg * Mathf.Atan(wheelBase / (turnRadius + (rearTrack / 2))) *
+                                      horizontal;
+                    break;
+                default:
+                    AckermannLeftAngle = 0f;
+                    AckermannRightAngle = 0f;
+                    break;
+            } 
         }
 
         private void OnCollisionEnter(Collision other)
