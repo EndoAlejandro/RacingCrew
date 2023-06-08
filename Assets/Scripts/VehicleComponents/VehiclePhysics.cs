@@ -14,11 +14,8 @@ namespace VehicleComponents
         [SerializeField] private float damp = 1f;
 
         [Header("Steering")]
-        [SerializeField]
-        [Range(0f, 60f)] private float steeringAngle;
-
-        [SerializeField] private float steerForce = 1f;
         [SerializeField] private float tireGrip;
+
         [SerializeField] private float tireMass;
 
         [Header("Acceleration")]
@@ -40,8 +37,6 @@ namespace VehicleComponents
         public float TireMass => tireMass;
         public float MaxSpeed => maxSpeed;
         public float Acceleration => acceleration;
-        public float SteeringAngle => steeringAngle;
-        public float SteerForce => steerForce;
 
         public AnimationCurve AccelerationCurve => accelerationCurve;
         public Rigidbody Rigidbody { get; private set; }
