@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 
 namespace VehicleComponents
@@ -13,6 +12,8 @@ namespace VehicleComponents
 
     public class WheelPhysics : MonoBehaviour
     {
+        [SerializeField] private float offset;
+        [SerializeField] private Transform display;
         [SerializeField] private WheelPosition wheelPosition;
 
         private VehiclePhysics _vehiclePhysics;
@@ -31,35 +32,39 @@ namespace VehicleComponents
 
         private void Update()
         {
-            switch (wheelPosition)
+            transform.localRotation = wheelPosition switch
             {
-                case WheelPosition.FrontLeft:
-                    transform.localRotation = Quaternion.Euler(Vector3.up * _vehiclePhysics.AckermannLeftAngle);
-                    break;
-                case WheelPosition.FrontRight:
-                    transform.localRotation = Quaternion.Euler(Vector3.up * _vehiclePhysics.AckermannRightAngle);
-                    break;
-            }
+                WheelPosition.FrontLeft => Quaternion.Euler(Vector3.up * _vehiclePhysics.AckermannLeftAngle),
+                WheelPosition.FrontRight => Quaternion.Euler(Vector3.up * _vehiclePhysics.AckermannRightAngle),
+                _ => transform.localRotation
+            };
         }
 
         private void FixedUpdate()
         {
             if (!Physics.Raycast(transform.position, -_vehiclePhysics.transform.up, out _hit,
-                    _vehiclePhysics.SuspensionDistance)) return;
+                    _vehiclePhysics.SuspensionDistance))
+            {
+                display.localPosition = Vector3.zero;
+                return;
+            }
+
+            display.position = _hit.point + _hit.normal * offset;
 
             var worldVelocity = _vehiclePhysics.Rigidbody.GetPointVelocity(transform.position);
             Grip(worldVelocity);
             Suspension(worldVelocity);
-            Acceleration();
+            Acceleration(worldVelocity);
         }
 
-        private void Acceleration()
+        private void Acceleration(Vector3 worldVelocity)
         {
             if (wheelPosition.ToString().Contains("Front")) return;
 
             var vertical = Input.GetAxis("Vertical");
 
-            var accelerationDirection = transform.forward;
+            var accelerationDirection = Vector3.Lerp(worldVelocity, transform.forward, Time.deltaTime * 2f).normalized;
+            //var accelerationDirection = transform.forward;
             var speed = Vector3.Dot(_vehiclePhysics.transform.forward, _vehiclePhysics.Rigidbody.velocity);
             var normalizedSpeed = Mathf.Clamp01(Mathf.Abs(speed) / _vehiclePhysics.MaxSpeed);
 
