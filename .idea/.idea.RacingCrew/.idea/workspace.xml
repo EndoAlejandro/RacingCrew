@@ -4,18 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="89d28beb-5f3b-4b70-bf77-826042fca131" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.RacingCrew/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.RacingCrew/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainRace.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainRace.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/VehicleComponents/VehiclePhysics.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/VehicleComponents/VehiclePhysics.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/VehicleComponents/WheelPhysics.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/VehicleComponents/WheelPhysics.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/Scalable Grid Prototype Materials/Materials/Prototype_Scaling_Dark_Blue.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ThirdParty/Scalable Grid Prototype Materials/Materials/Prototype_Scaling_Dark_Blue.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/Scalable Grid Prototype Materials/Materials/Prototype_Scaling_Light_Sea_Green.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ThirdParty/Scalable Grid Prototype Materials/Materials/Prototype_Scaling_Light_Sea_Green.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/Scalable Grid Prototype Materials/Materials/Prototype_Scaling_Mantis.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ThirdParty/Scalable Grid Prototype Materials/Materials/Prototype_Scaling_Mantis.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/Scalable Grid Prototype Materials/Materials/Prototype_Scaling_Orange.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ThirdParty/Scalable Grid Prototype Materials/Materials/Prototype_Scaling_Orange.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/DynamicsManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/DynamicsManager.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
-    </list>
+    <list default="true" id="89d28beb-5f3b-4b70-bf77-826042fca131" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -51,7 +40,7 @@
 }</component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
-      <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2021.3.11f1\Editor\Unity.exe" />
+      <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2022.3.0f1\Editor\Unity.exe" />
       <option name="PROGRAM_PARAMETERS" value="-projectPath C:\Users\alejo\Documents\GitHub\RacingCrew -debugCodeOptimization" />
       <option name="WORKING_DIRECTORY" value="C:\Users\alejo\Documents\GitHub\RacingCrew" />
       <option name="PASS_PARENT_ENVS" value="1" />
@@ -59,7 +48,7 @@
       <method v="2" />
     </configuration>
     <configuration name="Unit Tests (batch mode)" type="RunUnityExe" factoryName="Unity Executable">
-      <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2021.3.11f1\Editor\Unity.exe" />
+      <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2022.3.0f1\Editor\Unity.exe" />
       <option name="PROGRAM_PARAMETERS" value="-runTests -batchmode -projectPath C:\Users\alejo\Documents\GitHub\RacingCrew -testResults Logs/results.xml -testPlatform EditMode -debugCodeOptimization" />
       <option name="WORKING_DIRECTORY" value="C:\Users\alejo\Documents\GitHub\RacingCrew" />
       <option name="PASS_PARENT_ENVS" value="1" />
@@ -98,6 +87,11 @@
       <workItem from="1685641498201" duration="688000" />
       <workItem from="1685728617133" duration="3290000" />
       <workItem from="1685782646183" duration="8154000" />
+      <workItem from="1686045457088" duration="2009000" />
+      <workItem from="1686150618465" duration="3488000" />
+      <workItem from="1686164304980" duration="2831000" />
+      <workItem from="1686221226453" duration="682000" />
+      <workItem from="1686240422221" duration="5617000" />
     </task>
     <servers />
   </component>
