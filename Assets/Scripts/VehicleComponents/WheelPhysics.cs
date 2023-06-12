@@ -63,8 +63,8 @@ namespace VehicleComponents
 
             var vertical = Input.GetAxis("Vertical");
 
-            var accelerationDirection = Vector3.Lerp(worldVelocity, transform.forward, Time.deltaTime * 2f).normalized;
-            //var accelerationDirection = transform.forward;
+            // var accelerationDirection = Vector3.Lerp(worldVelocity, transform.forward, Time.deltaTime * 2f).normalized;
+            var accelerationDirection = transform.forward;
             var speed = Vector3.Dot(_vehiclePhysics.transform.forward, _vehiclePhysics.Rigidbody.velocity);
             var normalizedSpeed = Mathf.Clamp01(Mathf.Abs(speed) / _vehiclePhysics.MaxSpeed);
 
