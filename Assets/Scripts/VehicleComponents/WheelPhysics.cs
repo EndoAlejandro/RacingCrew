@@ -2,9 +2,19 @@ using UnityEngine;
 
 namespace VehicleComponents
 {
+    public enum WheelPosition
+    {
+        FrontLeft,
+        FrontRight,
+        RearLeft,
+        RearRight,
+    }
+
     public class WheelPhysics : MonoBehaviour
     {
-        [SerializeField] private bool canSteer;
+        [SerializeField] private float offset;
+        [SerializeField] private Transform display;
+        [SerializeField] private WheelPosition wheelPosition;
 
         private VehiclePhysics _vehiclePhysics;
 
@@ -22,31 +32,38 @@ namespace VehicleComponents
 
         private void Update()
         {
-            if (!canSteer) return;
-
-            var horizontal = Input.GetAxis("Horizontal");
-            var angle = _vehiclePhysics.SteerAngle * horizontal;
-            var desired = Quaternion.Euler(new Vector3(0f, angle, 0f));
-            var lerp = Quaternion.Lerp(transform.localRotation, desired, Time.deltaTime * _vehiclePhysics.SteerForce);
-            transform.localRotation = lerp;
+            transform.localRotation = wheelPosition switch
+            {
+                WheelPosition.FrontLeft => Quaternion.Euler(Vector3.up * _vehiclePhysics.AckermannLeftAngle),
+                WheelPosition.FrontRight => Quaternion.Euler(Vector3.up * _vehiclePhysics.AckermannRightAngle),
+                _ => transform.localRotation
+            };
         }
 
         private void FixedUpdate()
         {
             if (!Physics.Raycast(transform.position, -_vehiclePhysics.transform.up, out _hit,
-                    _vehiclePhysics.SuspensionDistance)) return;
+                    _vehiclePhysics.SuspensionDistance))
+            {
+                display.localPosition = Vector3.zero;
+                return;
+            }
+
+            display.position = _hit.point + _hit.normal * offset;
 
             var worldVelocity = _vehiclePhysics.Rigidbody.GetPointVelocity(transform.position);
             Grip(worldVelocity);
             Suspension(worldVelocity);
-            Acceleration();
+            Acceleration(worldVelocity);
         }
 
-        private void Acceleration()
+        private void Acceleration(Vector3 worldVelocity)
         {
+            if (wheelPosition.ToString().Contains("Front")) return;
+
             var vertical = Input.GetAxis("Vertical");
 
-            // if (!(vertical > 0f)) return;
+            // var accelerationDirection = Vector3.Lerp(worldVelocity, transform.forward, Time.deltaTime * 2f).normalized;
             var accelerationDirection = transform.forward;
             var speed = Vector3.Dot(_vehiclePhysics.transform.forward, _vehiclePhysics.Rigidbody.velocity);
             var normalizedSpeed = Mathf.Clamp01(Mathf.Abs(speed) / _vehiclePhysics.MaxSpeed);
@@ -54,8 +71,9 @@ namespace VehicleComponents
             var torque = _vehiclePhysics.AccelerationCurve.Evaluate(normalizedSpeed) * vertical;
             _accelerationForce = accelerationDirection * (torque * _vehiclePhysics.Acceleration);
 
-            _vehiclePhysics.Rigidbody.AddForceAtPosition(_accelerationForce, transform.position,
-                ForceMode.Acceleration);
+            var positionForce = transform.position;
+            positionForce.y = _vehiclePhysics.transform.position.y + 0f;
+            _vehiclePhysics.Rigidbody.AddForceAtPosition(_accelerationForce, positionForce, ForceMode.Acceleration);
         }
 
         private void Grip(Vector3 worldVelocity)
@@ -63,7 +81,7 @@ namespace VehicleComponents
             var steeringDirection = transform.right;
             var steeringVelocity = Vector3.Dot(steeringDirection, worldVelocity);
 
-            var desiredVelocityChange = -steeringVelocity * _vehiclePhysics.TireGrip;
+            var desiredVelocityChange = -steeringVelocity * _vehiclePhysics.CurrentGrip;
             var desiredAcceleration = desiredVelocityChange / Time.fixedDeltaTime;
 
             _steeringForce = steeringDirection * _vehiclePhysics.TireMass * desiredAcceleration;
