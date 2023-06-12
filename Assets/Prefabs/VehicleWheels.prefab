@@ -26,7 +26,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 375813873760546618}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.25, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -109,7 +109,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1852929014143734928}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.25, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -192,7 +192,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4962832394056706730}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.25, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -275,7 +275,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5677942326015752743}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.25, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -440,7 +440,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7524373905502965738}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.6343796, y: 0.8667134, z: 2.520626}
+  m_LocalPosition: {x: 1.25, y: 0.6, z: 2.525}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -461,6 +461,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 753631bda59b63f408069b1fbae08349, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  offset: 0.6
+  display: {fileID: 4594482449119452652}
   wheelPosition: 1
 --- !u!1 &7524373905516341561
 GameObject:
@@ -487,7 +489,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7524373905516341561}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.6343758, y: 0.8665849, z: -2.1813488}
+  m_LocalPosition: {x: 1.25, y: 0.6, z: -2.195}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -508,6 +510,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 753631bda59b63f408069b1fbae08349, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  offset: 0.6
+  display: {fileID: 1230595868923647619}
   wheelPosition: 3
 --- !u!1 &7524373905629267863
 GameObject:
@@ -534,7 +538,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7524373905629267863}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.6343658, y: 0.8665849, z: -2.1813488}
+  m_LocalPosition: {x: -1.25, y: 0.6, z: -2.195}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -555,6 +559,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 753631bda59b63f408069b1fbae08349, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  offset: 0.6
+  display: {fileID: 7718123738930471756}
   wheelPosition: 2
 --- !u!1 &7524373906186774784
 GameObject:
@@ -581,7 +587,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7524373906186774784}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.6343658, y: 0.8667134, z: 2.520626}
+  m_LocalPosition: {x: -1.25, y: 0.6, z: 2.525}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -602,6 +608,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 753631bda59b63f408069b1fbae08349, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  offset: 0.6
+  display: {fileID: 7283261290213686397}
   wheelPosition: 0
 --- !u!1 &7524373906372633396
 GameObject:
@@ -856,8 +864,6 @@ MonoBehaviour:
   suspensionDistance: 0.75
   springStrength: 100
   damp: 5
-  steeringAngle: 32.5
-  steerForce: 5
   tireGrip: 0.7
   tireMass: 0.2
   accelerationCurve:
@@ -905,7 +911,7 @@ MonoBehaviour:
   acceleration: 30
   maxSpeed: 100
   wheelBase: 2.629
-  rearTrack: 1.525
+  rearTrack: 2.5
   turnRadius: 10.8
 --- !u!54 &7524373906747536020
 Rigidbody:
@@ -953,8 +959,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 3.4073663, y: 1.6038337, z: 7.8020563}
-  m_Center: {x: 0, y: 1.5, z: 0}
+  m_Size: {x: 3.4073663, y: 1.2387803, z: 7.8020563}
+  m_Center: {x: 0, y: 1.3174736, z: 0}
 --- !u!1 &7524373907030551022
 GameObject:
   m_ObjectHideFlags: 0
