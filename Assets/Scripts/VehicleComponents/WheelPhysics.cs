@@ -1,16 +1,7 @@
 using UnityEngine;
-using UnityEngine.Serialization;
 
 namespace VehicleComponents
 {
-    public enum WheelPosition
-    {
-        FrontLeft,
-        FrontRight,
-        RearLeft,
-        RearRight,
-    }
-
     public class WheelPhysics : MonoBehaviour
     {
         [SerializeField] private float wheelRadius = 0.6f;
@@ -44,9 +35,15 @@ namespace VehicleComponents
             WheelPositionSmooth();
         }
 
+        /// <summary>
+        /// Controls the vertical position of the wheels to simulate the wheel position working with the suspension.
+        /// </summary>
         private void WheelPositionSmooth() => display.localPosition =
             Vector3.Lerp(display.localPosition, _targetPosition, Time.deltaTime * 10f);
 
+        /// <summary>
+        /// Rotate the wheel based on the ackermann calculation made from the vehicle physics.
+        /// </summary>
         private void WheelRotationDisplay()
         {
             transform.localRotation = wheelPosition switch
@@ -75,10 +72,10 @@ namespace VehicleComponents
             Acceleration(worldVelocity);
         }
 
-        private void GravityForce()
-        {
-            _vehiclePhysics.Rigidbody.AddForce(Vector3.down * 10f, ForceMode.Acceleration);
-        }
+        /// <summary>
+        /// Make the vehicle fall faster. kind of extra gravity.
+        /// </summary>
+        private void GravityForce() => _vehiclePhysics.Rigidbody.AddForce(Vector3.down * 10f, ForceMode.Acceleration);
 
         /// <summary>
         /// Acceleration force made by the wheel but it's applied in the vehicle's Rigidbody.
@@ -86,7 +83,7 @@ namespace VehicleComponents
         /// <param name="worldVelocity"></param>
         private void Acceleration(Vector3 worldVelocity)
         {
-            var vertical = Input.GetAxis("Vertical");
+            var vertical = _vehiclePhysics.AccelerationInput;
 
             var accelerationDirection = transform.forward;
             var speed = Vector3.Dot(_vehiclePhysics.transform.forward, _vehiclePhysics.Rigidbody.velocity);
@@ -100,6 +97,10 @@ namespace VehicleComponents
             _vehiclePhysics.Rigidbody.AddForceAtPosition(_accelerationForce, positionForce, ForceMode.Acceleration);
         }
 
+        /// <summary>
+        /// Grip force of the tire to avoid drifting.
+        /// </summary>
+        /// <param name="worldVelocity"></param>
         private void Grip(Vector3 worldVelocity)
         {
             var steeringDirection = transform.right;
@@ -112,6 +113,10 @@ namespace VehicleComponents
             _vehiclePhysics.Rigidbody.AddForceAtPosition(_steeringForce, transform.position, ForceMode.Acceleration);
         }
 
+        /// <summary>
+        /// How the spring of the wheel should work.
+        /// </summary>
+        /// <param name="worldVelocity"></param>
         private void Suspension(Vector3 worldVelocity)
         {
             var springDirection = transform.up;

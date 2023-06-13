@@ -33,29 +33,23 @@ namespace VehicleComponents
         public float SuspensionDistance => suspensionDistance;
         public float SpringStrength => springStrength;
         public float Damp => damp;
-        public float CurrentGrip { get; private set; }
+        public float CurrentGrip => tireGrip;
         public float TireMass => tireMass;
         public float MaxSpeed => maxSpeed;
         public float Acceleration => acceleration;
-
+        public float TurningInput { get; private set; }
+        public float AccelerationInput { get; private set; }
+        public float AckermannLeftAngle { get; private set; }
+        public float AckermannRightAngle { get; private set; }
         public AnimationCurve AccelerationCurve => accelerationCurve;
         public Rigidbody Rigidbody { get; private set; }
 
-        public float AckermannLeftAngle { get; private set; }
-        public float AckermannRightAngle { get; private set; }
-
         private void Awake() => Rigidbody = GetComponent<Rigidbody>();
         private void Start() => Rigidbody.centerOfMass = Vector3.zero;
+        private void Update() => AckermannTurning(TurningInput);
 
-        private void Update()
+        private void AckermannTurning(float horizontal)
         {
-            var horizontal = Input.GetAxis("Horizontal");
-
-            var targetGrip = tireGrip;
-            if (horizontal != 0f && Input.GetKey(KeyCode.LeftShift)) targetGrip = 0.1f;
-
-            CurrentGrip = Mathf.Lerp(CurrentGrip, targetGrip, Time.deltaTime * 10f);
-
             switch (horizontal)
             {
                 case > 0f:
@@ -81,9 +75,7 @@ namespace VehicleComponents
             }
         }
 
-        private void OnCollisionEnter(Collision other)
-        {
-            Debug.Log(other.transform.name);
-        }
+        public void Accelerate(float value) => AccelerationInput = value;
+        public void Turn(float value) => TurningInput = value;
     }
 }
