@@ -56,7 +56,7 @@ namespace VehicleComponents
 
         private void FixedUpdate()
         {
-            if (!Physics.Raycast(transform.position, -_vehiclePhysics.transform.up * wheelRadius, out _hit,
+            if (!Physics.Raycast(transform.position + transform.up * 0.25f, -_vehiclePhysics.transform.up * wheelRadius, out _hit,
                     _vehiclePhysics.SuspensionDistance + wheelRadius))
             {
                 _targetPosition = _initialPosition + Vector3.up * (wheelRadius - _vehiclePhysics.SuspensionDistance);
