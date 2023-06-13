@@ -6,6 +6,7 @@ TagManager:
   tags:
   - SoundFX
   - Music
+  - Manager
   layers:
   - Default
   - TransparentFX
