@@ -9,6 +9,9 @@ using UnityEngine.UI;
 namespace Menu {
 	public class MenuManager : MonoBehaviour
 	{
+
+		[Header("SOUND FX IN MAIN MENU")]
+		[SerializeField] AudioClip soundFx;
 		[Header("SETTINGS"), Space(3)]
 		[SerializeField] GameObject _screenMainMenu;
 		[SerializeField] GameObject _screenSelectMode;
@@ -31,13 +34,16 @@ namespace Menu {
 		[SerializeField] Toggle fullscreenToggle;
 
 
-
+		//Sound FX
+		private AudioSource audioSource;
 
 		//LANGUAGE
 		private int _currentLocaleIndex;
 
 		private void Awake()
 		{
+			audioSource = GameObject.FindGameObjectWithTag("SoundFX").GetComponent<AudioSource>();
+
 			//Comprueba si hay información guardada sobre volumen, si no hay crea info por defecto 
 			if (!PlayerPrefs.HasKey("MusicVolume"))
 			{
@@ -86,6 +92,7 @@ namespace Menu {
 			UpdateLocale();
 		}
 
+		#region INPUT SYSTEM
 		public void OnBack() {
 			if (_screenSelectMode.activeSelf) { 
 				_screenSelectMode.SetActive(false);
@@ -112,6 +119,8 @@ namespace Menu {
 				_screenMainMenu.SetActive(true);
 			}
 		}
+
+		#endregion
 
 		#region LANGUAGE
 
@@ -164,6 +173,10 @@ namespace Menu {
 			PlayerPrefs.SetFloat("GlobalVolume", value);
 		}
 
+		public void PlaySoundFX()
+		{
+			audioSource.PlayOneShot(soundFx);
+		}
 
 		#endregion
 
