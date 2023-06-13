@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace VehicleComponents
 {
@@ -12,12 +13,13 @@ namespace VehicleComponents
 
     public class WheelPhysics : MonoBehaviour
     {
-        [SerializeField] private float offset;
+        [SerializeField] private float wheelRadius = 0.6f;
         [SerializeField] private Transform display;
         [SerializeField] private WheelPosition wheelPosition;
 
         private VehiclePhysics _vehiclePhysics;
 
+        private Vector3 _initialPosition;
         private Vector3 _suspensionForce;
         private Vector3 _steeringForce;
         private Vector3 _accelerationForce;
@@ -26,6 +28,7 @@ namespace VehicleComponents
 
         private void Awake()
         {
+            _initialPosition = display.localPosition;
             _vehiclePhysics = GetComponentInParent<VehiclePhysics>();
             _hit = new RaycastHit();
         }
@@ -42,14 +45,16 @@ namespace VehicleComponents
 
         private void FixedUpdate()
         {
-            if (!Physics.Raycast(transform.position, -_vehiclePhysics.transform.up, out _hit,
-                    _vehiclePhysics.SuspensionDistance))
+            if (!Physics.Raycast(transform.position, -_vehiclePhysics.transform.up * wheelRadius, out _hit,
+                    _vehiclePhysics.SuspensionDistance + wheelRadius))
             {
-                display.localPosition = Vector3.zero;
+                display.localPosition =
+                    _initialPosition + Vector3.up * (wheelRadius - _vehiclePhysics.SuspensionDistance);
                 return;
             }
 
-            display.position = _hit.point + _hit.normal * offset;
+            display.position = _hit.point + _hit.normal * wheelRadius;
+            display.localPosition += _initialPosition;
 
             var worldVelocity = _vehiclePhysics.Rigidbody.GetPointVelocity(transform.position);
             Grip(worldVelocity);
@@ -63,7 +68,6 @@ namespace VehicleComponents
 
             var vertical = Input.GetAxis("Vertical");
 
-            // var accelerationDirection = Vector3.Lerp(worldVelocity, transform.forward, Time.deltaTime * 2f).normalized;
             var accelerationDirection = transform.forward;
             var speed = Vector3.Dot(_vehiclePhysics.transform.forward, _vehiclePhysics.Rigidbody.velocity);
             var normalizedSpeed = Mathf.Clamp01(Mathf.Abs(speed) / _vehiclePhysics.MaxSpeed);

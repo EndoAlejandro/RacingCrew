@@ -52,7 +52,7 @@ namespace VehicleComponents
             var horizontal = Input.GetAxis("Horizontal");
 
             var targetGrip = tireGrip;
-            if (horizontal != 0f && Input.GetKey(KeyCode.LeftShift)) targetGrip = 0f;
+            if (horizontal != 0f && Input.GetKey(KeyCode.LeftShift)) targetGrip = 0.1f;
 
             CurrentGrip = Mathf.Lerp(CurrentGrip, targetGrip, Time.deltaTime * 10f);
 
