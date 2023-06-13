@@ -118,7 +118,7 @@ GameObject:
   - component: {fileID: 6317903737059609751}
   - component: {fileID: 5938646755779569052}
   m_Layer: 0
-  m_Name: VehicleSphere
+  m_Name: VehicleSphere[deprecated]
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

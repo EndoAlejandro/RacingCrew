@@ -19,7 +19,11 @@ namespace VehicleComponents
 
         private VehiclePhysics _vehiclePhysics;
 
+        // Visuals.
         private Vector3 _initialPosition;
+        private Vector3 _targetPosition;
+
+        // Physics.
         private Vector3 _suspensionForce;
         private Vector3 _steeringForce;
         private Vector3 _accelerationForce;
@@ -29,11 +33,21 @@ namespace VehicleComponents
         private void Awake()
         {
             _initialPosition = display.localPosition;
+            _targetPosition = _initialPosition;
             _vehiclePhysics = GetComponentInParent<VehiclePhysics>();
             _hit = new RaycastHit();
         }
 
         private void Update()
+        {
+            WheelRotationDisplay();
+            WheelPositionSmooth();
+        }
+
+        private void WheelPositionSmooth() => display.localPosition =
+            Vector3.Lerp(display.localPosition, _targetPosition, Time.deltaTime * 10f);
+
+        private void WheelRotationDisplay()
         {
             transform.localRotation = wheelPosition switch
             {
@@ -48,13 +62,12 @@ namespace VehicleComponents
             if (!Physics.Raycast(transform.position, -_vehiclePhysics.transform.up * wheelRadius, out _hit,
                     _vehiclePhysics.SuspensionDistance + wheelRadius))
             {
-                display.localPosition =
-                    _initialPosition + Vector3.up * (wheelRadius - _vehiclePhysics.SuspensionDistance);
+                _targetPosition = _initialPosition + Vector3.up * (wheelRadius - _vehiclePhysics.SuspensionDistance);
+                GravityForce();
                 return;
             }
 
-            display.position = _hit.point + _hit.normal * wheelRadius;
-            display.localPosition += _initialPosition;
+            _targetPosition = _hit.point - transform.position + _hit.normal * wheelRadius + _initialPosition;
 
             var worldVelocity = _vehiclePhysics.Rigidbody.GetPointVelocity(transform.position);
             Grip(worldVelocity);
@@ -62,10 +75,17 @@ namespace VehicleComponents
             Acceleration(worldVelocity);
         }
 
+        private void GravityForce()
+        {
+            _vehiclePhysics.Rigidbody.AddForce(Vector3.down * 10f, ForceMode.Acceleration);
+        }
+
+        /// <summary>
+        /// Acceleration force made by the wheel but it's applied in the vehicle's Rigidbody.
+        /// </summary>
+        /// <param name="worldVelocity"></param>
         private void Acceleration(Vector3 worldVelocity)
         {
-            if (wheelPosition.ToString().Contains("Front")) return;
-
             var vertical = Input.GetAxis("Vertical");
 
             var accelerationDirection = transform.forward;
