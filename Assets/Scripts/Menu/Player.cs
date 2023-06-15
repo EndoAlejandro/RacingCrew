@@ -45,6 +45,7 @@ namespace Menu {
 
 		}
 
+		#region INPUT SYSTEM
 		public void OnNextOption() {
 			NextCar();
 		}
@@ -74,7 +75,7 @@ namespace Menu {
 			_carList[_index].SetActive(true);
 
 		}
-		
+		#endregion
 
 	}
 }

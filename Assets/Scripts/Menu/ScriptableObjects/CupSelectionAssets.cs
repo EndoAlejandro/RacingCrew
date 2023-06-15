@@ -11,6 +11,7 @@ namespace Menu {
 		public int cupID;
 		public string cupName;
 		public Sprite[] imageSpeedway = new Sprite[4];
+		public string[] speedwayNames = new string[4];
 	}
 }
 
