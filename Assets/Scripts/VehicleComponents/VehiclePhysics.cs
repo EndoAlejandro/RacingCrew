@@ -57,23 +57,23 @@ namespace VehicleComponents
                                          horizontal;
                     AckermannRightAngle = Mathf.Rad2Deg * Mathf.Atan(wheelBase / (turnRadius - (rearTrack / 2))) *
                                           horizontal;
-
-                    Rigidbody.centerOfMass = Vector3.left;
+                    // Rigidbody.centerOfMass = Vector3.right;
                     break;
                 case < 0f:
                     AckermannLeftAngle = Mathf.Rad2Deg * Mathf.Atan(wheelBase / (turnRadius - rearTrack / 2)) *
                                          horizontal;
                     AckermannRightAngle = Mathf.Rad2Deg * Mathf.Atan(wheelBase / (turnRadius + (rearTrack / 2))) *
                                           horizontal;
-                    Rigidbody.centerOfMass = Vector3.right;
+                    // Rigidbody.centerOfMass = Vector3.left;
                     break;
                 default:
-                    Rigidbody.centerOfMass = Vector3.zero;
                     AckermannLeftAngle = 0f;
                     AckermannRightAngle = 0f;
+                    Rigidbody.centerOfMass = Vector3.zero;
                     break;
             }
         }
+
 
         public void Accelerate(float value) => AccelerationInput = value;
         public void Turn(float value) => TurningInput = value;

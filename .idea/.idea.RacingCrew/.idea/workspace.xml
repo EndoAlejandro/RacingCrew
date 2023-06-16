@@ -5,20 +5,26 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="89d28beb-5f3b-4b70-bf77-826042fca131" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/VehicleComponents/SoundManager.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/VehicleComponents/SoundManager.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/IControllerInput.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/IControllerInput.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/RaceManager.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/RaceManager.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Racer.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Racer.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/VehicleComponents/AiControllerInput.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/VehicleComponents/AiControllerInput.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/VehicleComponents/PlayerControllerInput.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/VehicleController.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/VehicleController.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.RacingCrew/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.RacingCrew/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssetsData/AssetGroups/Localization-Asset-Tables-Enlgish.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddressableAssetsData/AssetGroups/Localization-Asset-Tables-Enlgish.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssetsData/AssetGroups/Localization-Asset-Tables-Español.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddressableAssetsData/AssetGroups/Localization-Asset-Tables-Español.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssetsData/AssetGroups/Localization-Assets-Shared.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddressableAssetsData/AssetGroups/Localization-Assets-Shared.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssetsData/AssetGroups/Localization-Locales.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddressableAssetsData/AssetGroups/Localization-Locales.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssetsData/AssetGroups/Localization-String-Tables-English (en).asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddressableAssetsData/AssetGroups/Localization-String-Tables-English (en).asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssetsData/AssetGroups/Localization-String-Tables-Enlgish.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddressableAssetsData/AssetGroups/Localization-String-Tables-Enlgish.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssetsData/AssetGroups/Localization-String-Tables-Español.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddressableAssetsData/AssetGroups/Localization-String-Tables-Español.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssetsData/AssetGroups/Localization-String-Tables-Spanish (es).asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddressableAssetsData/AssetGroups/Localization-String-Tables-Spanish (es).asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainMenu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainMenu.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/VehicleComponents/WheelPhysics.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/VehicleComponents/WheelPhysics.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/VehicleWheels.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/VehicleWheels.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/TestVehicles.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/TestVehicles.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Debugging/ObjectSpeedUIDisplay.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Debugging/ObjectSpeedUIDisplay.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/VehicleComponents/PlayerVehicleController.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/VehicleComponents/PlayerVehicleController.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/VehicleComponents/PlayerControllerInput.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/VehicleComponents/VehiclePhysics.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/VehicleComponents/VehiclePhysics.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2022.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2022.dwlt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,9 +32,11 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/3ea01e77be99618395f448b16bd7cc2bd4248bd9e5d8474964b2d97f39c5d74/System.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/VehicleComponents/PlayerVehicleController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/VehicleComponents/VehicleSphere.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/VehicleComponents/WheelPhysics.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.5.1/InputSystem/Plugins/PlayerInput/PlayerInput.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="ProjectId" id="2Qc8Qati2gc73ctkMXjUIKqmzqt" />
   <component name="ProjectLevelVcsManager">
@@ -115,6 +123,9 @@
       <workItem from="1686583380901" duration="620000" />
       <workItem from="1686649154974" duration="4377000" />
       <workItem from="1686679976604" duration="5134000" />
+      <workItem from="1686733978356" duration="1215000" />
+      <workItem from="1686826793363" duration="2402000" />
+      <workItem from="1686932520107" duration="9592000" />
     </task>
     <servers />
   </component>

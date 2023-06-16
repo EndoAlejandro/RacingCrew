@@ -13,6 +13,8 @@ namespace Debugging
 
         private void Update()
         {
+            if (target == null) return;
+
             var horizontal = target.velocity;
             horizontal.y = 0f;
             _text.SetText(horizontal.magnitude.ToString(CultureInfo.InvariantCulture));
