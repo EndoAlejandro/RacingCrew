@@ -9,9 +9,6 @@ using UnityEngine.UI;
 namespace Menu {
 	public class MenuManager : MonoBehaviour
 	{
-
-		[Header("SOUND FX IN MAIN MENU")]
-		[SerializeField] AudioClip soundFx;
 		[Header("SETTINGS"), Space(3)]
 		[SerializeField] GameObject _screenMainMenu;
 		[SerializeField] GameObject _screenSelectMode;
@@ -173,9 +170,8 @@ namespace Menu {
 			PlayerPrefs.SetFloat("GlobalVolume", value);
 		}
 
-		public void PlaySoundFX()
-		{
-			audioSource.PlayOneShot(soundFx);
+		public void PlaySoundFX() {
+			SoundManager.Instance.PlayFx(Sfx.UI);
 		}
 
 		#endregion
