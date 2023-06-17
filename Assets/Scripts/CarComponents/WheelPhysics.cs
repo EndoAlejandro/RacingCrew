@@ -1,3 +1,4 @@
+using CarComponents;
 using UnityEngine;
 
 namespace VehicleComponents
@@ -8,7 +9,7 @@ namespace VehicleComponents
         [SerializeField] private Transform display;
         [SerializeField] private WheelPosition wheelPosition;
 
-        private VehiclePhysics _vehiclePhysics;
+        private CarPhysics _carPhysics;
 
         // Visuals.
         private Vector3 _initialPosition;
@@ -25,7 +26,7 @@ namespace VehicleComponents
         {
             _initialPosition = display.localPosition;
             _targetPosition = _initialPosition;
-            _vehiclePhysics = GetComponentInParent<VehiclePhysics>();
+            _carPhysics = GetComponentInParent<CarPhysics>();
             _hit = new RaycastHit();
         }
 
@@ -48,25 +49,26 @@ namespace VehicleComponents
         {
             transform.localRotation = wheelPosition switch
             {
-                WheelPosition.FrontLeft => Quaternion.Euler(Vector3.up * _vehiclePhysics.AckermannLeftAngle),
-                WheelPosition.FrontRight => Quaternion.Euler(Vector3.up * _vehiclePhysics.AckermannRightAngle),
+                WheelPosition.FrontLeft => Quaternion.Euler(Vector3.up * _carPhysics.AckermannLeftAngle),
+                WheelPosition.FrontRight => Quaternion.Euler(Vector3.up * _carPhysics.AckermannRightAngle),
                 _ => transform.localRotation
             };
         }
 
         private void FixedUpdate()
         {
-            if (!Physics.Raycast(transform.position + transform.up * 0.25f, -_vehiclePhysics.transform.up * wheelRadius, out _hit,
-                    _vehiclePhysics.SuspensionDistance + wheelRadius))
+            if (!Physics.Raycast(transform.position + transform.up * 0.25f, -_carPhysics.transform.up * wheelRadius,
+                    out _hit,
+                    _carPhysics.SuspensionDistance + wheelRadius))
             {
-                _targetPosition = _initialPosition + Vector3.up * (wheelRadius - _vehiclePhysics.SuspensionDistance);
+                _targetPosition = _initialPosition + Vector3.up * (wheelRadius - _carPhysics.SuspensionDistance);
                 GravityForce();
                 return;
             }
 
             _targetPosition = _hit.point - transform.position + _hit.normal * wheelRadius + _initialPosition;
 
-            var worldVelocity = _vehiclePhysics.Rigidbody.GetPointVelocity(transform.position);
+            var worldVelocity = _carPhysics.Rigidbody.GetPointVelocity(transform.position);
             Grip(worldVelocity);
             Suspension(worldVelocity);
             Acceleration(worldVelocity);
@@ -75,7 +77,7 @@ namespace VehicleComponents
         /// <summary>
         /// Make the vehicle fall faster. kind of extra gravity.
         /// </summary>
-        private void GravityForce() => _vehiclePhysics.Rigidbody.AddForce(Vector3.down * 10f, ForceMode.Acceleration);
+        private void GravityForce() => _carPhysics.Rigidbody.AddForce(Vector3.down * 10f, ForceMode.Acceleration);
 
         /// <summary>
         /// Acceleration force made by the wheel but it's applied in the vehicle's Rigidbody.
@@ -83,18 +85,18 @@ namespace VehicleComponents
         /// <param name="worldVelocity"></param>
         private void Acceleration(Vector3 worldVelocity)
         {
-            var vertical = _vehiclePhysics.AccelerationInput;
+            var vertical = _carPhysics.Car.Input.x - _carPhysics.Car.Input.z;
 
             var accelerationDirection = transform.forward;
-            var speed = Vector3.Dot(_vehiclePhysics.transform.forward, _vehiclePhysics.Rigidbody.velocity);
-            var normalizedSpeed = Mathf.Clamp01(Mathf.Abs(speed) / _vehiclePhysics.MaxSpeed);
+            var speed = Vector3.Dot(_carPhysics.transform.forward, _carPhysics.Rigidbody.velocity);
+            var normalizedSpeed = Mathf.Clamp01(Mathf.Abs(speed) / _carPhysics.MaxSpeed);
 
-            var torque = _vehiclePhysics.AccelerationCurve.Evaluate(normalizedSpeed) * vertical;
-            _accelerationForce = accelerationDirection * (torque * _vehiclePhysics.Acceleration);
+            var torque = _carPhysics.AccelerationCurve.Evaluate(normalizedSpeed) * vertical;
+            _accelerationForce = accelerationDirection * (torque * _carPhysics.Acceleration);
 
             var positionForce = transform.position;
-            positionForce.y = _vehiclePhysics.transform.position.y + 0f;
-            _vehiclePhysics.Rigidbody.AddForceAtPosition(_accelerationForce, positionForce, ForceMode.Acceleration);
+            positionForce.y = _carPhysics.transform.position.y + 0f;
+            _carPhysics.Rigidbody.AddForceAtPosition(_accelerationForce, positionForce, ForceMode.Acceleration);
         }
 
         /// <summary>
@@ -106,11 +108,11 @@ namespace VehicleComponents
             var steeringDirection = transform.right;
             var steeringVelocity = Vector3.Dot(steeringDirection, worldVelocity);
 
-            var desiredVelocityChange = -steeringVelocity * _vehiclePhysics.CurrentGrip;
+            var desiredVelocityChange = -steeringVelocity * _carPhysics.CurrentGrip;
             var desiredAcceleration = desiredVelocityChange / Time.fixedDeltaTime;
 
-            _steeringForce = steeringDirection * _vehiclePhysics.TireMass * desiredAcceleration;
-            _vehiclePhysics.Rigidbody.AddForceAtPosition(_steeringForce, transform.position, ForceMode.Acceleration);
+            _steeringForce = steeringDirection * _carPhysics.TireMass * desiredAcceleration;
+            _carPhysics.Rigidbody.AddForceAtPosition(_steeringForce, transform.position, ForceMode.Acceleration);
         }
 
         /// <summary>
@@ -120,13 +122,13 @@ namespace VehicleComponents
         private void Suspension(Vector3 worldVelocity)
         {
             var springDirection = transform.up;
-            var offset = _vehiclePhysics.SuspensionDistance - _hit.distance;
+            var offset = _carPhysics.SuspensionDistance - _hit.distance;
 
             var velocity = Vector3.Dot(springDirection, worldVelocity);
-            var force = (offset * _vehiclePhysics.SpringStrength) - (velocity * _vehiclePhysics.Damp);
+            var force = (offset * _carPhysics.SpringStrength) - (velocity * _carPhysics.Damp);
 
             _suspensionForce = springDirection * force;
-            _vehiclePhysics.Rigidbody.AddForceAtPosition(_suspensionForce, transform.position, ForceMode.Acceleration);
+            _carPhysics.Rigidbody.AddForceAtPosition(_suspensionForce, transform.position, ForceMode.Acceleration);
         }
 
         private void OnDrawGizmos()
