@@ -8,12 +8,12 @@ namespace CarComponents
     {
         [Header("Acceleration")]
         [Tooltip("Max possible horizontal speed.")]
-        [SerializeField] private float maxSpeed = 200f;
+        [SerializeField] private float maxSpeed;
 
         [Tooltip("Acceleration force based on speed.")]
-        [SerializeField] private float horsePower = 300f;
+        [SerializeField] private float horsePower;
 
-        [Range(0.001f, 1f)] [SerializeField] private float reverseAccelerationScale = 0.75f;
+        [Range(0.001f, 1f)] [SerializeField] private float reverseAccelerationScale;
         [SerializeField] private float breakForce;
 
         [Tooltip("This emulate the force of the engine.")]
@@ -21,29 +21,29 @@ namespace CarComponents
 
         [Header("Turning")]
         [Tooltip("Friction of the wheels with the floor.")]
-        [Range(0f, 1f)] [SerializeField] private float grip = 0.5f;
+        [Range(0f, 1f)] [SerializeField] private float grip;
 
         [Tooltip("TODO: Tire Mass.")]
-        [SerializeField] private float tireMass = 0.2f;
+        [SerializeField] private float tireMass;
 
         [Tooltip("Turn radius ranged. x = turn radius at 0Km/h | y = Turn Radius at MaxSpeed.")]
         [SerializeField] private Vector2 turnRadius;
 
         [Tooltip("Distance from left wheels to right wheels.")]
-        [SerializeField] private float rearTrack = 2.5f;
+        [SerializeField] private float rearTrack;
 
         [Tooltip("Distance from rear wheels to front wheels.")]
-        [SerializeField] private float wheelBase = 2.629f;
+        [SerializeField] private float wheelBase;
 
         [Header("Suspension")]
         [Tooltip("Force of each wheel spring.")]
         [SerializeField] private float suspensionForce;
 
         [Tooltip("Lenght of the spring.")]
-        [SerializeField] private float suspensionDistance = 2f;
+        [SerializeField] private float suspensionDistance;
 
         [Tooltip("Reduce de buoyancy of the spring.")]
-        [SerializeField] private float damp = 5f;
+        [SerializeField] private float damp;
 
         public float MaxSpeed => maxSpeed;
         public float HorsePower => horsePower;

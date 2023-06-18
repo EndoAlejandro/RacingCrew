@@ -6,15 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="89d28beb-5f3b-4b70-bf77-826042fca131" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.RacingCrew/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.RacingCrew/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Car.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Car.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/TestVehicles.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/TestVehicles.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/Muscle.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/Muscle.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CarComponents/Car.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CarComponents/Car.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/CarComponents/CarPhysics.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CarComponents/CarPhysics.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CarComponents/CarStats.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CarComponents/CarStats.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CarComponents/WheelPhysics.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CarComponents/WheelPhysics.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Debugging/ObjectSpeedUIDisplay.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Debugging/ObjectSpeedUIDisplay.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/RaceComponents/TrackManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/RaceComponents/TrackManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2022.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2022.dwlt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -118,7 +111,8 @@
       <workItem from="1686733978356" duration="1215000" />
       <workItem from="1686826793363" duration="2402000" />
       <workItem from="1686932520107" duration="9592000" />
-      <workItem from="1687105675084" duration="4767000" />
+      <workItem from="1687105675084" duration="5639000" />
+      <workItem from="1687117388073" duration="52000" />
     </task>
     <servers />
   </component>

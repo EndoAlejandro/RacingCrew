@@ -38,8 +38,8 @@ namespace CarComponents
         private void AckermannTurning(float turning)
         {
             var normalizedSpeed = FlatVelocity.magnitude / Car.Stats.MaxSpeed;
-            // var realTurnRadius = Car.Data.TurnRadius.GetPointInRange(normalizedSpeed);
-            var realTurnRadius = Car.Stats.TurnRadius.GetPointInRange(1);
+            var realTurnRadius = Car.Stats.TurnRadius.GetPointInRange(normalizedSpeed);
+            //var realTurnRadius = Car.Stats.TurnRadius.GetPointInRange(1);
             switch (turning)
             {
                 case > 0f:
