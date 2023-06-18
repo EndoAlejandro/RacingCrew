@@ -10,8 +10,10 @@ namespace CarComponents
         private IControllerInput _controller;
         public Vector3 Input { get; private set; }
         public bool CanGo { get; private set; }
-        public CarStats Stats => _racer?.CarData != null ? _racer
-            .CarData.Stats : null;
+
+        public CarStats Stats => _racer?.CarData != null
+            ? _racer.CarData.Stats
+            : new CarStats();
 
         private void Awake() => Input = new Vector3();
 

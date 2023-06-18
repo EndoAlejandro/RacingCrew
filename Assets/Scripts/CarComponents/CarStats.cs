@@ -4,7 +4,7 @@ using UnityEngine;
 namespace CarComponents
 {
     [Serializable]
-    public class CarStats
+    public struct CarStats
     {
         [Header("Acceleration")]
         [Tooltip("Max possible horizontal speed.")]
@@ -21,7 +21,8 @@ namespace CarComponents
 
         [Header("Turning")]
         [Tooltip("Friction of the wheels with the floor.")]
-        [Range(0f, 1f)] [SerializeField] private float grip;
+        //[Range(0f, 1f)] 
+        [SerializeField] private float grip;
 
         [Tooltip("TODO: Tire Mass.")]
         [SerializeField] private float tireMass;
