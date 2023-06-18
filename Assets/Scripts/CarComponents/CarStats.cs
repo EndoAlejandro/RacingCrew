@@ -11,7 +11,7 @@ namespace CarComponents
         [SerializeField] private float maxSpeed = 200f;
 
         [Tooltip("Acceleration force based on speed.")]
-        [SerializeField] private float acceleration = 40f;
+        [SerializeField] private float horsePower = 300f;
 
         [Range(0.001f, 1f)] [SerializeField] private float reverseAccelerationScale = 0.75f;
         [SerializeField] private float breakForce;
@@ -46,7 +46,7 @@ namespace CarComponents
         [SerializeField] private float damp = 5f;
 
         public float MaxSpeed => maxSpeed;
-        public float Acceleration => acceleration;
+        public float HorsePower => horsePower;
         public float ReverseAccelerationScale => reverseAccelerationScale;
         public float BreakForce => breakForce;
         public AnimationCurve AccelerationCurve => accelerationCurve;

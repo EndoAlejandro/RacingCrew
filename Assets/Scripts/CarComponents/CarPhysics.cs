@@ -6,7 +6,10 @@ namespace CarComponents
     [RequireComponent(typeof(Car))]
     public class CarPhysics : MonoBehaviour
     {
+        [SerializeField] private bool printSpeed;
+
         public Car Car { get; private set; }
+
         // public float TireGrip => Car != null && Car.Data != null ? Car.Data.Grip : 0.5f;
         public float AckermannLeftAngle { get; private set; }
         public float AckermannRightAngle { get; private set; }
@@ -26,6 +29,7 @@ namespace CarComponents
 
         private void SpeedControl()
         {
+            if (printSpeed) Debug.Log(FlatVelocity.magnitude);
             if (FlatVelocity.magnitude > Car.Stats.MaxSpeed)
                 Rigidbody.velocity = FlatVelocity.normalized * Car.Stats.MaxSpeed +
                                      Vector3.one * Rigidbody.velocity.y;

@@ -69,9 +69,9 @@ namespace VehicleComponents
             _targetPosition = _hit.point - transform.position + _hit.normal * wheelRadius + _initialPosition;
 
             var worldVelocity = _carPhysics.Rigidbody.GetPointVelocity(transform.position);
+            Acceleration(worldVelocity);
             Grip(worldVelocity);
             Suspension(worldVelocity);
-            Acceleration(worldVelocity);
         }
 
         /// <summary>
@@ -89,14 +89,13 @@ namespace VehicleComponents
 
             var accelerationDirection = transform.forward;
             var speed = Vector3.Dot(_carPhysics.transform.forward, _carPhysics.Rigidbody.velocity);
-            var normalizedSpeed = 1 - Mathf.Clamp01(Mathf.Abs(speed) / _carPhysics.Stats.MaxSpeed);
+            var normalizedSpeed = Mathf.Clamp01(Mathf.Abs(speed) / _carPhysics.Stats.MaxSpeed);
 
             var torque = _carPhysics.Stats.AccelerationCurve.Evaluate(normalizedSpeed) * vertical;
-            _accelerationForce = accelerationDirection * (torque * _carPhysics.Car.Stats.Acceleration);
+            _accelerationForce = accelerationDirection * (torque * _carPhysics.Car.Stats.HorsePower);
 
-            var positionForce = transform.position;
-            positionForce.y = _carPhysics.transform.position.y + 0f;
-            _carPhysics.Rigidbody.AddForceAtPosition(_accelerationForce, positionForce, ForceMode.Acceleration);
+            _carPhysics.Rigidbody.AddForceAtPosition(_accelerationForce * _carPhysics.Car.Stats.MaxSpeed,
+                transform.position, ForceMode.Force);
         }
 
         /// <summary>

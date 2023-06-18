@@ -1,4 +1,3 @@
-using System.Globalization;
 using TMPro;
 using UnityEngine;
 
@@ -17,7 +16,7 @@ namespace Debugging
 
             var horizontal = target.velocity;
             horizontal.y = 0f;
-            _text.SetText(horizontal.magnitude.ToString(CultureInfo.InvariantCulture));
+            _text.SetText(((int)horizontal.magnitude).ToString());
         }
     }
 }

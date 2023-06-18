@@ -64,7 +64,7 @@ namespace RaceComponents
 
         private IEnumerator GoCountDown()
         {
-            yield return new WaitForSeconds(5f);
+            yield return new WaitForSeconds(1f);
             OnGo?.Invoke();
         }
     }

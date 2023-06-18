@@ -13,39 +13,39 @@ MonoBehaviour:
   m_Name: Muscle
   m_EditorClassIdentifier: 
   stats:
-    maxSpeed: 200
-    acceleration: 40
+    maxSpeed: 150
+    horsePower: 250
     reverseAccelerationScale: 0.75
     breakForce: 50
     accelerationCurve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
-        time: 0
-        value: 0
-        inSlope: 3.2623963
-        outSlope: 3.2623963
+        time: -0.0073242188
+        value: 0.09899902
+        inSlope: 0.81427246
+        outSlope: 0.81427246
         tangentMode: 0
         weightedMode: 0
         inWeight: 0
-        outWeight: 0.2725793
+        outWeight: 0.12411454
       - serializedVersion: 3
-        time: 1
-        value: 1
-        inSlope: 0
-        outSlope: 0
+        time: 1.0219452
+        value: 1.0268438
+        inSlope: -0.07687617
+        outSlope: -0.07687617
         tangentMode: 0
         weightedMode: 0
-        inWeight: 0
+        inWeight: 0.15215029
         outWeight: 0
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
     grip: 0.5
     tireMass: 0.2
-    turnRadius: {x: 20, y: 30}
+    turnRadius: {x: 30, y: 20}
     rearTrack: 2.5
-    wheelBase: 2.629
+    wheelBase: 4.62
     suspensionForce: 100
     suspensionDistance: 1.25
     damp: 5
