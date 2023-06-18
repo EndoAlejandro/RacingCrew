@@ -16,7 +16,6 @@ namespace RaceComponents
 
         [SerializeField] private Car carPrefab;
         [SerializeField] private CarData carData;
-        [SerializeField] private CarController carControllerPrefab;
 
         [SerializeField] private GameObject[] models;
         [SerializeField] private PlayerControllerInput[] playerControllers;
@@ -24,7 +23,6 @@ namespace RaceComponents
 
         public List<Racer> Racers { get; private set; } = new List<Racer>();
         public List<Car> Cars { get; private set; } = new List<Car>();
-        private readonly List<CarController> _controllers = new List<CarController>();
 
         private const int CarsAmount = 10;
 
