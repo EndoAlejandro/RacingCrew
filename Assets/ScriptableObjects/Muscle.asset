@@ -12,13 +12,43 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c07ad98c9df44c9bcfb313f4f6c7402, type: 3}
   m_Name: Muscle
   m_EditorClassIdentifier: 
-  maxSpeed: 150
-  acceleration: 30
-  reverseAccelerationScale: 0.75
-  grip: 0
-  breakForce: 5
-  turnRadius: {x: 20, y: 30}
-  suspensionForce: 100
+  stats:
+    maxSpeed: 200
+    acceleration: 40
+    reverseAccelerationScale: 0.75
+    breakForce: 50
+    accelerationCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0
+        inSlope: 3.2623963
+        outSlope: 3.2623963
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0.2725793
+      - serializedVersion: 3
+        time: 1
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    grip: 0.5
+    tireMass: 0.2
+    turnRadius: {x: 20, y: 30}
+    rearTrack: 2.5
+    wheelBase: 2.629
+    suspensionForce: 100
+    suspensionDistance: 1.25
+    damp: 5
   models:
   - {fileID: 6652437609419938593, guid: 0343afcf6fb2c3d43937ac57f0472eab, type: 3}
   - {fileID: 883344635444528942, guid: b5d2562e3be1baf469c8a910d3d12aa9, type: 3}

@@ -59,9 +59,9 @@ namespace VehicleComponents
         {
             if (!Physics.Raycast(transform.position + transform.up * 0.25f, -_carPhysics.transform.up * wheelRadius,
                     out _hit,
-                    _carPhysics.SuspensionDistance + wheelRadius))
+                    _carPhysics.Stats.SuspensionDistance + wheelRadius))
             {
-                _targetPosition = _initialPosition + Vector3.up * (wheelRadius - _carPhysics.SuspensionDistance);
+                _targetPosition = _initialPosition + Vector3.up * (wheelRadius - _carPhysics.Stats.SuspensionDistance);
                 GravityForce();
                 return;
             }
@@ -89,10 +89,10 @@ namespace VehicleComponents
 
             var accelerationDirection = transform.forward;
             var speed = Vector3.Dot(_carPhysics.transform.forward, _carPhysics.Rigidbody.velocity);
-            var normalizedSpeed = Mathf.Clamp01(Mathf.Abs(speed) / _carPhysics.MaxSpeed);
+            var normalizedSpeed = 1 - Mathf.Clamp01(Mathf.Abs(speed) / _carPhysics.Stats.MaxSpeed);
 
-            var torque = _carPhysics.AccelerationCurve.Evaluate(normalizedSpeed) * vertical;
-            _accelerationForce = accelerationDirection * (torque * _carPhysics.Acceleration);
+            var torque = _carPhysics.Stats.AccelerationCurve.Evaluate(normalizedSpeed) * vertical;
+            _accelerationForce = accelerationDirection * (torque * _carPhysics.Car.Stats.Acceleration);
 
             var positionForce = transform.position;
             positionForce.y = _carPhysics.transform.position.y + 0f;
@@ -108,10 +108,10 @@ namespace VehicleComponents
             var steeringDirection = transform.right;
             var steeringVelocity = Vector3.Dot(steeringDirection, worldVelocity);
 
-            var desiredVelocityChange = -steeringVelocity * _carPhysics.CurrentGrip;
+            var desiredVelocityChange = -steeringVelocity * _carPhysics.Stats.Grip;
             var desiredAcceleration = desiredVelocityChange / Time.fixedDeltaTime;
 
-            _steeringForce = steeringDirection * _carPhysics.TireMass * desiredAcceleration;
+            _steeringForce = steeringDirection * (_carPhysics.Stats.TireMass * desiredAcceleration);
             _carPhysics.Rigidbody.AddForceAtPosition(_steeringForce, transform.position, ForceMode.Acceleration);
         }
 
@@ -122,10 +122,10 @@ namespace VehicleComponents
         private void Suspension(Vector3 worldVelocity)
         {
             var springDirection = transform.up;
-            var offset = _carPhysics.SuspensionDistance - _hit.distance;
+            var offset = _carPhysics.Stats.SuspensionDistance - _hit.distance;
 
             var velocity = Vector3.Dot(springDirection, worldVelocity);
-            var force = (offset * _carPhysics.SpringStrength) - (velocity * _carPhysics.Damp);
+            var force = (offset * _carPhysics.Stats.SuspensionForce) - (velocity * _carPhysics.Stats.Damp);
 
             _suspensionForce = springDirection * force;
             _carPhysics.Rigidbody.AddForceAtPosition(_suspensionForce, transform.position, ForceMode.Acceleration);

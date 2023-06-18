@@ -5,41 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="89d28beb-5f3b-4b70-bf77-826042fca131" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/CarComponents/Car.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/CarComponents/Car.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/CarComponents/CarData.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/CarComponents/CarData.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/CarController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/RaceComponents/TrackCheckPoints.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/RaceComponents/TrackCheckPoints.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/CarComponents/CarStats.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/CarComponents/CarStats.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.RacingCrew/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.RacingCrew/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/VehicleTestColorChange.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/VehicleTestColorChange.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Vehicle.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Vehicle.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/VehicleSphere[deprecated].prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/VehicleSphere[deprecated].prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/TestVehicles.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/TestVehicles.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Menu/HoverCupPreview.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Menu/HoverCupPreview.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/RaceManager.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/RaceManager.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Racer.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Racer.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/VehicleComponents.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CarComponents.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/VehicleComponents/AiControllerInput.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CarComponents/AiControllerInput.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/VehicleComponents/AiControllerInput.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CarComponents/AiControllerInput.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/VehicleComponents/PlayerControllerInput.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CarComponents/PlayerControllerInput.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/VehicleComponents/PlayerControllerInput.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CarComponents/PlayerControllerInput.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/VehicleComponents/VehiclePhysics.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CarComponents/CarPhysics.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/VehicleComponents/VehiclePhysics.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CarComponents/CarPhysics.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/VehicleComponents/VehicleSphere.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/VehicleComponents/VehicleSphere.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/VehicleComponents/WheelPhysics.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CarComponents/WheelPhysics.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/VehicleComponents/WheelPhysics.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CarComponents/WheelPhysics.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/VehicleComponents/WheelPosition.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CarComponents/WheelPosition.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/VehicleComponents/WheelPosition.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CarComponents/WheelPosition.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/VehicleController.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/VehicleController.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CarController.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/Muscle.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/Muscle.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CarComponents/Car.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CarComponents/Car.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CarComponents/CarData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CarComponents/CarData.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CarComponents/CarPhysics.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CarComponents/CarPhysics.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CarComponents/WheelPhysics.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CarComponents/WheelPhysics.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

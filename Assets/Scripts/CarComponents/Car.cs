@@ -11,6 +11,7 @@ namespace CarComponents
         public Vector3 Input { get; private set; }
         public bool CanGo { get; private set; }
         public CarData Data => _racer.CarData;
+        public CarStats Stats => _racer.CarData.Stats;
 
         private void Awake() => Input = new Vector3();
 
