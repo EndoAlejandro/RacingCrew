@@ -1,6 +1,5 @@
 using RaceComponents;
 using UnityEngine;
-using VehicleComponents;
 
 namespace CarComponents
 {
@@ -20,6 +19,7 @@ namespace CarComponents
 
         private void Start()
         {
+            // var car = Instantiate(carPrefab, transform.position, transform.rotation);
             var model = data.Models[0];
             var racer = new Racer(data, model, _controllerInput);
             _car.Setup(racer);
