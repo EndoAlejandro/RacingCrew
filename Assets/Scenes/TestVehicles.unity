@@ -13498,8 +13498,17 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5838702844981231161, guid: a47a9a9b63d5b3544992daecd47b7190,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
+<<<<<<< Updated upstream
   m_SourcePrefab: {fileID: 100100000, guid: b0b5a846d0451ee4f95cfd9950ab6023, type: 3}
+=======
+  m_SourcePrefab: {fileID: 100100000, guid: a47a9a9b63d5b3544992daecd47b7190, type: 3}
+>>>>>>> Stashed changes
