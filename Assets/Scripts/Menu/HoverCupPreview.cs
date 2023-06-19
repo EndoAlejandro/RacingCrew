@@ -33,7 +33,7 @@ namespace Menu {
 			UpdateCupInfoInScreen();
 		}
 
-		//En la selecci髇 de copas, actuliza la informaci髇 de acuerdo a la copa seleccionada
+		//En la selecci贸n de copas, actuliza la informaci贸n de acuerdo a la copa seleccionada
 		public void UpdateCupInfoInScreen() {
 			_cupNameText.text = cupSelectionAssets.cupName;
 
@@ -42,13 +42,13 @@ namespace Menu {
 			}
 		}
 
-		//Guardamos la informaci髇 de la copa seleccionada
+		//Guardamos la informaci贸n de la copa seleccionada
 		public void SaveSelectedCupInMemory() {
 			PlayerPrefs.SetInt("CurrentCupID", cupSelectionAssets.cupID);
 			Debug.Log("Current Cup ID: " + PlayerPrefs.GetInt("CurrentCupID"));
 		}
 
-		//Implementaci髇 de interfaces
+		//Implementaci贸n de interfaces
 		public void OnPointerEnter(PointerEventData eventData)
 		{
 			_cupButton.Select();
