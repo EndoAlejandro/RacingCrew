@@ -37,7 +37,8 @@ namespace RaceComponents
             _checkPoints = transform.GetComponentsInChildren<CheckPoint>().ToList();
         }
 
-        private void Start()
+        [ContextMenu("Start")]
+        private void Star()
         {
             CreateRacersList();
             CreateVehicles();
