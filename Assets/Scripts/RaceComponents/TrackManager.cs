@@ -59,10 +59,18 @@ namespace RaceComponents
             {
                 var model = models[Random.Range(0, models.Length)];
                 IControllerInput controllerInput =
-                    i < playerControllers.Length ? playerControllers[i] : new AiControllerInput();
+                    i < playerControllers.Length ? playerControllers[i] : CreateNewAiController(i);
+
                 var racer = new Racer(carData, model, controllerInput);
                 Racers.Add(racer);
             }
+        }
+
+        private AiControllerInput CreateNewAiController(int index)
+        {
+            var controller = new GameObject("AIController_" + index).AddComponent<AiControllerInput>();
+            controller.Setup(index);
+            return controller;
         }
 
         private void CreateVehicles()
@@ -80,6 +88,8 @@ namespace RaceComponents
                 Cars.Add(car);
             }
         }
+
+        public CheckPoint GetNextCheckPoint(int index) => _checkPoints[(index + 1) % _checkPoints.Count];
 
         public void CarThroughCheckPoint(CheckPoint checkPoint, Car car)
         {
