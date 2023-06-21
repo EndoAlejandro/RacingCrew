@@ -2,20 +2,23 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
-
+using UnityEngine.UI;
 
 namespace Menu {
 	public class Player : MonoBehaviour
 	{
 		public static int playerID = 0;
-		public TextMeshProUGUI _playerIDText;
-		public Transform _carTransform;
-		public CarAssets carAssets;
+
+		[SerializeField] TextMeshProUGUI playerIDText;
+		[SerializeField] Transform carTransform;
+		[SerializeField] CarAssets carAssets;
+		[SerializeField] Button[] buttons;
 
 
-		private int _ID;
+		private int _id;
 		private List<GameObject> _carList = new List<GameObject>();
 		private int _index = 0;
+		private bool _selection = true;
 
 		private Transform _parent;
 
@@ -27,13 +30,13 @@ namespace Menu {
 		private void Start()
 		{
 			playerID++;
-			_ID = playerID;
-			_playerIDText.text = "PLAYER " + _ID.ToString();
+			_id = playerID;
+			playerIDText.text = "PLAYER " + _id.ToString();
 
 
 			for (int i = 0; i < carAssets.cars.Length; i++) {
 				GameObject car = Instantiate(carAssets.cars[i]);
-				car.transform.parent = _carTransform;
+				car.transform.parent = carTransform;
 				car.transform.localPosition = Vector3.zero;
 				car.SetActive(false);
 				if (i == 0) {
@@ -47,11 +50,16 @@ namespace Menu {
 
 		#region INPUT SYSTEM
 		public void OnNextOption() {
-			NextCar();
+			if (_selection) {
+				NextCar();
+			}
+			
 		}
 
 		public void OnPrevOption() {
-			PrevCar();
+			if (_selection) {
+				PrevCar();
+			}		
 		}
 
 		public void NextCar()
@@ -73,6 +81,22 @@ namespace Menu {
 				_index = _carList.Count-1;
 			}
 			_carList[_index].SetActive(true);
+
+		}
+
+		public void OnSelect()
+		{
+
+			//Guarda la información del jugador y el index del carro que eligió
+			PlayerPrefs.SetInt("Player" + _id.ToString(),_index);
+
+			_selection = false;
+
+			for (int i = 0; i < buttons.Length;++i) {
+				buttons[i].interactable = false;
+			}
+
+			MenuManager.Instance.PlayersReady++;
 
 		}
 		#endregion

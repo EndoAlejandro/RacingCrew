@@ -3,19 +3,29 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Audio;
+using UnityEngine.InputSystem;
 using UnityEngine.Localization.Settings;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 namespace Menu {
 	public class MenuManager : MonoBehaviour
 	{
+		public static MenuManager Instance;
+
+		[Header("PLAYER INPUT MANAGER")]
+		[SerializeField] PlayerInputManager playerInputManager;
+
+		[Header("COPAS")]
+		[SerializeField] AllCupsAssets allCupsAssets;
+
 		[Header("SETTINGS"), Space(3)]
-		[SerializeField] GameObject _screenMainMenu;
-		[SerializeField] GameObject _screenSelectMode;
-		[SerializeField] GameObject _screenSelectCup;
-		[SerializeField] GameObject _screenLobby;
-		[SerializeField] GameObject _screenSettings;
-		[SerializeField] GameObject _screenCredits;
+		[SerializeField] GameObject screenMainMenu;
+		[SerializeField] GameObject screenSelectMode;
+		[SerializeField] GameObject screenSelectCup;
+		[SerializeField] GameObject screenLobby;
+		[SerializeField] GameObject screenSettings;
+		[SerializeField] GameObject screenCredits;
 		[Space(5)]
 		[Header("Audio")]
 		[SerializeField] AudioMixer audioMixer;
@@ -24,7 +34,7 @@ namespace Menu {
 		[SerializeField] Slider sliderGlobalVolume;
 		[Space(5)]
 		[Header("Language")]
-		[SerializeField] TextMeshProUGUI _languageText;
+		[SerializeField] TextMeshProUGUI languageText;
 		[Space(5)]
 		[Header("Resolution")]
 		[SerializeField] TMP_Dropdown resolutionDropdown;
@@ -32,14 +42,36 @@ namespace Menu {
 
 
 		//Sound FX
-		private AudioSource audioSource;
+		private AudioSource _audioSource;
 
 		//LANGUAGE
 		private int _currentLocaleIndex;
 
+		//CUPS
+		private int _selectedCupIndex;
+
+		//Player ready
+		private int _playersReady;
+
+		public int PlayersReady {
+			get { return _playersReady; }
+			set { 
+				_playersReady = value;
+				Debug.Log("Current Number of Players: " + _playersReady);
+				if (_playersReady == playerInputManager.playerCount) {
+					ChangeScene();
+				}
+			}
+		}
+
+		public int SelectedCupIndex { set { _selectedCupIndex = value; } }
+
+
 		private void Awake()
 		{
-			audioSource = GameObject.FindGameObjectWithTag("SoundFX").GetComponent<AudioSource>();
+			Instance= this;
+
+			_audioSource = GameObject.FindGameObjectWithTag("SoundFX").GetComponent<AudioSource>();
 
 			//Comprueba si hay información guardada sobre volumen, si no hay crea info por defecto 
 			if (!PlayerPrefs.HasKey("MusicVolume"))
@@ -89,31 +121,47 @@ namespace Menu {
 			UpdateLocale();
 		}
 
+		public void ChangeScene() {
+			int index = 0;
+
+			for (int i = 0; i < allCupsAssets.cups.Length;i++) {
+				if (allCupsAssets.cups[i].cupID == PlayerPrefs.GetInt("CurrentCupID")) { 
+					index= i;
+					break;
+				}
+			}
+
+			PlayerPrefs.SetInt("CurrentSpeedway",0);
+			PlayerPrefs.SetInt("NumberOfPlayers", playerInputManager.playerCount);
+			SceneManager.LoadScene(allCupsAssets.cups[index].speedwayNames[PlayerPrefs.GetInt("CurrentSpeedway")]);
+
+		}
+
 		#region INPUT SYSTEM
 		public void OnBack() {
-			if (_screenSelectMode.activeSelf) { 
-				_screenSelectMode.SetActive(false);
-				_screenMainMenu.SetActive(true);
+			if (screenSelectMode.activeSelf) { 
+				screenSelectMode.SetActive(false);
+				screenMainMenu.SetActive(true);
 			}
 
-			if (_screenSelectCup.activeSelf) {
-				_screenSelectCup.SetActive(false);
-				_screenSelectMode.SetActive(true);
+			if (screenSelectCup.activeSelf) {
+				screenSelectCup.SetActive(false);
+				screenSelectMode.SetActive(true);
 			}
 
-			if (_screenLobby.activeSelf) { 
-				_screenLobby.SetActive(false);
-				_screenSelectCup.SetActive(true);
+			if (screenLobby.activeSelf) { 
+				screenLobby.SetActive(false);
+				screenSelectCup.SetActive(true);
 			}
 
-			if (_screenSettings.activeSelf) { 
-				_screenSettings.SetActive(false);
-				_screenMainMenu.SetActive(true);
+			if (screenSettings.activeSelf) { 
+				screenSettings.SetActive(false);
+				screenMainMenu.SetActive(true);
 			}
 
-			if (_screenCredits.activeSelf) {
-				_screenCredits.SetActive(false);
-				_screenMainMenu.SetActive(true);
+			if (screenCredits.activeSelf) {
+				screenCredits.SetActive(false);
+				screenMainMenu.SetActive(true);
 			}
 		}
 
@@ -144,10 +192,10 @@ namespace Menu {
 			switch (_currentLocaleIndex)
 			{
 				case 0:
-					_languageText.text = "English";
+					languageText.text = "English";
 					break;
 				case 1:
-					_languageText.text = "Español";
+					languageText.text = "Español";
 					break;
 			}
 		}
