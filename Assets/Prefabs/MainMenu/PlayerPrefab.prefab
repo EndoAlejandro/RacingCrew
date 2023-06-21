@@ -532,9 +532,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d2c06fe90ebc85d458f93e053f9c0db9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _playerIDText: {fileID: 4813405088551854567}
-  _carTransform: {fileID: 4172760515225368378}
+  playerIDText: {fileID: 4813405088551854567}
+  carTransform: {fileID: 4172760515225368378}
   carAssets: {fileID: 11400000, guid: 1025eaf6fe0da0d43a3e970116729635, type: 2}
+  buttons:
+  - {fileID: 7774623356199470198}
+  - {fileID: 1456201690873392887}
 --- !u!114 &6330068504056537606
 MonoBehaviour:
   m_ObjectHideFlags: 0
