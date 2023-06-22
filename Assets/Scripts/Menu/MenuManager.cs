@@ -73,7 +73,7 @@ namespace Menu {
 
 			_audioSource = GameObject.FindGameObjectWithTag("SoundFX").GetComponent<AudioSource>();
 
-			//Comprueba si hay información guardada sobre volumen, si no hay crea info por defecto 
+			//Comprueba si hay informaciï¿½n guardada sobre volumen, si no hay crea info por defecto 
 			if (!PlayerPrefs.HasKey("MusicVolume"))
 			{
 				PlayerPrefs.SetFloat("MusicVolume", 1);
@@ -195,7 +195,7 @@ namespace Menu {
 					languageText.text = "English";
 					break;
 				case 1:
-					languageText.text = "Español";
+					languageText.text = "Espaï¿½ol";
 					break;
 			}
 		}

@@ -2501,6 +2501,7 @@ GameObject:
   m_Component:
   - component: {fileID: 232358545}
   - component: {fileID: 232358544}
+  - component: {fileID: 232358546}
   m_Layer: 0
   m_Name: Spline
   m_TagString: Untagged
@@ -2810,8 +2811,8 @@ MonoBehaviour:
     - Mode: 0
       Tension: 0.5
       DistanceToInterpolation:
-      - Distance: 0
-        T: 0
+      - Distance: -1
+        T: -1
       - Distance: 3.9175313
         T: 0.03448276
       - Distance: 7.958493
@@ -2873,8 +2874,8 @@ MonoBehaviour:
     - Mode: 0
       Tension: 0.5
       DistanceToInterpolation:
-      - Distance: 0
-        T: 0
+      - Distance: -1
+        T: -1
       - Distance: 1.2543598
         T: 0.03448276
       - Distance: 2.4723392
@@ -2936,8 +2937,8 @@ MonoBehaviour:
     - Mode: 0
       Tension: 0.5
       DistanceToInterpolation:
-      - Distance: 0
-        T: 0
+      - Distance: -1
+        T: -1
       - Distance: 1.4919027
         T: 0.03448276
       - Distance: 3.0383928
@@ -2999,8 +3000,8 @@ MonoBehaviour:
     - Mode: 2
       Tension: 0.5
       DistanceToInterpolation:
-      - Distance: 0
-        T: 0
+      - Distance: -1
+        T: -1
       - Distance: 2.0181406
         T: 0.03448276
       - Distance: 4.0941024
@@ -3062,8 +3063,8 @@ MonoBehaviour:
     - Mode: 2
       Tension: 0.5
       DistanceToInterpolation:
-      - Distance: 0
-        T: 0
+      - Distance: -1
+        T: -1
       - Distance: 1.3015704
         T: 0.03448276
       - Distance: 2.7686853
@@ -3125,8 +3126,8 @@ MonoBehaviour:
     - Mode: 0
       Tension: 0.5
       DistanceToInterpolation:
-      - Distance: 0
-        T: 0
+      - Distance: -1
+        T: -1
       - Distance: 2.1438308
         T: 0.03448276
       - Distance: 4.330258
@@ -3188,8 +3189,8 @@ MonoBehaviour:
     - Mode: 2
       Tension: 0.5
       DistanceToInterpolation:
-      - Distance: 0
-        T: 0
+      - Distance: -1
+        T: -1
       - Distance: 4.2002954
         T: 0.03448276
       - Distance: 7.987671
@@ -3251,8 +3252,8 @@ MonoBehaviour:
     - Mode: 0
       Tension: 0.5
       DistanceToInterpolation:
-      - Distance: 0
-        T: 0
+      - Distance: -1
+        T: -1
       - Distance: 2.2103605
         T: 0.03448276
       - Distance: 4.402424
@@ -3314,8 +3315,8 @@ MonoBehaviour:
     - Mode: 2
       Tension: 0.5
       DistanceToInterpolation:
-      - Distance: 0
-        T: 0
+      - Distance: -1
+        T: -1
       - Distance: 2.923774
         T: 0.03448276
       - Distance: 5.696708
@@ -3377,8 +3378,8 @@ MonoBehaviour:
     - Mode: 2
       Tension: 0.5
       DistanceToInterpolation:
-      - Distance: 0
-        T: 0
+      - Distance: -1
+        T: -1
       - Distance: 1.5279746
         T: 0.03448276
       - Distance: 3.419302
@@ -3440,8 +3441,8 @@ MonoBehaviour:
     - Mode: 2
       Tension: 0.5
       DistanceToInterpolation:
-      - Distance: 0
-        T: 0
+      - Distance: -1
+        T: -1
       - Distance: 2.4194746
         T: 0.03448276
       - Distance: 4.7445292
@@ -3503,8 +3504,8 @@ MonoBehaviour:
     - Mode: 0
       Tension: 0.5
       DistanceToInterpolation:
-      - Distance: 0
-        T: 0
+      - Distance: -1
+        T: -1
       - Distance: 2.5223644
         T: 0.03448276
       - Distance: 5.14347
@@ -3566,8 +3567,8 @@ MonoBehaviour:
     - Mode: 2
       Tension: 0.5
       DistanceToInterpolation:
-      - Distance: 0
-        T: 0
+      - Distance: -1
+        T: -1
       - Distance: 2.131778
         T: 0.03448276
       - Distance: 4.646259
@@ -3629,8 +3630,8 @@ MonoBehaviour:
     - Mode: 0
       Tension: 0.5
       DistanceToInterpolation:
-      - Distance: 0
-        T: 0
+      - Distance: -1
+        T: -1
       - Distance: 1.3176631
         T: 0.03448276
       - Distance: 2.5955586
@@ -3692,8 +3693,8 @@ MonoBehaviour:
     - Mode: 0
       Tension: 0.5
       DistanceToInterpolation:
-      - Distance: 0
-        T: 0
+      - Distance: -1
+        T: -1
       - Distance: 2.405786
         T: 0.03448276
       - Distance: 4.971445
@@ -3770,14 +3771,29 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 232358543}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -1.4102936, y: 0, z: -5.8253784}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_Father: {fileID: 2040491096}
+  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &232358546
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 232358543}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aef0ed3106b1c7a46bbe60fb027a253d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interpolation: 0.5
+  marker: {fileID: 1625013543}
+  visuals: {fileID: 1308646548}
 --- !u!1001 &248531150
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7447,7 +7463,7 @@ GameObject:
   m_Component:
   - component: {fileID: 807630480}
   m_Layer: 6
-  m_Name: Track
+  m_Name: Visuals
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7460,7 +7476,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 807630479}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -7571,8 +7587,8 @@ Transform:
   - {fileID: 1005608433}
   - {fileID: 62661301}
   - {fileID: 128440656}
-  m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_Father: {fileID: 2040491096}
+  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &819568185
 PrefabInstance:
@@ -11340,6 +11356,89 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 20, y: 0, z: 9.999977}
   m_Center: {x: 0, y: 0, z: 4.9999914}
+--- !u!1 &1308646545
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1308646548}
+  - component: {fileID: 1308646547}
+  - component: {fileID: 1308646546}
+  m_Layer: 0
+  m_Name: Position
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!23 &1308646546
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1308646545}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: f1e38594f14520c48bc546f3a41f4f56, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &1308646547
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1308646545}
+  m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &1308646548
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1308646545}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -26.88822, y: -98.5, z: 2.3310165}
+  m_LocalScale: {x: 10, y: 10, z: 10}
+  m_ConstrainProportionsScale: 1
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1325770225
 GameObject:
   m_ObjectHideFlags: 0
@@ -12958,6 +13057,89 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1576894994}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1625013540
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1625013543}
+  - component: {fileID: 1625013542}
+  - component: {fileID: 1625013541}
+  m_Layer: 0
+  m_Name: Marker
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!23 &1625013541
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1625013540}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 6af20d21fdb3e9846be9fcc5368045e6, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &1625013542
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1625013540}
+  m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &1625013543
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1625013540}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -26.88822, y: -98.5, z: 2.3310165}
+  m_LocalScale: {x: 10, y: 10, z: 10}
+  m_ConstrainProportionsScale: 1
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1642865091
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15677,7 +15859,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2034360165
 PrefabInstance:
@@ -15812,6 +15994,8 @@ Transform:
   m_Children:
   - {fileID: 1765576940}
   - {fileID: 1280238038}
+  - {fileID: 807630480}
+  - {fileID: 232358545}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -16528,7 +16712,7 @@ PrefabInstance:
     - target: {fileID: 4654247667062173793, guid: a47a9a9b63d5b3544992daecd47b7190,
         type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4654247667062173793, guid: a47a9a9b63d5b3544992daecd47b7190,
         type: 3}

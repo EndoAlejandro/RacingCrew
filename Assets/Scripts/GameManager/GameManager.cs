@@ -7,61 +7,63 @@ using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 
 
-namespace InGame {
-	public class GameManager : MonoBehaviour
-	{
-		public static GameManager Instance;
-		[SerializeField] private AllCupsAssets allCupsAssets;
+namespace InGame
+{
+    public class GameManager : MonoBehaviour
+    {
+        public static GameManager Instance;
+        [SerializeField] private AllCupsAssets allCupsAssets;
 
-		private PlayerInputManager _playerInputManager;
+        private PlayerInputManager _playerInputManager;
 
-		private void Awake()
-		{
-			Instance = this;
-		}
+        private void Awake()
+        {
+            Instance = this;
+        }
 
-		private void Start()
-		{
-			_playerInputManager = GetComponent<PlayerInputManager>();
+        private void Start()
+        {
+            _playerInputManager = GetComponent<PlayerInputManager>();
 
-			for (int i = 0; i < PlayerPrefs.GetInt("NumberOfPlayers"); i++)
-			{
-				_playerInputManager.JoinPlayer();
-			}
+            var amount = PlayerPrefs.GetInt("NumberOfPlayers");
+            for (int i = 0; i < amount; i++)
+            {
+                _playerInputManager.JoinPlayer();
+            }
 
-			_playerInputManager.DisableJoining();
+            _playerInputManager.DisableJoining();
+        }
 
-		}
+        public void LoadNextScene()
+        {
+            int index = 0;
 
-		public void LoadNextScene() {
-			int index = 0;
+            for (int i = 0; i < allCupsAssets.cups.Length; i++)
+            {
+                if (allCupsAssets.cups[i].cupID == PlayerPrefs.GetInt("CurrentCupID"))
+                {
+                    index = i;
+                    break;
+                }
+            }
 
-			for (int i = 0; i < allCupsAssets.cups.Length; i++)
-			{
-				if (allCupsAssets.cups[i].cupID == PlayerPrefs.GetInt("CurrentCupID"))
-				{
-					index = i;
-					break;
-				}
-			}
-			PlayerPrefs.SetInt("CurrentSpeedway", PlayerPrefs.GetInt("CurrentSpeedway")+1);
-			SceneManager.LoadScene(allCupsAssets.cups[index].speedwayNames[PlayerPrefs.GetInt("CurrentSpeedway")]);
-		}
+            PlayerPrefs.SetInt("CurrentSpeedway", PlayerPrefs.GetInt("CurrentSpeedway") + 1);
+            SceneManager.LoadScene(allCupsAssets.cups[index].speedwayNames[PlayerPrefs.GetInt("CurrentSpeedway")]);
+        }
 
-		public void SetGlobalScore(int ID, int score)
-		{
+        public void SetGlobalScore(int ID, int score)
+        {
+            if (!PlayerPrefs.HasKey("Score" + ID))
+            {
+                PlayerPrefs.SetInt("Score" + ID, 0);
+            }
 
-			if (!PlayerPrefs.HasKey("Score" + ID))
-			{
-				PlayerPrefs.SetInt("Score" + ID, 0);
-			}
-			PlayerPrefs.SetInt("Score" + ID, PlayerPrefs.GetInt("Score" + ID) + score);
+            PlayerPrefs.SetInt("Score" + ID, PlayerPrefs.GetInt("Score" + ID) + score);
+        }
 
-		}
-
-		public int GetNumberOfPlayers()
-		{
-			return PlayerPrefs.GetInt("NumberOfPlayers");
-		}
-	}
+        public int GetNumberOfPlayers()
+        {
+            return PlayerPrefs.GetInt("NumberOfPlayers");
+        }
+    }
 }

@@ -87,7 +87,7 @@ namespace Menu {
 		public void OnSelect()
 		{
 
-			//Guarda la información del jugador y el index del carro que eligió
+			//Guarda la informaciÃ³n del jugador y el index del carro que eligiÃ³
 			PlayerPrefs.SetInt("Player" + _id.ToString(),_index);
 
 			_selection = false;

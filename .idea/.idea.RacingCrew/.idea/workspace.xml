@@ -6,11 +6,15 @@
   <component name="ChangeListManager">
     <list default="true" id="89d28beb-5f3b-4b70-bf77-826042fca131" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.RacingCrew/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.RacingCrew/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/TransparentTest.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/TransparentTest.mat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/TestVehicles.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/TestVehicles.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/CarDataExample.preset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/CarDataExample.preset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/Muscle.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/Muscle.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CarComponents/PlayerControllerInput.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CarComponents/PlayerControllerInput.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameManager/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameManager/GameManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Menu/MenuManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Menu/MenuManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Menu/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Menu/Player.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/RaceComponents/TrackManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/RaceComponents/TrackManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2022.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2022.dwlt" afterDir="false" />
     </list>
@@ -28,7 +32,9 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/d44b17e136d09081da1e8fd0e8c83fde60e11818b9f2442d7ed8cb733fae895e/System.Collections.Generic.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/CarComponents/WheelPhysics.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/RaceComponents/CheckPoint.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/RaceComponents/NavigationRoute.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.5.1/InputSystem/Plugins/PlayerInput/PlayerInput.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.5.1/InputSystem/Plugins/PlayerInput/PlayerInputManager.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.scriptablebuildpipeline@1.21.5/Tests/Editor/ContextObjectSerializationTests.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="ProjectId" id="2Qc8Qati2gc73ctkMXjUIKqmzqt" />
@@ -45,7 +51,7 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;ai-test&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;track-management&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -126,6 +132,8 @@
       <workItem from="1687168549913" duration="15298000" />
       <workItem from="1687246406865" duration="5310000" />
       <workItem from="1687281333928" duration="666000" />
+      <workItem from="1687362462870" duration="4145000" />
+      <workItem from="1687453382886" duration="2993000" />
     </task>
     <servers />
   </component>

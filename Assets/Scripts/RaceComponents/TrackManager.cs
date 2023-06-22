@@ -5,7 +5,7 @@ using System.Linq;
 using CarComponents;
 using CustomUtils;
 using UnityEngine;
-using VehicleComponents;
+using UnityEngine.Splines;
 using Random = UnityEngine.Random;
 
 namespace RaceComponents
