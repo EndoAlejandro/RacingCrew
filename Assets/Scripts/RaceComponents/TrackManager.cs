@@ -13,6 +13,7 @@ namespace RaceComponents
     public class TrackManager : Singleton<TrackManager>
     {
         public event Action OnGo;
+        public event Action OnRaceOver;
 
         [SerializeField] private Car carPrefab;
         [SerializeField] private CarData carData;
