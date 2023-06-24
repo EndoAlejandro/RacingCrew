@@ -43,7 +43,7 @@ MonoBehaviour:
       m_RotationOrder: 4
     grip: 0.1
     tireMass: 0.2
-    turnRadius: {x: 200, y: 200}
+    turnRadius: {x: 20, y: 50}
     rearTrack: 2.5
     wheelBase: 4.62
     suspensionForce: 150
