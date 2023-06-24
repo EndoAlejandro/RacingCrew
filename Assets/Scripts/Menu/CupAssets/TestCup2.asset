@@ -19,8 +19,8 @@ MonoBehaviour:
   - {fileID: 21300000, guid: c1dd7fd8b8c90cb4a8115018e1cfce24, type: 3}
   - {fileID: 21300000, guid: 70559f998bbe3904b99b913a14cf37b3, type: 3}
   - {fileID: 21300000, guid: 4f62343c567386647b7eb049040fadd0, type: 3}
-  sceneName:
-  - scene1
-  - scene2
-  - scene3
-  - scene4
+  speedwayNames:
+  - Multiplayer
+  - Scene2
+  - Scene3
+  - Scene4
