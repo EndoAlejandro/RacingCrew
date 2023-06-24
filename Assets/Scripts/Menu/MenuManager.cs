@@ -3,45 +3,67 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Audio;
+using UnityEngine.InputSystem;
 using UnityEngine.Localization.Settings;
 using UnityEngine.UI;
+using CustomUtils;
+using InGame;
 
 namespace Menu {
-	public class MenuManager : MonoBehaviour
+	public class MenuManager : Singleton<MenuManager>
 	{
+
+		[Header("PLAYER INPUT MANAGER")]
+		[SerializeField] private PlayerInputManager playerInputManager;
+
+		[Header("COPAS")]
+		[SerializeField] private AllCupsAssets allCupsAssets;
+
 		[Header("SETTINGS"), Space(3)]
-		[SerializeField] GameObject _screenMainMenu;
-		[SerializeField] GameObject _screenSelectMode;
-		[SerializeField] GameObject _screenSelectCup;
-		[SerializeField] GameObject _screenLobby;
-		[SerializeField] GameObject _screenSettings;
-		[SerializeField] GameObject _screenCredits;
+		[SerializeField] private GameObject screenMainMenu;
+		[SerializeField] private GameObject screenSelectMode;
+		[SerializeField] private GameObject screenSelectCup;
+		[SerializeField] private GameObject screenLobby;
+		[SerializeField] private GameObject screenSettings;
+		[SerializeField] private GameObject screenCredits;
 		[Space(5)]
 		[Header("Audio")]
-		[SerializeField] AudioMixer audioMixer;
-		[SerializeField] Slider sliderMusicVolume;
-		[SerializeField] Slider sliderSoundFXVolume;
-		[SerializeField] Slider sliderGlobalVolume;
+		[SerializeField] private AudioMixer audioMixer;
+		[SerializeField] private Slider sliderMusicVolume;
+		[SerializeField] private Slider sliderSoundFXVolume;
+		[SerializeField] private Slider sliderGlobalVolume;
 		[Space(5)]
 		[Header("Language")]
-		[SerializeField] TextMeshProUGUI _languageText;
+		[SerializeField] private TextMeshProUGUI languageText;
 		[Space(5)]
 		[Header("Resolution")]
-		[SerializeField] TMP_Dropdown resolutionDropdown;
-		[SerializeField] Toggle fullscreenToggle;
-
-
-		//Sound FX
-		private AudioSource audioSource;
+		[SerializeField] private TMP_Dropdown resolutionDropdown;
+		[SerializeField] private Toggle fullscreenToggle;
 
 		//LANGUAGE
 		private int _currentLocaleIndex;
 
-		private void Awake()
-		{
-			audioSource = GameObject.FindGameObjectWithTag("SoundFX").GetComponent<AudioSource>();
+		//CUPS
+		private int _selectedCupIndex;
 
-			//Comprueba si hay información guardada sobre volumen, si no hay crea info por defecto 
+		//Player ready
+		private int _playersReady;
+
+		public int PlayersReady {
+			get { return _playersReady; }
+			set { 
+				_playersReady = value;
+				CheckNumberOfPlayers();
+			}
+		}
+
+		public int SelectedCupIndex { set { _selectedCupIndex = value; } }
+
+		protected override void Awake()
+		{
+			base.Awake();
+
+			//Comprueba si hay informaciï¿½n guardada sobre volumen, si no hay crea info por defecto 
 			if (!PlayerPrefs.HasKey("MusicVolume"))
 			{
 				PlayerPrefs.SetFloat("MusicVolume", 1);
@@ -63,21 +85,25 @@ namespace Menu {
 			OnGlobalVolumeChange(PlayerPrefs.GetFloat("GlobalVolume"));
 			sliderGlobalVolume.value = PlayerPrefs.GetFloat("GlobalVolume");
 
-			if (!PlayerPrefs.HasKey("Language")) {
+			if (!PlayerPrefs.HasKey("Language"))
+			{
 				PlayerPrefs.SetInt("Language", 0);
 			}
 
 			//Personaliza el dropdown con las opciones disponibles
 			resolutionDropdown.options.Clear();
-			for (int i = 0; i < Screen.resolutions.Length; ++i) {
+			for (int i = 0; i < Screen.resolutions.Length; ++i)
+			{
 				resolutionDropdown.options.Add(new TMP_Dropdown.OptionData(Screen.resolutions[i].width + " x " + Screen.resolutions[i].height));
 
-				if (Screen.width == Screen.resolutions[i].width && Screen.height == Screen.resolutions[i].height) {
+				if (Screen.width == Screen.resolutions[i].width && Screen.height == Screen.resolutions[i].height)
+				{
 					resolutionDropdown.value = i;
 				}
 			}
 
-			if (fullscreenToggle.isOn) {
+			if (fullscreenToggle.isOn)
+			{
 				Screen.fullScreenMode = FullScreenMode.FullScreenWindow;
 			}
 		}
@@ -89,31 +115,43 @@ namespace Menu {
 			UpdateLocale();
 		}
 
+		public void CheckNumberOfPlayers() {
+			if (_playersReady == playerInputManager.playerCount)
+			{
+				ChangeScene();
+			}
+		}
+
+		public void ChangeScene() {
+			GameManager.Instance.NumberOfPlayers = playerInputManager.playerCount;
+			GameManager.Instance.LoadNextSpeedway();
+		}
+
 		#region INPUT SYSTEM
 		public void OnBack() {
-			if (_screenSelectMode.activeSelf) { 
-				_screenSelectMode.SetActive(false);
-				_screenMainMenu.SetActive(true);
+			if (screenSelectMode.activeSelf) { 
+				screenSelectMode.SetActive(false);
+				screenMainMenu.SetActive(true);
 			}
 
-			if (_screenSelectCup.activeSelf) {
-				_screenSelectCup.SetActive(false);
-				_screenSelectMode.SetActive(true);
+			if (screenSelectCup.activeSelf) {
+				screenSelectCup.SetActive(false);
+				screenSelectMode.SetActive(true);
 			}
 
-			if (_screenLobby.activeSelf) { 
-				_screenLobby.SetActive(false);
-				_screenSelectCup.SetActive(true);
+			if (screenLobby.activeSelf) { 
+				screenLobby.SetActive(false);
+				screenSelectCup.SetActive(true);
 			}
 
-			if (_screenSettings.activeSelf) { 
-				_screenSettings.SetActive(false);
-				_screenMainMenu.SetActive(true);
+			if (screenSettings.activeSelf) { 
+				screenSettings.SetActive(false);
+				screenMainMenu.SetActive(true);
 			}
 
-			if (_screenCredits.activeSelf) {
-				_screenCredits.SetActive(false);
-				_screenMainMenu.SetActive(true);
+			if (screenCredits.activeSelf) {
+				screenCredits.SetActive(false);
+				screenMainMenu.SetActive(true);
 			}
 		}
 
@@ -144,10 +182,10 @@ namespace Menu {
 			switch (_currentLocaleIndex)
 			{
 				case 0:
-					_languageText.text = "English";
+					languageText.text = "English";
 					break;
 				case 1:
-					_languageText.text = "Español";
+					languageText.text = "Espaï¿½ol";
 					break;
 			}
 		}

@@ -6,12 +6,12 @@ namespace CarComponents
     public class Car : MonoBehaviour
     {
         [SerializeField] private CarData defaultData;
-        private Racer _racer;
+        public Racer Racer { get; private set; }
         private IControllerInput _controller;
         public Vector3 Input { get; private set; }
         public bool CanGo { get; private set; }
 
-        public CarStats Stats => _racer?.CarData != null ? _racer.CarData.Stats : defaultData.Stats;
+        public CarStats Stats => Racer?.CarData != null ? Racer.CarData.Stats : defaultData.Stats;
 
         private void Awake() => Input = new Vector3();
 
@@ -22,8 +22,8 @@ namespace CarComponents
             else
                 CanGo = true;
 
-            _racer = racer;
-            _controller = _racer.ControllerInput;
+            Racer = racer;
+            _controller = Racer.ControllerInput;
             Instantiate(racer.Model, transform);
         }
 
