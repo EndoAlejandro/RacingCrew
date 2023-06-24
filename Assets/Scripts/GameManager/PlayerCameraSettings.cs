@@ -2,20 +2,20 @@ using Cinemachine;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using CustomUtils;
 
 namespace InGame {
-	public class PlayerCameraSettings : MonoBehaviour
+	public class PlayerCameraSettings : Singleton<PlayerCameraSettings>
 	{
-		public static PlayerCameraSettings Instance;
 
-		[SerializeField] CinemachineVirtualCamera[] cameras;
-		[SerializeField] GameObject target;
+		[SerializeField] private CinemachineVirtualCamera[] cameras;
+		[SerializeField] private GameObject target;
 
 		private int _currentCameraIndex = 0;
 
-		private void Awake()
+		protected override void Awake()
 		{
-			Instance = this;
+			base.Awake();
 			SetTarget(GameObject.FindGameObjectWithTag("Player"));
 		}
 
