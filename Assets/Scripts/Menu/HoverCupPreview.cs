@@ -1,16 +1,14 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using UnityEngine.EventSystems;
-using UnityEngine.Rendering.Universal;
+using InGame;
 
 namespace Menu {
 	public class HoverCupPreview : MonoBehaviour, IPointerEnterHandler, ISelectHandler
 	{
 		[Header("Assets")]
-		[SerializeField] CupSelectionAssets cupSelectionAssets;
+		[SerializeField] private CupSelectionAssets cupSelectionAssets;
 
 		[Space(10)]
 		[Header("User Interface")]
@@ -34,7 +32,7 @@ namespace Menu {
 			UpdateCupInfoInScreen();
 		}
 
-		//En la selección de copas, actuliza la información de acuerdo a la copa seleccionada
+		//En la selección de copas, actualiza la información de acuerdo a la copa seleccionada
 		public void UpdateCupInfoInScreen() {
 			_cupNameText.text = cupSelectionAssets.cupName;
 
@@ -45,7 +43,7 @@ namespace Menu {
 
 		//Guardamos la información de la copa seleccionada
 		public void SaveSelectedCupInMemory() {
-			PlayerPrefs.SetInt("CurrentCupID", cupSelectionAssets.cupID);
+			GameManager.Instance.CurrentCup = cupSelectionAssets.cupID;
 		}
 
 		//Implementación de interfaces

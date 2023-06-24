@@ -1,3 +1,5 @@
+using CarComponents;
+using InGame;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -9,16 +11,17 @@ namespace Menu {
 	{
 		public static int playerID = 0;
 
-		[SerializeField] TextMeshProUGUI playerIDText;
-		[SerializeField] Transform carTransform;
-		[SerializeField] CarAssets carAssets;
-		[SerializeField] Button[] buttons;
+		[SerializeField] private TextMeshProUGUI playerIDText;
+		[SerializeField] private Transform carTransform;
+		[SerializeField] private CarData carData;
+		[SerializeField] private Button[] buttons;
 
 
 		private int _id;
 		private List<GameObject> _carList = new List<GameObject>();
 		private int _index = 0;
 		private bool _selection = true;
+		private bool _readyToSelection = false;
 
 		private Transform _parent;
 
@@ -34,8 +37,9 @@ namespace Menu {
 			playerIDText.text = "PLAYER " + _id.ToString();
 
 
-			for (int i = 0; i < carAssets.cars.Length; i++) {
-				GameObject car = Instantiate(carAssets.cars[i]);
+			for (int i = 0; i < carData.Models.Length; i++) {
+				GameObject car = Instantiate(carData.Models[i],new Vector3(0,99,-60), Quaternion.Euler(23,122,-32));
+				car.transform.localScale= new Vector3(0.45f,0.45f,0.45f);
 				car.transform.parent = carTransform;
 				car.transform.localPosition = Vector3.zero;
 				car.SetActive(false);
@@ -86,18 +90,23 @@ namespace Menu {
 
 		public void OnSelect()
 		{
+			if (playerID == 1 && _readyToSelection)
+			{
+				//Guarda el index del coche que el jugador selecciono
+				GameManager.Instance.SetPlayerCarData(playerID,_index);
 
-			//Guarda la información del jugador y el index del carro que eligió
-			PlayerPrefs.SetInt("Player" + _id.ToString(),_index);
+				_selection = false;
 
-			_selection = false;
+				for (int i = 0; i < buttons.Length; ++i)
+				{
+					buttons[i].interactable = false;
+				}
 
-			for (int i = 0; i < buttons.Length;++i) {
-				buttons[i].interactable = false;
+				MenuManager.Instance.PlayersReady++;
 			}
-
-			MenuManager.Instance.PlayersReady++;
-
+			else { 
+				_readyToSelection= true;
+			}
 		}
 		#endregion
 

@@ -2,21 +2,21 @@ using Menu;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using CustomUtils;
 
 namespace InGame {
-	public class PlayerCarSelection : MonoBehaviour
+	public class PlayerCarSelection : Singleton<PlayerCarSelection>
 	{
-		public static PlayerCarSelection Instance;
 		public static int playerID = 0;
-		[SerializeField] CarAssets carAssets;
+		[SerializeField] private CarAssets carAssets;
 
 		private int _id;
 
-
-		private void Awake()
+		protected override void Awake()
 		{
-			Instance = this;
+			base.Awake();
 		}
+
 
 		private void Start()
 		{

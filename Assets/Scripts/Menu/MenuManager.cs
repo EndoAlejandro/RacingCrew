@@ -6,43 +6,39 @@ using UnityEngine.Audio;
 using UnityEngine.InputSystem;
 using UnityEngine.Localization.Settings;
 using UnityEngine.UI;
-using UnityEngine.SceneManagement;
+using CustomUtils;
+using InGame;
 
 namespace Menu {
-	public class MenuManager : MonoBehaviour
+	public class MenuManager : Singleton<MenuManager>
 	{
-		public static MenuManager Instance;
 
 		[Header("PLAYER INPUT MANAGER")]
-		[SerializeField] PlayerInputManager playerInputManager;
+		[SerializeField] private PlayerInputManager playerInputManager;
 
 		[Header("COPAS")]
-		[SerializeField] AllCupsAssets allCupsAssets;
+		[SerializeField] private AllCupsAssets allCupsAssets;
 
 		[Header("SETTINGS"), Space(3)]
-		[SerializeField] GameObject screenMainMenu;
-		[SerializeField] GameObject screenSelectMode;
-		[SerializeField] GameObject screenSelectCup;
-		[SerializeField] GameObject screenLobby;
-		[SerializeField] GameObject screenSettings;
-		[SerializeField] GameObject screenCredits;
+		[SerializeField] private GameObject screenMainMenu;
+		[SerializeField] private GameObject screenSelectMode;
+		[SerializeField] private GameObject screenSelectCup;
+		[SerializeField] private GameObject screenLobby;
+		[SerializeField] private GameObject screenSettings;
+		[SerializeField] private GameObject screenCredits;
 		[Space(5)]
 		[Header("Audio")]
-		[SerializeField] AudioMixer audioMixer;
-		[SerializeField] Slider sliderMusicVolume;
-		[SerializeField] Slider sliderSoundFXVolume;
-		[SerializeField] Slider sliderGlobalVolume;
+		[SerializeField] private AudioMixer audioMixer;
+		[SerializeField] private Slider sliderMusicVolume;
+		[SerializeField] private Slider sliderSoundFXVolume;
+		[SerializeField] private Slider sliderGlobalVolume;
 		[Space(5)]
 		[Header("Language")]
-		[SerializeField] TextMeshProUGUI languageText;
+		[SerializeField] private TextMeshProUGUI languageText;
 		[Space(5)]
 		[Header("Resolution")]
-		[SerializeField] TMP_Dropdown resolutionDropdown;
-		[SerializeField] Toggle fullscreenToggle;
-
-
-		//Sound FX
-		private AudioSource _audioSource;
+		[SerializeField] private TMP_Dropdown resolutionDropdown;
+		[SerializeField] private Toggle fullscreenToggle;
 
 		//LANGUAGE
 		private int _currentLocaleIndex;
@@ -57,21 +53,15 @@ namespace Menu {
 			get { return _playersReady; }
 			set { 
 				_playersReady = value;
-				Debug.Log("Current Number of Players: " + _playersReady);
-				if (_playersReady == playerInputManager.playerCount) {
-					ChangeScene();
-				}
+				CheckNumberOfPlayers();
 			}
 		}
 
 		public int SelectedCupIndex { set { _selectedCupIndex = value; } }
 
-
-		private void Awake()
+		protected override void Awake()
 		{
-			Instance= this;
-
-			_audioSource = GameObject.FindGameObjectWithTag("SoundFX").GetComponent<AudioSource>();
+			base.Awake();
 
 			//Comprueba si hay informaci�n guardada sobre volumen, si no hay crea info por defecto 
 			if (!PlayerPrefs.HasKey("MusicVolume"))
@@ -95,21 +85,25 @@ namespace Menu {
 			OnGlobalVolumeChange(PlayerPrefs.GetFloat("GlobalVolume"));
 			sliderGlobalVolume.value = PlayerPrefs.GetFloat("GlobalVolume");
 
-			if (!PlayerPrefs.HasKey("Language")) {
+			if (!PlayerPrefs.HasKey("Language"))
+			{
 				PlayerPrefs.SetInt("Language", 0);
 			}
 
 			//Personaliza el dropdown con las opciones disponibles
 			resolutionDropdown.options.Clear();
-			for (int i = 0; i < Screen.resolutions.Length; ++i) {
+			for (int i = 0; i < Screen.resolutions.Length; ++i)
+			{
 				resolutionDropdown.options.Add(new TMP_Dropdown.OptionData(Screen.resolutions[i].width + " x " + Screen.resolutions[i].height));
 
-				if (Screen.width == Screen.resolutions[i].width && Screen.height == Screen.resolutions[i].height) {
+				if (Screen.width == Screen.resolutions[i].width && Screen.height == Screen.resolutions[i].height)
+				{
 					resolutionDropdown.value = i;
 				}
 			}
 
-			if (fullscreenToggle.isOn) {
+			if (fullscreenToggle.isOn)
+			{
 				Screen.fullScreenMode = FullScreenMode.FullScreenWindow;
 			}
 		}
@@ -121,20 +115,16 @@ namespace Menu {
 			UpdateLocale();
 		}
 
-		public void ChangeScene() {
-			int index = 0;
-
-			for (int i = 0; i < allCupsAssets.cups.Length;i++) {
-				if (allCupsAssets.cups[i].cupID == PlayerPrefs.GetInt("CurrentCupID")) { 
-					index= i;
-					break;
-				}
+		public void CheckNumberOfPlayers() {
+			if (_playersReady == playerInputManager.playerCount)
+			{
+				ChangeScene();
 			}
+		}
 
-			PlayerPrefs.SetInt("CurrentSpeedway",0);
-			PlayerPrefs.SetInt("NumberOfPlayers", playerInputManager.playerCount);
-			SceneManager.LoadScene(allCupsAssets.cups[index].speedwayNames[PlayerPrefs.GetInt("CurrentSpeedway")]);
-
+		public void ChangeScene() {
+			GameManager.Instance.NumberOfPlayers = playerInputManager.playerCount;
+			GameManager.Instance.LoadNextSpeedway();
 		}
 
 		#region INPUT SYSTEM
