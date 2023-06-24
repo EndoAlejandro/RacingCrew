@@ -135,7 +135,7 @@ Preset:
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: stats.turnRadius.y
-    value: 30
+    value: 60
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: stats.rearTrack
