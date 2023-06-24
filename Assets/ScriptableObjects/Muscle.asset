@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Muscle
   m_EditorClassIdentifier: 
   stats:
-    maxSpeed: 150
-    horsePower: 250
+    maxSpeed: 80
+    horsePower: 300
     reverseAccelerationScale: 0.75
     breakForce: 50
     accelerationCurve:
@@ -41,9 +41,9 @@ MonoBehaviour:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    grip: 0.1
+    grip: 0.3
     tireMass: 0.2
-    turnRadius: {x: 20, y: 50}
+    turnRadius: {x: 5, y: 50}
     rearTrack: 2.5
     wheelBase: 4.62
     suspensionForce: 150
