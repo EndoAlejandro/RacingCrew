@@ -32,6 +32,7 @@ namespace RaceComponents
         public void SetScore(int value) => Score = value;
         public void SetControllerInput(IControllerInput value) => ControllerInput = value;
         public void SetCar(Car value) => Car = value;
+        public void SetCarModel(GameObject model) => Model = model;
 
         public bool Equals(Racer other) => other != null && Id.Equals(other.Id);
 

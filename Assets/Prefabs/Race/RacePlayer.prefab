@@ -484,8 +484,8 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: be5a0906-d13f-473f-a4f5-20cc153563f4
     m_ActionName: Vehicle/Turning[/XInputControllerWindows/leftStick/x,/Keyboard/a,/Keyboard/d]
-  m_NeverAutoSwitchControlSchemes: 0
-  m_DefaultControlScheme: 
+  m_NeverAutoSwitchControlSchemes: 1
+  m_DefaultControlScheme: Gamepad
   m_DefaultActionMap: Vehicle
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 4278178568525754991}
