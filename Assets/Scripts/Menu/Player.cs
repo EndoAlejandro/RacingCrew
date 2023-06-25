@@ -90,7 +90,7 @@ namespace Menu {
 
 		public void OnSelect()
 		{
-			if (playerID == 1 && _readyToSelection)
+			if (_readyToSelection)
 			{
 				//Guarda el index del coche que el jugador selecciono
 				GameManager.Instance.SetPlayerCarData(playerID,_index);
