@@ -4294,6 +4294,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 42025cef09496bd4d9f9fb7d95b5abe9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fixedRacersAmount: 5
+  defaultCarData: {fileID: 11400000, guid: 2755c468669a79d419fe33bbd2a03cca, type: 2}
   allCupsAssets: {fileID: 11400000, guid: a939f91bd81e2164eafec06dd422afe3, type: 2}
 --- !u!1 &619460116
 GameObject:

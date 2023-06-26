@@ -5,8 +5,8 @@ namespace CarComponents
 {
     public class PlayerControllerInput : MonoBehaviour, IControllerInput
     {
-        private PlayerInput _playerInput;
-        private void Awake() => _playerInput = GetComponent<PlayerInput>();
+        public PlayerInput PlayerInput { get; private set; }
+        private void Awake() => PlayerInput = GetComponent<PlayerInput>();
         public float Acceleration { get; private set; }
         public float Break { get; private set; }
         public float Turn { get; private set; }
