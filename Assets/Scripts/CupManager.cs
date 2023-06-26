@@ -76,7 +76,9 @@ public class CupManager : Singleton<CupManager>
 
     private void OnLoadingBegin()
     {
-        CreatePlayersInput();
+        // CreatePlayersInput();
+        // var playerInput = PlayersManager.Instance.GetPlayer(0);
+        
         loadingCanvas.gameObject.SetActive(true);
         loadingCamera.enabled = true;
     }
