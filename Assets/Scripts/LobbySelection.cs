@@ -1,28 +1,24 @@
 using System.Collections.Generic;
 using Menu;
 using UnityEngine;
-using UnityEngine.InputSystem;
+using UnityEngine.Serialization;
 
 public class LobbySelection : MonoBehaviour
 {
-    [SerializeField] private Player playerPrefab;
+    [FormerlySerializedAs("playerPrefab")] [SerializeField] private LobbyPlayer lobbyPlayerPrefab;
 
-    private Dictionary<int, Player> _players = new();
+    private Dictionary<int, LobbyPlayer> _players = new();
 
     private void OnEnable()
     {
         PlayersManager.Instance.OnPlayerJoined += PlayersManagerOnPlayerJoined;
     }
 
-    private void PlayersManagerOnPlayerJoined(PlayerInput playerInput)
+    private void PlayersManagerOnPlayerJoined(PlayerInputSingle playerInput)
     {
-        if (!_players.ContainsKey(playerInput.playerIndex))
-        {
-            var player = Instantiate(playerPrefab, transform);
-            _players.Add(playerInput.playerIndex, player);
-        }
+        if (_players.ContainsKey(playerInput.Input.playerIndex)) return;
 
-        /*if (_players[playerInput.playerIndex] == null)
-            _players[playerInput.playerIndex] = Instantiate(playerPrefab, transform);*/
+        var player = Instantiate(lobbyPlayerPrefab, transform);
+        _players.Add(playerInput.Input.playerIndex, player);
     }
 }

@@ -145,7 +145,7 @@ GameObject:
   - component: {fileID: 3152141927447460639}
   - component: {fileID: 4813405088551854567}
   m_Layer: 5
-  m_Name: Txt_Player
+  m_Name: PlayerName_Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -278,7 +278,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4172760515225368378}
   m_Layer: 5
-  m_Name: Transform_Car
+  m_Name: CarModelContainer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -446,12 +446,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3626567368470572958}
-  - component: {fileID: 5386707471666936838}
   - component: {fileID: 8984268402179376410}
   - component: {fileID: 4440988952873012391}
   - component: {fileID: 6330068504056537606}
   m_Layer: 5
-  m_Name: PlayerPrefab
+  m_Name: LobbyPlayer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -481,37 +480,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &5386707471666936838
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5224043477836712279}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Actions: {fileID: -944628639613478452, guid: 20b61b1a17e6e544bb0129a10c23141b,
-    type: 3}
-  m_NotificationBehavior: 0
-  m_UIInputModule: {fileID: 0}
-  m_DeviceLostEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_DeviceRegainedEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_ControlsChangedEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_ActionEvents: []
-  m_NeverAutoSwitchControlSchemes: 0
-  m_DefaultControlScheme: 
-  m_DefaultActionMap: MainMenu
-  m_SplitScreenIndex: -1
-  m_Camera: {fileID: 0}
 --- !u!222 &8984268402179376410
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -532,12 +500,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d2c06fe90ebc85d458f93e053f9c0db9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerIDText: {fileID: 4813405088551854567}
-  carTransform: {fileID: 4172760515225368378}
+  playerDisplayText: {fileID: 4813405088551854567}
+  modelsContainer: {fileID: 4172760515225368378}
   carData: {fileID: 11400000, guid: 2755c468669a79d419fe33bbd2a03cca, type: 2}
-  buttons:
-  - {fileID: 7774623356199470198}
-  - {fileID: 1456201690873392887}
 --- !u!114 &6330068504056537606
 MonoBehaviour:
   m_ObjectHideFlags: 0

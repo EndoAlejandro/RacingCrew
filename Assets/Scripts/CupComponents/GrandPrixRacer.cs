@@ -1,4 +1,4 @@
-namespace InGame
+namespace CupComponents
 {
     public class GrandPrixRacer
     {

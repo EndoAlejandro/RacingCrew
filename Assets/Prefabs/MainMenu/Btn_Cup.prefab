@@ -9,7 +9,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1983751463380684553}
-  - component: {fileID: 8156444011717910040}
   - component: {fileID: 6492594644499971421}
   - component: {fileID: 5389544992363159657}
   - component: {fileID: 3820926696929196111}
@@ -42,19 +41,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 701.24, y: 70.9}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &8156444011717910040
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6061309776444371996}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 20da3f756b17f9c40bd0d740a4c13e9c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  button: {fileID: 3677490426947661901}
 --- !u!114 &6492594644499971421
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -68,8 +54,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cupSelectionAssets: {fileID: 11400000, guid: 36081bb1a389b6a45b1e15043532d011, type: 2}
-  _cupNameText: {fileID: 0}
-  _racetracksImage:
+  racetracksImage:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
