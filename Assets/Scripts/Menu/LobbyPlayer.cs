@@ -8,9 +8,10 @@ namespace Menu
 {
     public class LobbyPlayer : MonoBehaviour
     {
-        public static event Action OnLobbyPlayerReady;
+        public static event Action<bool> OnLobbyPlayerReady;
 
         [SerializeField] private TextMeshProUGUI playerDisplayText;
+        [SerializeField] private GameObject readyText;
         [SerializeField] private Transform modelsContainer;
         [SerializeField] private CarData carData;
 
@@ -47,18 +48,18 @@ namespace Menu
 
         private void PlayerInputSingleOnInputTriggered()
         {
-            if (PlayerInputSingle.MainMenuInputReader.Navigation.x != 0f)
-                ChangeSelectedCar((int)PlayerInputSingle.MainMenuInputReader.Navigation.x);
-            if (PlayerInputSingle.MainMenuInputReader.Select)
-                SetLockSelection(true);
-            else if (PlayerInputSingle.MainMenuInputReader.Back)
-                SetLockSelection(false);
+            if (PlayerInputSingle.MainMenuInputReader.Select) SetLockSelection(true);
+            else if (PlayerInputSingle.MainMenuInputReader.Back) SetLockSelection(false);
+
+            if (IsPlayerReady) return;
+            ChangeSelectedCar(PlayerInputSingle.MainMenuInputReader.Navigation);
         }
 
         private void SetLockSelection(bool lockSelection)
         {
             IsPlayerReady = lockSelection;
-            OnLobbyPlayerReady?.Invoke();
+            OnLobbyPlayerReady?.Invoke(lockSelection);
+            readyText.SetActive(IsPlayerReady);
         }
 
         private void ChangeSelectedCar(int direction)

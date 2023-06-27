@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class MainMenuInputReader : IInputReader
 {
-    public Vector2 Navigation { get; private set; }
+    public int Navigation { get; private set; }
     public bool Select { get; private set; }
     public bool Back { get; private set; }
 
@@ -15,7 +15,7 @@ public class MainMenuInputReader : IInputReader
                 Select = context.ReadValueAsButton();
                 break;
             case MainMenuInput.NAVIGATION: // Vector2.
-                Navigation = context.ReadValue<Vector2>();
+                Navigation = Mathf.RoundToInt(context.ReadValue<float>());
                 break;
             case MainMenuInput.BACK: // button.
                 Back = context.ReadValueAsButton();

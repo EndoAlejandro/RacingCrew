@@ -12,7 +12,7 @@ namespace Menu
 
         private List<LobbyPlayer> _lobbyPlayers;
 
-        private bool _allPlayersReady;
+        private bool _allReady;
 
         private void OnEnable()
         {
@@ -28,16 +28,15 @@ namespace Menu
             LobbyPlayer.OnLobbyPlayerReady += LobbyPlayerOnLobbyPlayerReady;
         }
 
-        private void LobbyPlayerOnLobbyPlayerReady()
+        private void LobbyPlayerOnLobbyPlayerReady(bool wasLockAction)
         {
-            var wasAllReady = _allPlayersReady;
-            _allPlayersReady = true;
-            foreach (var _ in _lobbyPlayers.Where(lobbyPlayer => !lobbyPlayer.IsPlayerReady))
-                _allPlayersReady = false;
+            if (_allReady && wasLockAction) GameManager.Instance.StartCup();
 
-            if (wasAllReady && _allPlayersReady) GameManager.Instance.StartCup();
-            
-            startRaceButton.gameObject.SetActive(_allPlayersReady);
+            _allReady = true;
+            foreach (var _ in _lobbyPlayers.Where(lobbyPlayer => !lobbyPlayer.IsPlayerReady))
+                _allReady = false;
+
+            startRaceButton.gameObject.SetActive(_allReady);
         }
 
         private void PlayersManagerOnPlayerJoined(PlayerInputSingle playerInput)
