@@ -48,8 +48,10 @@ namespace Menu
 
         private void PlayerInputSingleOnInputTriggered()
         {
-            if (PlayerInputSingle.MainMenuInputReader.Select) SetLockSelection(true);
-            else if (PlayerInputSingle.MainMenuInputReader.Back) SetLockSelection(false);
+            if (PlayerInputSingle.MainMenuInputReader.Select) 
+                SetLockSelection(true);
+            else if (PlayerInputSingle.MainMenuInputReader.Back) 
+                SetLockSelection(false);
 
             if (IsPlayerReady) return;
             ChangeSelectedCar(PlayerInputSingle.MainMenuInputReader.Navigation);

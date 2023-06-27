@@ -12,7 +12,7 @@ public class MainMenuInputReader : IInputReader
         switch (actionName)
         {
             case MainMenuInput.SELECT: // button.
-                Select = context.ReadValueAsButton();
+                Select = context.action.WasPerformedThisFrame();
                 break;
             case MainMenuInput.NAVIGATION: // Vector2.
                 Navigation = Mathf.RoundToInt(context.ReadValue<float>());

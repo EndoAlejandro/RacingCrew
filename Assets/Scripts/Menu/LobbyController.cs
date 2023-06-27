@@ -30,13 +30,18 @@ namespace Menu
 
         private void LobbyPlayerOnLobbyPlayerReady(bool wasLockAction)
         {
-            if (_allReady && wasLockAction) GameManager.Instance.StartCup();
+            if (_allReady && wasLockAction)
+                GameManager.Instance.StartCup();
 
+            CheckForAllReady();
+            startRaceButton.gameObject.SetActive(_allReady);
+        }
+
+        private void CheckForAllReady()
+        {
             _allReady = true;
             foreach (var _ in _lobbyPlayers.Where(lobbyPlayer => !lobbyPlayer.IsPlayerReady))
                 _allReady = false;
-
-            startRaceButton.gameObject.SetActive(_allReady);
         }
 
         private void PlayersManagerOnPlayerJoined(PlayerInputSingle playerInput)
@@ -48,14 +53,18 @@ namespace Menu
                 return;
 
             AddLobbyPlayer(playerInput);
+            CheckForAllReady();
+            startRaceButton.gameObject.SetActive(_allReady);
         }
 
         private void PlayersManagerOnPlayerDisconnected(PlayerInputSingle playerInput)
         {
-            if (playerInput.PlayerIndex < 0) return;
+            if (playerInput.PlayerIndex < 0) 
+                return;
             foreach (var lobbyPlayer in _lobbyPlayers)
             {
-                if (lobbyPlayer.PlayerInputSingle.PlayerIndex != playerInput.PlayerIndex) continue;
+                if (lobbyPlayer.PlayerInputSingle.PlayerIndex != playerInput.PlayerIndex) 
+                    continue;
 
                 RemoveLobbyPlayer(lobbyPlayer);
                 break;

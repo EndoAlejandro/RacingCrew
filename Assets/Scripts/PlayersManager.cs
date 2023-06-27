@@ -44,7 +44,7 @@ public class PlayersManager : Singleton<PlayersManager>
     {
         CurrentState = state;
 
-        if (CurrentState is State.WaitingFirstPlayer or State.Lobby) _inputManager.EnableJoining();
+        if (CurrentState is State.Lobby) _inputManager.EnableJoining();
         else _inputManager.DisableJoining();
 
         OnStateChanged?.Invoke(CurrentState);
@@ -59,7 +59,11 @@ public class PlayersManager : Singleton<PlayersManager>
         if (CurrentState == State.WaitingFirstPlayer) SetState(State.UI);
     }
 
-    public void OnPlayerLost(PlayerInputSingle single) => PlayerInputs.Remove(single);
+    public void OnPlayerLost(PlayerInputSingle single)
+    {
+        PlayerInputs.Remove(single);
+        OnPlayerDisconnected?.Invoke(single);
+    }
 
     public void OnPlayerRegained(PlayerInputSingle single)
     {
