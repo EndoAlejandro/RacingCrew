@@ -19,20 +19,9 @@ public class GameManager : Singleton<GameManager>
     [SerializeField] private AllCupsAssets allCupsAssets;
 
     private Dictionary<int, GrandPrixRacer> _cupRacers = new();
-
-    //ID del jugador || Index del carro seleccionado
     public List<ModelAndInputPlayer> PlayerCarInformation { get; private set; } = new();
-
-    //ID del jugador || Puntuaci�n
-    private Dictionary<int, int> _globalScore = new();
-
-    //ID del jugador || Posici�n final del jugador
-    private Dictionary<int, int> _finalPositionInRace = new();
-    public List<PlayerInput> Inputs { get; private set; } = new List<PlayerInput>();
-
     public CupSelectionAssets CurrentCup { get; private set; }
 
-    // public int PlayersCount { get; private set; }
     public int CurrentSpeedway { get; private set; }
     public int FixedRacersAmount => fixedRacersAmount;
     public CarData DefaultCarData => defaultCarData;
@@ -89,7 +78,4 @@ public class GameManager : Singleton<GameManager>
     }
 
     public void SetCurrentCup(CupSelectionAssets cupSelectionAssets) => CurrentCup = cupSelectionAssets;
-
-    // public void SetPlayersCount(int value) => PlayersCount = value;
-    public void AddPlayerInput(PlayerInput input) => Inputs.Add(input);
 }
