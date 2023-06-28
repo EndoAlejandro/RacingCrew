@@ -84,6 +84,7 @@ namespace RaceComponents
         private void EndRace()
         {
             OnRaceOver?.Invoke();
+            
             for (int i = 0; i < RacersPositions.Count; i++)
             {
                 var normalizedPosition = (float)i / RacersPositions.Count;

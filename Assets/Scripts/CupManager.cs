@@ -68,8 +68,7 @@ public class CupManager : Singleton<CupManager>
         var racersAmount = 8;
         for (int i = 0; i < racersAmount; i++)
         {
-            var inputSingle = PlayersManager.Instance.TryGetPlayerInputSingle(i);
-            var racer = new CupRacer(i, inputSingle);
+            var racer = new CupRacer(i, null);
             list.Add(racer);
         }
 
