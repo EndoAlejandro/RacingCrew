@@ -52,7 +52,6 @@ public class GameManager : Singleton<GameManager>
     public void LoadTrack(string sceneName, Action callback) =>
         StartCoroutine(LoadTrackAsync("Scenes/" + sceneName, callback));
 
-
     private IEnumerator LoadTrackAsync(string sceneName, Action callback)
     {
         if (SceneManager.loadedSceneCount > 1)

@@ -9,6 +9,7 @@ using UnityEngine;
 public class CupManager : Singleton<CupManager>
 {
     public event Action<bool> OnLoading;
+    public event Action TrackEnded;
     public int CurrentRaceIndex { get; private set; }
     public List<CupRacer> CupRacers { get; private set; }
 
@@ -57,5 +58,21 @@ public class CupManager : Singleton<CupManager>
         {
             Debug.Log(cupRacer.Score);
         }
+
+        TrackEnded?.Invoke();
+    }
+
+    public static List<CupRacer> TempGetDummyList()
+    {
+        var list = new List<CupRacer>();
+        var racersAmount = 8;
+        for (int i = 0; i < racersAmount; i++)
+        {
+            var inputSingle = PlayersManager.Instance.TryGetPlayerInputSingle(i);
+            var racer = new CupRacer(i, inputSingle);
+            list.Add(racer);
+        }
+
+        return list;
     }
 }
