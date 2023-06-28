@@ -340,7 +340,7 @@ Material:
     - _GroundColor: {r: 0.30211937, g: 0.724708, b: 0.9338235, a: 1}
     - _MoonColor: {r: 1, g: 1, b: 1, a: 1}
     - _Sky: {r: 0.6691177, g: 0.29519898, b: 0.29519898, a: 0}
-    - _SkyColor: {r: 0, g: 0.08650014, b: 0.53676474, a: 1}
+    - _SkyColor: {r: 0, g: 0.5372549, b: 0.36482653, a: 1}
     - _SkyboxRotationAxis: {r: 0, g: 1, b: 0, a: 0}
     - _Skycol: {r: 0.27941146, g: 0.64219046, b: 1, a: 0}
     - _StarsRotationAxis: {r: 0, g: 1, b: 0, a: 0}
