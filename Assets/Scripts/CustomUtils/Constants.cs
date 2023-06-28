@@ -1,11 +1,5 @@
 namespace CustomUtils
 {
-    public static class ActionMaps
-    {
-        public const string MAIN_MENU = "MainMenu";
-        public const string VEHICLE = "Vehicle";
-    }
-
     public static class MainMenuInput
     {
         public const string SELECT = "Select";
@@ -18,5 +12,10 @@ namespace CustomUtils
         public const string ACCELERATION = "Acceleration";
         public const string TURNING = "Turning";
         public const string BREAK = "Break";
+    }
+
+    public class Constants
+    {
+        public const int RACE_POINTS = 15;
     }
 }

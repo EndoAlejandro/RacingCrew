@@ -6,33 +6,19 @@
   <component name="ChangeListManager">
     <list default="true" id="89d28beb-5f3b-4b70-bf77-826042fca131" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.RacingCrew/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.RacingCrew/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Cup.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Cup.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Race/Car.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Race/Car.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/FirstCup/Greenwood.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/FirstCup/Greenwood.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/FirstCup/Greenwood.unity.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/FirstCup/Greenwood.unity.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/FirstCup/Penita.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/FirstCup/Penita.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/FirstCup/Penita.unity.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/FirstCup/Penita.unity.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/FirstCup/Summerton.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/FirstCup/Summerton.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/FirstCup/Summerton.unity.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/FirstCup/Summerton.unity.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/FirstCup/Velozia.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/FirstCup/Velozia.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/FirstCup/Velozia.unity.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/FirstCup/Velozia.unity.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainMenu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainMenu.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/CupAssets/AllCups.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/CupAssets/AllCups.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/CupAssets/FirstCup.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/CupAssets/FirstCup.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/CupAssets/TestCup2.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/CupAssets/TestCup2.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/TestVehicles.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/TestVehicles.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/CarComponents/AiControllerInput.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CarComponents/AiControllerInput.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/CarComponents/Car.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CarComponents/Car.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CarComponents/DummyCar.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CarComponents/DummyCar.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CupComponents/CupRacer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CupComponents/CupRacer.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/CupManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CupManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/CustomUtils/Constants.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CustomUtils/Constants.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/RaceComponents/Racer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/RaceComponents/Racer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/RaceComponents/Racer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/RaceComponents/Racer.cs.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/RaceComponents/RacerPosition.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/RaceComponents/RacerPosition.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/RaceComponents/TrackManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/RaceComponents/TrackManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/UiTrackPositions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UiTrackPositions.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/VehicleInputReader.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/VehicleInputReader.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/SimpleRacer/Demo/SimpleRacerDemoSettings.lighting" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ThirdParty/SimpleRacer/Demo/SimpleRacerDemoSettings.lighting" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -48,6 +34,7 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/3ea01e77be99618395f448b16bd7cc2bd4248bd9e5d8474964b2d97f39c5d74/System.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/d44b17e136d09081da1e8fd0e8c83fde60e11818b9f2442d7ed8cb733fae895e/System.Collections.Generic.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/CarComponents/WheelPhysics.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/LoadingController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Menu/LobbyController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/PlayersManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/RaceComponents/CheckPoint.cs" root0="FORCE_HIGHLIGHTING" />
@@ -119,10 +106,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="18628">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" />
+      <option name="pid" value="18628" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
@@ -164,7 +151,7 @@
       <workItem from="1687691228584" duration="19650000" />
       <workItem from="1687770036293" duration="5527000" />
       <workItem from="1687851802352" duration="20211000" />
-      <workItem from="1687936961756" duration="13855000" />
+      <workItem from="1687936961756" duration="22800000" />
     </task>
     <servers />
   </component>
@@ -230,6 +217,45 @@
             </endOffsets>
           </properties>
           <option name="timeStamp" value="30" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/CupManager.cs</url>
+          <line>57</line>
+          <properties documentPath="C:\Users\alejo\Documents\GitHub\RacingCrew\Assets\Scripts\CupManager.cs" initialLine="57" containingFunctionPresentation="Method 'OnTrackEnded'">
+            <startOffsets>
+              <option value="1562" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1588" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="32" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/RaceComponents/TrackManager.cs</url>
+          <line>90</line>
+          <properties documentPath="C:\Users\alejo\Documents\GitHub\RacingCrew\Assets\Scripts\RaceComponents\TrackManager.cs" initialLine="90" containingFunctionPresentation="Method 'EndRace'">
+            <startOffsets>
+              <option value="3049" />
+            </startOffsets>
+            <endOffsets>
+              <option value="3112" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="33" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/RaceComponents/TrackManager.cs</url>
+          <line>88</line>
+          <properties documentPath="C:\Users\alejo\Documents\GitHub\RacingCrew\Assets\Scripts\RaceComponents\TrackManager.cs" initialLine="88" containingFunctionPresentation="Method 'EndRace'">
+            <startOffsets>
+              <option value="2887" />
+            </startOffsets>
+            <endOffsets>
+              <option value="2945" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="34" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

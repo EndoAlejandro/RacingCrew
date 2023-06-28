@@ -6,7 +6,7 @@ using Random = UnityEngine.Random;
 namespace CupComponents
 {
     [Serializable]
-    public class CupRacer
+    public class CupRacer : IComparable<CupRacer>
     {
         public PlayerInputSingle PlayerInputSingle { get; private set; }
         public int RacerIndex { get; private set; }
@@ -14,6 +14,7 @@ namespace CupComponents
         public int FinalPosition { get; private set; }
         public GameObject CarModel { get; private set; }
         public CarStats Stats { get; private set; }
+        public bool IsPlayer => PlayerInputSingle != null;
 
         public CupRacer(int racerIndex, PlayerInputSingle playerInputSingle)
         {
@@ -36,6 +37,15 @@ namespace CupComponents
         }
 
         public void SetFinalPosition(int value) => FinalPosition = value;
-        public void SetScore(int value) => Score = value;
+        public void AddScore(int value) => Score += value;
+
+        public int CompareTo(CupRacer other)
+        {
+            if (ReferenceEquals(this, other)) return 0;
+            if (ReferenceEquals(null, other)) return 1;
+
+            var scoreComparison = Score.CompareTo(other.Score);
+            return scoreComparison;
+        }
     }
 }

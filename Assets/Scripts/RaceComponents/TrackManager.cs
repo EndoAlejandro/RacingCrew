@@ -13,16 +13,12 @@ namespace RaceComponents
         public event Action OnGo;
         public event Action OnRaceOver;
 
+        [SerializeField] private int laps = 3;
         [SerializeField] private Car carPrefab;
-
-        [SerializeField] private Transform spawnPointsContainer;
         [SerializeField] private Transform[] spawnPoints;
 
-        public List<Car> Cars { get; private set; } = new List<Car>();
-
-        // private Dictionary<Racer, Car> _carRacer = new Dictionary<Racer, Car>();
-
         private List<CheckPoint> _checkPoints;
+        public List<RacerPosition> RacersPositions { get; private set; } = new();
 
         protected override void Awake()
         {
@@ -38,45 +34,25 @@ namespace RaceComponents
 
         public void UpdatePositionsList()
         {
-            /*Racers.Sort();
-            Racers.Reverse();*/
-        }
-
-        /// <summary>
-        /// This method must be replaced with getting the racers list from GameManager.
-        /// </summary>
-        /*private void CreateRacersList()
-        {
-            for (int i = 0; i < _carsAmount; i++)
-            {
-                var model = models[Random.Range(0, models.Length)];
-                IControllerInput controllerInput =
-                    i < playerControllers.Length ? playerControllers[i] : CreateNewAiController(i);
-
-                var racer = new Racer(carData, model, controllerInput);
-                Racers.Add(racer);
-            }
-        }*/
-        private AiControllerInput CreateNewAiController(int index)
-        {
-            var controller = new GameObject("AIController_" + index).AddComponent<AiControllerInput>();
-            controller.Setup(index);
-            return controller;
+            RacersPositions.Sort();
+            RacersPositions.Reverse();
         }
 
         private void CreateVehicles()
         {
-            var racers = CupManager.Instance.Racers;
-            
+            var racers = CupManager.Instance.CupRacers;
+
             for (int i = 0; i < racers.Count; i++)
             {
                 var spawnTransform = spawnPoints[i].transform;
                 var car = Instantiate(carPrefab, spawnTransform.position, spawnTransform.rotation);
+                car.transform.SetParent(transform, true);
                 car.name = "Car_" + i;
-                
+
                 var racer = racers[i];
-                car.Setup(racer);
-                Cars.Add(car);
+                var position = new RacerPosition(racer, car);
+                car.Setup(racer, position);
+                RacersPositions.Add(position);
             }
         }
 
@@ -84,22 +60,49 @@ namespace RaceComponents
 
         public void CarThroughCheckPoint(CheckPoint checkPoint, Car car)
         {
-            /*var index = _checkPoints.IndexOf(checkPoint);
-            car.Racer.RacerPosition.SetLastPointIndex(index);
+            var index = _checkPoints.IndexOf(checkPoint);
+            car.RacerPosition.SetLastPointIndex(index);
 
-            foreach (var c in Cars)
+            var currentPlayersFinished = 0;
+            foreach (var racerPosition in RacersPositions)
             {
-                var nextCheckPoint = (c.Racer.RacerPosition.LastPointIndex + 1) % _checkPoints.Count;
-                var distance = Vector3.Distance(c.transform.position, _checkPoints[nextCheckPoint].transform.position);
-                c.Racer.RacerPosition.SetDistanceToNextPoint(distance);
+                var nextCheckPoint = (racerPosition.LastPointIndex + 1) % _checkPoints.Count;
+                var distance = Vector3.Distance(racerPosition.Car.transform.position,
+                    _checkPoints[nextCheckPoint].transform.position);
+                racerPosition.SetDistanceToNextPoint(distance);
+
+                if (racerPosition.CupRacer.IsPlayer && racerPosition.Laps > laps)
+                    currentPlayersFinished++;
             }
 
-            UpdatePositionsList();*/
+            UpdatePositionsList();
+
+            if (currentPlayersFinished >= PlayersManager.Instance.PlayerInputs.Count)
+                EndRace();
+        }
+
+        private void EndRace()
+        {
+            OnRaceOver?.Invoke();
+            for (int i = 0; i < RacersPositions.Count; i++)
+            {
+                var normalizedPosition = (float)i / RacersPositions.Count;
+                var points = Mathf.Lerp(Constants.RACE_POINTS, 1, normalizedPosition);
+                RacersPositions[i].CupRacer.AddScore(Mathf.RoundToInt(points));
+            }
+
+            CupManager.Instance.OnTrackEnded();
         }
 
         private IEnumerator GoCountDown()
         {
-            yield return new WaitForSeconds(1f);
+            var currentCountDown = 5;
+            while (currentCountDown > 0)
+            {
+                yield return new WaitForSeconds(1f);
+                currentCountDown--;
+            }
+
             OnGo?.Invoke();
         }
     }

@@ -7,23 +7,29 @@ namespace CarComponents
     public class Car : MonoBehaviour
     {
         [SerializeField] private CarData defaultData;
-        public CupRacer Racer { get; private set; }
+
+        private bool _canGo;
         private IControllerInput _controller;
+
+        public CupRacer Racer { get; private set; }
         public Vector3 Input { get; private set; }
-        public bool CanGo { get; private set; }
         public CarStats Stats => Racer?.Stats ?? defaultData.Stats;
+
+        public RacerPosition RacerPosition { get; private set; }
 
         private void Awake() => Input = new Vector3();
 
-        public void Setup(CupRacer racer)
+        public void Setup(CupRacer racer, RacerPosition racerPosition)
         {
+            RacerPosition = racerPosition;
+
             if (TrackManager.Instance != null)
                 TrackManager.Instance.OnGo += TrackManagerOnGo;
             else
-                CanGo = true;
+                _canGo = true;
 
             Racer = racer;
-            
+
             if (Racer.PlayerInputSingle != null)
                 _controller = Racer.PlayerInputSingle.VehicleInputReader;
             else
@@ -32,11 +38,11 @@ namespace CarComponents
             Instantiate(racer.CarModel, transform);
         }
 
-        private void TrackManagerOnGo() => CanGo = true;
+        private void TrackManagerOnGo() => _canGo = true;
 
         private void Update()
         {
-            if (!CanGo) return;
+            if (!_canGo) return;
             Input = new Vector3(_controller.Acceleration, _controller.Turn, _controller.Break);
         }
 

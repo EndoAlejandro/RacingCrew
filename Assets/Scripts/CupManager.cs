@@ -4,12 +4,13 @@ using CarComponents;
 using CupComponents;
 using CustomUtils;
 using Menu.ScriptableObjects;
+using UnityEngine;
 
 public class CupManager : Singleton<CupManager>
 {
-    public event Action<bool> OnLoading; 
+    public event Action<bool> OnLoading;
     public int CurrentRaceIndex { get; private set; }
-    public List<CupRacer> Racers { get; private set; }
+    public List<CupRacer> CupRacers { get; private set; }
 
     private List<PlayerControllerInput> _playersController;
     private CupSelectionAssets _currentCup;
@@ -20,7 +21,7 @@ public class CupManager : Singleton<CupManager>
         base.Awake();
         DontDestroyOnLoad(gameObject);
 
-        Racers = new List<CupRacer>();
+        CupRacers = new List<CupRacer>();
     }
 
     private void Start()
@@ -32,7 +33,7 @@ public class CupManager : Singleton<CupManager>
         OnLoadingBegin();
         GameManager.Instance.LoadTrack(_currentCup.TracksData[0].sceneName, OnLoadingEnded);
     }
-    
+
     private void OnLoadingBegin() => OnLoading?.Invoke(true);
     private void OnLoadingEnded() => OnLoading?.Invoke(false);
 
@@ -43,7 +44,18 @@ public class CupManager : Singleton<CupManager>
         {
             var inputSingle = PlayersManager.Instance.TryGetPlayerInputSingle(i);
             var racer = new CupRacer(i, inputSingle);
-            Racers.Add(racer);
+            CupRacers.Add(racer);
+        }
+    }
+
+    public void OnTrackEnded()
+    {
+        CupRacers.Sort();
+        CupRacers.Reverse();
+
+        foreach (var cupRacer in CupRacers)
+        {
+            Debug.Log(cupRacer.Score);
         }
     }
 }
