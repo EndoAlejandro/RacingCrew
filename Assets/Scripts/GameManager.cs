@@ -3,6 +3,7 @@ using System.Collections;
 using CarComponents;
 using CustomUtils;
 using Menu;
+using Menu.ScriptableObjects;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 

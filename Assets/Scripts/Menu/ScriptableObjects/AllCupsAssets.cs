@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Menu.ScriptableObjects;
 using UnityEngine;
 
 namespace Menu {

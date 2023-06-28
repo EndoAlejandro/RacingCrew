@@ -3,6 +3,7 @@ using CarComponents;
 using CupComponents;
 using CustomUtils;
 using Menu;
+using Menu.ScriptableObjects;
 using RaceComponents;
 using UnityEngine;
 

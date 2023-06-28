@@ -3,6 +3,7 @@ using UnityEngine.UI;
 using TMPro;
 using UnityEngine.EventSystems;
 using InGame;
+using Menu.ScriptableObjects;
 
 namespace Menu
 {

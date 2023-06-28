@@ -9,17 +9,20 @@ EditorBuildSettings:
     path: Assets/Scenes/MainMenu.unity
     guid: 02fe64680acd5d242bfbe93b21d18115
   - enabled: 1
-    path: Assets/Scenes/TestVehicles.unity
-    guid: 99c9720ab356a0642a771bea13969a05
-  - enabled: 1
-    path: Assets/Scenes/TestTest.unity
-    guid: d918b19b6f6e0144dad6e7211359f6e2
-  - enabled: 1
-    path: Assets/Scenes/Multiplayer.unity
-    guid: 7504dbec0611d1c49bddfedb3e91386b
-  - enabled: 1
     path: Assets/Scenes/Cup.unity
     guid: e7f9ac6f547ab7b4182c20c488d97066
+  - enabled: 1
+    path: Assets/Scenes/FirstCup/Greenwood.unity
+    guid: c4568214e80f32743a3f52141508b53e
+  - enabled: 1
+    path: Assets/Scenes/FirstCup/Penita.unity
+    guid: 09fcfc4236545b3419c2142d6505b986
+  - enabled: 1
+    path: Assets/Scenes/FirstCup/Summerton.unity
+    guid: 70974c5e3a685414fbda91acde8ff1dd
+  - enabled: 1
+    path: Assets/Scenes/FirstCup/Velozia.unity
+    guid: b34d40f95f5282b46831f08351dff5d3
   m_configObjects:
     com.unity.addressableassets: {fileID: 11400000, guid: dbf1902c0bd8918408204ba02becdd02,
       type: 2}
