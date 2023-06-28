@@ -1,3 +1,4 @@
+using CupComponents;
 using RaceComponents;
 using UnityEngine;
 
@@ -6,16 +7,15 @@ namespace CarComponents
     public class Car : MonoBehaviour
     {
         [SerializeField] private CarData defaultData;
-        public Racer Racer { get; private set; }
+        public CupRacer Racer { get; private set; }
         private IControllerInput _controller;
         public Vector3 Input { get; private set; }
         public bool CanGo { get; private set; }
-
-        public CarStats Stats => Racer?.CarData != null ? Racer.CarData.Stats : defaultData.Stats;
+        public CarStats Stats => Racer?.Stats ?? defaultData.Stats;
 
         private void Awake() => Input = new Vector3();
 
-        public void Setup(Racer racer)
+        public void Setup(CupRacer racer)
         {
             if (TrackManager.Instance != null)
                 TrackManager.Instance.OnGo += TrackManagerOnGo;
@@ -23,8 +23,13 @@ namespace CarComponents
                 CanGo = true;
 
             Racer = racer;
-            _controller = Racer.ControllerInput;
-            Instantiate(racer.Model, transform);
+            
+            if (Racer.PlayerInputSingle != null)
+                _controller = Racer.PlayerInputSingle.VehicleInputReader;
+            else
+                _controller = gameObject.AddComponent<AiControllerInput>();
+
+            Instantiate(racer.CarModel, transform);
         }
 
         private void TrackManagerOnGo() => CanGo = true;

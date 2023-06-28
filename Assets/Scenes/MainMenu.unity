@@ -392,9 +392,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: c336adf9fb5111a4986fff25e2565a27, type: 3}
   m_Type: 0
-  m_PreserveAspect: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
@@ -6244,9 +6244,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: c336adf9fb5111a4986fff25e2565a27, type: 3}
   m_Type: 0
-  m_PreserveAspect: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
@@ -7152,14 +7152,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8370506c74d18584c8f09346e66db431, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerInputManager: {fileID: 0}
-  allCupsAssets: {fileID: 11400000, guid: a939f91bd81e2164eafec06dd422afe3, type: 2}
-  screenMainMenu: {fileID: 1290272780}
-  screenSelectMode: {fileID: 411228665}
-  screenSelectCup: {fileID: 1851569088}
-  screenLobby: {fileID: 1804315190}
-  screenSettings: {fileID: 240101826}
-  screenCredits: {fileID: 1632766523}
   audioMixer: {fileID: 24100000, guid: ab758a973a8f90d45828503277be9263, type: 2}
   sliderMusicVolume: {fileID: 1624713067}
   sliderSoundFXVolume: {fileID: 1810017676}
@@ -8254,7 +8246,7 @@ PrefabInstance:
         type: 3}
       propertyPath: cupSelectionAssets
       value: 
-      objectReference: {fileID: 11400000, guid: ab2a3e0e713f1de4194b055e559b9174,
+      objectReference: {fileID: 11400000, guid: 9c26f59e692afd546b014bbcc6066b47,
         type: 2}
     - target: {fileID: 6492594644499971421, guid: 2520d8275a0819743bab28f6b45c8a04,
         type: 3}
@@ -8606,9 +8598,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: c336adf9fb5111a4986fff25e2565a27, type: 3}
   m_Type: 0
-  m_PreserveAspect: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
@@ -10305,9 +10297,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: c336adf9fb5111a4986fff25e2565a27, type: 3}
   m_Type: 0
-  m_PreserveAspect: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1

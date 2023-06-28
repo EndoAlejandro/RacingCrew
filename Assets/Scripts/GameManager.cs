@@ -38,7 +38,11 @@ public class GameManager : Singleton<GameManager>
         Time.timeScale = 1;
     }
 
-    public void StartCup() => StartCoroutine(StartCupAsync());
+    public void StartCup()
+    {
+        PlayersManager.Instance.SetState(PlayersManager.State.Race);
+        StartCoroutine(StartCupAsync());
+    }
 
     private IEnumerator StartCupAsync()
     {
@@ -46,7 +50,8 @@ public class GameManager : Singleton<GameManager>
     }
 
     public void LoadTrack(string sceneName, Action callback) =>
-        StartCoroutine(LoadTrackAsync(sceneName, callback));
+        StartCoroutine(LoadTrackAsync("Scenes/" + sceneName, callback));
+
 
     private IEnumerator LoadTrackAsync(string sceneName, Action callback)
     {

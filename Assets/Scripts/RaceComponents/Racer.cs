@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace RaceComponents
 {
-    public class Racer : IEquatable<Racer>, IComparable<Racer>
+    /*public class Racer : IEquatable<Racer>, IComparable<Racer>
     {
         public Guid Id { get; private set; }
 
@@ -45,5 +45,5 @@ namespace RaceComponents
                 ? filterA
                 : other.RacerPosition.DistanceToNextPoint.CompareTo(RacerPosition.DistanceToNextPoint);
         }
-    }
+    }*/
 }

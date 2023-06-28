@@ -16021,21 +16021,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   carPrefab: {fileID: 8809607413496532861, guid: b0b5a846d0451ee4f95cfd9950ab6023,
     type: 3}
-  carData: {fileID: 11400000, guid: c6352fd6d99b74c48bc6a016b6796be9, type: 2}
-  models:
-  - {fileID: 6652437609419938593, guid: 0343afcf6fb2c3d43937ac57f0472eab, type: 3}
-  - {fileID: 883344635444528942, guid: b5d2562e3be1baf469c8a910d3d12aa9, type: 3}
-  - {fileID: 3494473293954348014, guid: c834dcc54f92baa4dbc4b15d0384be00, type: 3}
-  - {fileID: 2881831232187037303, guid: 0a94fe953284be1468c649c278c662b7, type: 3}
-  - {fileID: 7339689439336479079, guid: df02ea47921effd48b34a5e80d7ce744, type: 3}
-  - {fileID: 7512530390937016382, guid: a2a56f40be78ece4dade254b18234372, type: 3}
-  - {fileID: 749960343570103385, guid: 1ab9ec98d4fccfb44ac5e16f5209470b, type: 3}
-  - {fileID: 4891413161846821662, guid: 2f75f3a19a6bfaf41ba0da803e8b5553, type: 3}
-  - {fileID: 8968808452836237903, guid: 1036eb6ed462a3741b3df2b369b7fc83, type: 3}
-  - {fileID: 234037897037736756, guid: 875ce8f01f2c855439e7d641de662ed5, type: 3}
-  playerControllers:
-  - {fileID: 0}
-  - {fileID: 0}
   spawnPoints:
   - {fileID: 519168228}
   - {fileID: 500752006}

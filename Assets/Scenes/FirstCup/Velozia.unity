@@ -97,8 +97,10 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 0}
-  m_LightingSettings: {fileID: 0}
+  m_LightingDataAsset: {fileID: 112000000, guid: f43e36578f5516945858d1b7eba1f462,
+    type: 2}
+  m_LightingSettings: {fileID: 4890085278179872738, guid: 367e5d03cdb3b3b4ba829530b0a67051,
+    type: 2}
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -2016,6 +2018,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SR_Env_Grass_Track_Blank (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 157198, guid: 7563027fd27f10e41b2bf18cf161c7da, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 443710, guid: 7563027fd27f10e41b2bf18cf161c7da, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -3927,6 +3933,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SR_Env_Concrete_Track_Straight_03 (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 120332, guid: 62efdafbbf70e89468285f91436f1220, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 445904, guid: 62efdafbbf70e89468285f91436f1220, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -4190,6 +4200,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SR_Env_Grass_Track_Blank (13)
       objectReference: {fileID: 0}
+    - target: {fileID: 157198, guid: 7563027fd27f10e41b2bf18cf161c7da, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 443710, guid: 7563027fd27f10e41b2bf18cf161c7da, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -4295,6 +4309,10 @@ PrefabInstance:
     - target: {fileID: 120332, guid: 62efdafbbf70e89468285f91436f1220, type: 3}
       propertyPath: m_Name
       value: SR_Env_Concrete_Track_Straight_03 (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 120332, guid: 62efdafbbf70e89468285f91436f1220, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 445904, guid: 62efdafbbf70e89468285f91436f1220, type: 3}
       propertyPath: m_RootOrder
@@ -4853,6 +4871,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SR_Env_Concrete_Track_Straight_03 (57)
       objectReference: {fileID: 0}
+    - target: {fileID: 120332, guid: 62efdafbbf70e89468285f91436f1220, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 445904, guid: 62efdafbbf70e89468285f91436f1220, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -5347,6 +5369,10 @@ PrefabInstance:
     - target: {fileID: 127468, guid: 5e3bc91a4ba41ee448f654baaa3e1b68, type: 3}
       propertyPath: m_Name
       value: SR_Env_Concrete_Track_StartingGrid_03 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 127468, guid: 5e3bc91a4ba41ee448f654baaa3e1b68, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 407716, guid: 5e3bc91a4ba41ee448f654baaa3e1b68, type: 3}
       propertyPath: m_RootOrder
@@ -6435,6 +6461,10 @@ PrefabInstance:
     - target: {fileID: 120332, guid: 62efdafbbf70e89468285f91436f1220, type: 3}
       propertyPath: m_Name
       value: SR_Env_Concrete_Track_Straight_03 (79)
+      objectReference: {fileID: 0}
+    - target: {fileID: 120332, guid: 62efdafbbf70e89468285f91436f1220, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 445904, guid: 62efdafbbf70e89468285f91436f1220, type: 3}
       propertyPath: m_RootOrder
@@ -7627,6 +7657,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SR_Env_Concrete_Track_Straight_03 (71)
       objectReference: {fileID: 0}
+    - target: {fileID: 120332, guid: 62efdafbbf70e89468285f91436f1220, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 445904, guid: 62efdafbbf70e89468285f91436f1220, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -7823,6 +7857,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SR_Env_Concrete_Track_Straight_03 (32)
       objectReference: {fileID: 0}
+    - target: {fileID: 120332, guid: 62efdafbbf70e89468285f91436f1220, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 445904, guid: 62efdafbbf70e89468285f91436f1220, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -8018,6 +8056,10 @@ PrefabInstance:
     - target: {fileID: 120332, guid: 62efdafbbf70e89468285f91436f1220, type: 3}
       propertyPath: m_Name
       value: SR_Env_Concrete_Track_Straight_03 (48)
+      objectReference: {fileID: 0}
+    - target: {fileID: 120332, guid: 62efdafbbf70e89468285f91436f1220, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 445904, guid: 62efdafbbf70e89468285f91436f1220, type: 3}
       propertyPath: m_RootOrder
@@ -8916,6 +8958,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SR_Env_Concrete_Track_Straight_03 (60)
       objectReference: {fileID: 0}
+    - target: {fileID: 120332, guid: 62efdafbbf70e89468285f91436f1220, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 445904, guid: 62efdafbbf70e89468285f91436f1220, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -9282,6 +9328,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SR_Env_Concrete_Track_Straight_03 (23)
       objectReference: {fileID: 0}
+    - target: {fileID: 120332, guid: 62efdafbbf70e89468285f91436f1220, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 445904, guid: 62efdafbbf70e89468285f91436f1220, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -9545,6 +9595,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SR_Env_Concrete_Track_CornerSmooth_Grass (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 139772, guid: b2512aadd28fca443982f66ee57ed5b4, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 425032, guid: b2512aadd28fca443982f66ee57ed5b4, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -9710,6 +9764,10 @@ PrefabInstance:
     - target: {fileID: 157198, guid: 7563027fd27f10e41b2bf18cf161c7da, type: 3}
       propertyPath: m_Name
       value: SR_Env_Grass_Track_Blank (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 157198, guid: 7563027fd27f10e41b2bf18cf161c7da, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 443710, guid: 7563027fd27f10e41b2bf18cf161c7da, type: 3}
       propertyPath: m_RootOrder
@@ -10048,6 +10106,10 @@ PrefabInstance:
     - target: {fileID: 120332, guid: 62efdafbbf70e89468285f91436f1220, type: 3}
       propertyPath: m_Name
       value: SR_Env_Concrete_Track_Straight_03 (53)
+      objectReference: {fileID: 0}
+    - target: {fileID: 120332, guid: 62efdafbbf70e89468285f91436f1220, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 445904, guid: 62efdafbbf70e89468285f91436f1220, type: 3}
       propertyPath: m_RootOrder
@@ -10985,6 +11047,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SR_Env_Concrete_Track_Straight_03 (75)
       objectReference: {fileID: 0}
+    - target: {fileID: 120332, guid: 62efdafbbf70e89468285f91436f1220, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 445904, guid: 62efdafbbf70e89468285f91436f1220, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -11150,6 +11216,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SR_Env_Concrete_Track_Straight_03 (19)
       objectReference: {fileID: 0}
+    - target: {fileID: 120332, guid: 62efdafbbf70e89468285f91436f1220, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 445904, guid: 62efdafbbf70e89468285f91436f1220, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -11314,6 +11384,10 @@ PrefabInstance:
     - target: {fileID: 120332, guid: 62efdafbbf70e89468285f91436f1220, type: 3}
       propertyPath: m_Name
       value: SR_Env_Concrete_Track_Straight_03 (29)
+      objectReference: {fileID: 0}
+    - target: {fileID: 120332, guid: 62efdafbbf70e89468285f91436f1220, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 445904, guid: 62efdafbbf70e89468285f91436f1220, type: 3}
       propertyPath: m_RootOrder
@@ -11729,6 +11803,10 @@ PrefabInstance:
     - target: {fileID: 120332, guid: 62efdafbbf70e89468285f91436f1220, type: 3}
       propertyPath: m_Name
       value: SR_Env_Concrete_Track_Straight_03 (33)
+      objectReference: {fileID: 0}
+    - target: {fileID: 120332, guid: 62efdafbbf70e89468285f91436f1220, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 445904, guid: 62efdafbbf70e89468285f91436f1220, type: 3}
       propertyPath: m_RootOrder
@@ -12256,6 +12334,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SR_Env_Concrete_Track_Straight_03 (63)
       objectReference: {fileID: 0}
+    - target: {fileID: 120332, guid: 62efdafbbf70e89468285f91436f1220, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 445904, guid: 62efdafbbf70e89468285f91436f1220, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -12353,6 +12435,10 @@ PrefabInstance:
     - target: {fileID: 120332, guid: 62efdafbbf70e89468285f91436f1220, type: 3}
       propertyPath: m_Name
       value: SR_Env_Concrete_Track_Straight_03 (26)
+      objectReference: {fileID: 0}
+    - target: {fileID: 120332, guid: 62efdafbbf70e89468285f91436f1220, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 445904, guid: 62efdafbbf70e89468285f91436f1220, type: 3}
       propertyPath: m_RootOrder
@@ -13050,6 +13136,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SR_Env_Grass_Track_Blank (11)
       objectReference: {fileID: 0}
+    - target: {fileID: 157198, guid: 7563027fd27f10e41b2bf18cf161c7da, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 443710, guid: 7563027fd27f10e41b2bf18cf161c7da, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -13222,6 +13312,10 @@ PrefabInstance:
     - target: {fileID: 127468, guid: 5e3bc91a4ba41ee448f654baaa3e1b68, type: 3}
       propertyPath: m_Name
       value: SR_Env_Concrete_Track_StartingGrid_03 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 127468, guid: 5e3bc91a4ba41ee448f654baaa3e1b68, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 407716, guid: 5e3bc91a4ba41ee448f654baaa3e1b68, type: 3}
       propertyPath: m_RootOrder
@@ -14971,6 +15065,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SR_Env_Concrete_Track_StartingGrid_03 (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 127468, guid: 5e3bc91a4ba41ee448f654baaa3e1b68, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 407716, guid: 5e3bc91a4ba41ee448f654baaa3e1b68, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -15429,6 +15527,10 @@ PrefabInstance:
     - target: {fileID: 120332, guid: 62efdafbbf70e89468285f91436f1220, type: 3}
       propertyPath: m_Name
       value: SR_Env_Concrete_Track_Straight_03 (49)
+      objectReference: {fileID: 0}
+    - target: {fileID: 120332, guid: 62efdafbbf70e89468285f91436f1220, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 445904, guid: 62efdafbbf70e89468285f91436f1220, type: 3}
       propertyPath: m_RootOrder
@@ -15925,6 +16027,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SR_Env_Grass_Track_Blank (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 157198, guid: 7563027fd27f10e41b2bf18cf161c7da, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 443710, guid: 7563027fd27f10e41b2bf18cf161c7da, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -16027,6 +16133,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SR_Env_Concrete_Track_Straight_03 (67)
       objectReference: {fileID: 0}
+    - target: {fileID: 120332, guid: 62efdafbbf70e89468285f91436f1220, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 445904, guid: 62efdafbbf70e89468285f91436f1220, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -16124,6 +16234,10 @@ PrefabInstance:
     - target: {fileID: 120332, guid: 62efdafbbf70e89468285f91436f1220, type: 3}
       propertyPath: m_Name
       value: SR_Env_Concrete_Track_Straight_03 (21)
+      objectReference: {fileID: 0}
+    - target: {fileID: 120332, guid: 62efdafbbf70e89468285f91436f1220, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 445904, guid: 62efdafbbf70e89468285f91436f1220, type: 3}
       propertyPath: m_RootOrder
@@ -18249,6 +18363,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SR_Env_Concrete_Track_Straight_03 (34)
       objectReference: {fileID: 0}
+    - target: {fileID: 120332, guid: 62efdafbbf70e89468285f91436f1220, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 445904, guid: 62efdafbbf70e89468285f91436f1220, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -18413,6 +18531,10 @@ PrefabInstance:
     - target: {fileID: 120332, guid: 62efdafbbf70e89468285f91436f1220, type: 3}
       propertyPath: m_Name
       value: SR_Env_Concrete_Track_Straight_03 (69)
+      objectReference: {fileID: 0}
+    - target: {fileID: 120332, guid: 62efdafbbf70e89468285f91436f1220, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 445904, guid: 62efdafbbf70e89468285f91436f1220, type: 3}
       propertyPath: m_RootOrder
@@ -18645,6 +18767,10 @@ PrefabInstance:
     - target: {fileID: 120332, guid: 62efdafbbf70e89468285f91436f1220, type: 3}
       propertyPath: m_Name
       value: SR_Env_Concrete_Track_Straight_03 (41)
+      objectReference: {fileID: 0}
+    - target: {fileID: 120332, guid: 62efdafbbf70e89468285f91436f1220, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 445904, guid: 62efdafbbf70e89468285f91436f1220, type: 3}
       propertyPath: m_RootOrder
@@ -19305,6 +19431,10 @@ PrefabInstance:
     - target: {fileID: 120332, guid: 62efdafbbf70e89468285f91436f1220, type: 3}
       propertyPath: m_Name
       value: SR_Env_Concrete_Track_Straight_03
+      objectReference: {fileID: 0}
+    - target: {fileID: 120332, guid: 62efdafbbf70e89468285f91436f1220, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 445904, guid: 62efdafbbf70e89468285f91436f1220, type: 3}
       propertyPath: m_RootOrder
@@ -20466,6 +20596,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SR_Env_Concrete_Track_Straight_03 (43)
       objectReference: {fileID: 0}
+    - target: {fileID: 120332, guid: 62efdafbbf70e89468285f91436f1220, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 445904, guid: 62efdafbbf70e89468285f91436f1220, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -21228,6 +21362,10 @@ PrefabInstance:
     - target: {fileID: 120332, guid: 62efdafbbf70e89468285f91436f1220, type: 3}
       propertyPath: m_Name
       value: SR_Env_Concrete_Track_Straight_03 (70)
+      objectReference: {fileID: 0}
+    - target: {fileID: 120332, guid: 62efdafbbf70e89468285f91436f1220, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 445904, guid: 62efdafbbf70e89468285f91436f1220, type: 3}
       propertyPath: m_RootOrder
@@ -23188,6 +23326,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SR_Env_Concrete_Track_Straight_03 (22)
       objectReference: {fileID: 0}
+    - target: {fileID: 120332, guid: 62efdafbbf70e89468285f91436f1220, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 445904, guid: 62efdafbbf70e89468285f91436f1220, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -23285,6 +23427,10 @@ PrefabInstance:
     - target: {fileID: 157198, guid: 7563027fd27f10e41b2bf18cf161c7da, type: 3}
       propertyPath: m_Name
       value: SR_Env_Grass_Track_Blank (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 157198, guid: 7563027fd27f10e41b2bf18cf161c7da, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 443710, guid: 7563027fd27f10e41b2bf18cf161c7da, type: 3}
       propertyPath: m_RootOrder
@@ -23685,6 +23831,10 @@ PrefabInstance:
     - target: {fileID: 120332, guid: 62efdafbbf70e89468285f91436f1220, type: 3}
       propertyPath: m_Name
       value: SR_Env_Concrete_Track_Straight_03 (59)
+      objectReference: {fileID: 0}
+    - target: {fileID: 120332, guid: 62efdafbbf70e89468285f91436f1220, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 445904, guid: 62efdafbbf70e89468285f91436f1220, type: 3}
       propertyPath: m_RootOrder
@@ -24748,6 +24898,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SR_Env_Concrete_Track_Straight_03 (36)
       objectReference: {fileID: 0}
+    - target: {fileID: 120332, guid: 62efdafbbf70e89468285f91436f1220, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 445904, guid: 62efdafbbf70e89468285f91436f1220, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -24912,6 +25066,10 @@ PrefabInstance:
     - target: {fileID: 141574, guid: dfd08e397abbe184c92bd194c8ef68a9, type: 3}
       propertyPath: m_Name
       value: SR_Env_Concrete_Track_StartingGrid_01 (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 141574, guid: dfd08e397abbe184c92bd194c8ef68a9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 413908, guid: dfd08e397abbe184c92bd194c8ef68a9, type: 3}
       propertyPath: m_RootOrder
@@ -25444,6 +25602,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SR_Env_Concrete_Track_Straight_03 (44)
       objectReference: {fileID: 0}
+    - target: {fileID: 120332, guid: 62efdafbbf70e89468285f91436f1220, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 445904, guid: 62efdafbbf70e89468285f91436f1220, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -25974,6 +26136,10 @@ PrefabInstance:
     - target: {fileID: 120332, guid: 62efdafbbf70e89468285f91436f1220, type: 3}
       propertyPath: m_Name
       value: SR_Env_Concrete_Track_Straight_03 (12)
+      objectReference: {fileID: 0}
+    - target: {fileID: 120332, guid: 62efdafbbf70e89468285f91436f1220, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 445904, guid: 62efdafbbf70e89468285f91436f1220, type: 3}
       propertyPath: m_RootOrder
@@ -27393,6 +27559,10 @@ PrefabInstance:
     - target: {fileID: 120332, guid: 62efdafbbf70e89468285f91436f1220, type: 3}
       propertyPath: m_Name
       value: SR_Env_Concrete_Track_Straight_03 (11)
+      objectReference: {fileID: 0}
+    - target: {fileID: 120332, guid: 62efdafbbf70e89468285f91436f1220, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 445904, guid: 62efdafbbf70e89468285f91436f1220, type: 3}
       propertyPath: m_RootOrder
@@ -29503,6 +29673,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SR_Env_Concrete_Track_StartingGrid_03 (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 127468, guid: 5e3bc91a4ba41ee448f654baaa3e1b68, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 407716, guid: 5e3bc91a4ba41ee448f654baaa3e1b68, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -29668,6 +29842,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SR_Env_Concrete_Track_Straight_03 (13)
       objectReference: {fileID: 0}
+    - target: {fileID: 120332, guid: 62efdafbbf70e89468285f91436f1220, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 445904, guid: 62efdafbbf70e89468285f91436f1220, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -29765,6 +29943,10 @@ PrefabInstance:
     - target: {fileID: 120332, guid: 62efdafbbf70e89468285f91436f1220, type: 3}
       propertyPath: m_Name
       value: SR_Env_Concrete_Track_Straight_03 (61)
+      objectReference: {fileID: 0}
+    - target: {fileID: 120332, guid: 62efdafbbf70e89468285f91436f1220, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 445904, guid: 62efdafbbf70e89468285f91436f1220, type: 3}
       propertyPath: m_RootOrder
@@ -30291,6 +30473,10 @@ PrefabInstance:
     - target: {fileID: 127468, guid: 5e3bc91a4ba41ee448f654baaa3e1b68, type: 3}
       propertyPath: m_Name
       value: SR_Env_Concrete_Track_StartingGrid_03 (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 127468, guid: 5e3bc91a4ba41ee448f654baaa3e1b68, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 407716, guid: 5e3bc91a4ba41ee448f654baaa3e1b68, type: 3}
       propertyPath: m_RootOrder
@@ -31591,6 +31777,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SR_Env_Grass_Track_Blank (16)
       objectReference: {fileID: 0}
+    - target: {fileID: 157198, guid: 7563027fd27f10e41b2bf18cf161c7da, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 443710, guid: 7563027fd27f10e41b2bf18cf161c7da, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -31696,6 +31886,10 @@ PrefabInstance:
     - target: {fileID: 120332, guid: 62efdafbbf70e89468285f91436f1220, type: 3}
       propertyPath: m_Name
       value: SR_Env_Concrete_Track_Straight_03 (24)
+      objectReference: {fileID: 0}
+    - target: {fileID: 120332, guid: 62efdafbbf70e89468285f91436f1220, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 445904, guid: 62efdafbbf70e89468285f91436f1220, type: 3}
       propertyPath: m_RootOrder
@@ -31990,6 +32184,10 @@ PrefabInstance:
     - target: {fileID: 157198, guid: 7563027fd27f10e41b2bf18cf161c7da, type: 3}
       propertyPath: m_Name
       value: SR_Env_Grass_Track_Blank (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 157198, guid: 7563027fd27f10e41b2bf18cf161c7da, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 443710, guid: 7563027fd27f10e41b2bf18cf161c7da, type: 3}
       propertyPath: m_RootOrder
@@ -33036,6 +33234,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SR_Env_Concrete_Track_Straight_03 (47)
       objectReference: {fileID: 0}
+    - target: {fileID: 120332, guid: 62efdafbbf70e89468285f91436f1220, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 445904, guid: 62efdafbbf70e89468285f91436f1220, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -33200,6 +33402,10 @@ PrefabInstance:
     - target: {fileID: 120332, guid: 62efdafbbf70e89468285f91436f1220, type: 3}
       propertyPath: m_Name
       value: SR_Env_Concrete_Track_Straight_03 (27)
+      objectReference: {fileID: 0}
+    - target: {fileID: 120332, guid: 62efdafbbf70e89468285f91436f1220, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 445904, guid: 62efdafbbf70e89468285f91436f1220, type: 3}
       propertyPath: m_RootOrder
@@ -33397,6 +33603,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SR_Env_Concrete_Track_StartingGrid_01 (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 141574, guid: dfd08e397abbe184c92bd194c8ef68a9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 413908, guid: dfd08e397abbe184c92bd194c8ef68a9, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -33561,6 +33771,10 @@ PrefabInstance:
     - target: {fileID: 141574, guid: dfd08e397abbe184c92bd194c8ef68a9, type: 3}
       propertyPath: m_Name
       value: SR_Env_Concrete_Track_StartingGrid_01 (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 141574, guid: dfd08e397abbe184c92bd194c8ef68a9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 413908, guid: dfd08e397abbe184c92bd194c8ef68a9, type: 3}
       propertyPath: m_RootOrder
@@ -34088,6 +34302,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SR_Env_Concrete_Track_Straight_03 (40)
       objectReference: {fileID: 0}
+    - target: {fileID: 120332, guid: 62efdafbbf70e89468285f91436f1220, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 445904, guid: 62efdafbbf70e89468285f91436f1220, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -34381,6 +34599,10 @@ PrefabInstance:
     - target: {fileID: 149134, guid: 20020e603587977458644fccd63c16ef, type: 3}
       propertyPath: m_Name
       value: SR_Env_Concrete_Track_StartingLine
+      objectReference: {fileID: 0}
+    - target: {fileID: 149134, guid: 20020e603587977458644fccd63c16ef, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 488372, guid: 20020e603587977458644fccd63c16ef, type: 3}
       propertyPath: m_RootOrder
@@ -34815,6 +35037,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SR_Env_Concrete_Track_Straight_03 (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 120332, guid: 62efdafbbf70e89468285f91436f1220, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 445904, guid: 62efdafbbf70e89468285f91436f1220, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -35180,6 +35406,10 @@ PrefabInstance:
     - target: {fileID: 120332, guid: 62efdafbbf70e89468285f91436f1220, type: 3}
       propertyPath: m_Name
       value: SR_Env_Concrete_Track_Straight_03 (42)
+      objectReference: {fileID: 0}
+    - target: {fileID: 120332, guid: 62efdafbbf70e89468285f91436f1220, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 445904, guid: 62efdafbbf70e89468285f91436f1220, type: 3}
       propertyPath: m_RootOrder
@@ -36976,6 +37206,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SR_Env_Concrete_Track_StartingGrid_01 (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 141574, guid: dfd08e397abbe184c92bd194c8ef68a9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 413908, guid: dfd08e397abbe184c92bd194c8ef68a9, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -37073,6 +37307,10 @@ PrefabInstance:
     - target: {fileID: 120332, guid: 62efdafbbf70e89468285f91436f1220, type: 3}
       propertyPath: m_Name
       value: SR_Env_Concrete_Track_Straight_03 (15)
+      objectReference: {fileID: 0}
+    - target: {fileID: 120332, guid: 62efdafbbf70e89468285f91436f1220, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 445904, guid: 62efdafbbf70e89468285f91436f1220, type: 3}
       propertyPath: m_RootOrder
@@ -38363,6 +38601,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SR_Env_Concrete_Track_Straight_03 (39)
       objectReference: {fileID: 0}
+    - target: {fileID: 120332, guid: 62efdafbbf70e89468285f91436f1220, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 445904, guid: 62efdafbbf70e89468285f91436f1220, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -38996,6 +39238,10 @@ PrefabInstance:
     - target: {fileID: 120332, guid: 62efdafbbf70e89468285f91436f1220, type: 3}
       propertyPath: m_Name
       value: SR_Env_Concrete_Track_Straight_03 (14)
+      objectReference: {fileID: 0}
+    - target: {fileID: 120332, guid: 62efdafbbf70e89468285f91436f1220, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 445904, guid: 62efdafbbf70e89468285f91436f1220, type: 3}
       propertyPath: m_RootOrder
@@ -39692,6 +39938,10 @@ PrefabInstance:
     - target: {fileID: 120332, guid: 62efdafbbf70e89468285f91436f1220, type: 3}
       propertyPath: m_Name
       value: SR_Env_Concrete_Track_Straight_03 (58)
+      objectReference: {fileID: 0}
+    - target: {fileID: 120332, guid: 62efdafbbf70e89468285f91436f1220, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 445904, guid: 62efdafbbf70e89468285f91436f1220, type: 3}
       propertyPath: m_RootOrder
@@ -40688,6 +40938,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SR_Env_Concrete_Track_CornerSmooth_Grass
       objectReference: {fileID: 0}
+    - target: {fileID: 139772, guid: b2512aadd28fca443982f66ee57ed5b4, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 425032, guid: b2512aadd28fca443982f66ee57ed5b4, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -40951,6 +41205,10 @@ PrefabInstance:
     - target: {fileID: 120332, guid: 62efdafbbf70e89468285f91436f1220, type: 3}
       propertyPath: m_Name
       value: SR_Env_Concrete_Track_Straight_03 (45)
+      objectReference: {fileID: 0}
+    - target: {fileID: 120332, guid: 62efdafbbf70e89468285f91436f1220, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 445904, guid: 62efdafbbf70e89468285f91436f1220, type: 3}
       propertyPath: m_RootOrder
@@ -41611,6 +41869,10 @@ PrefabInstance:
     - target: {fileID: 120332, guid: 62efdafbbf70e89468285f91436f1220, type: 3}
       propertyPath: m_Name
       value: SR_Env_Concrete_Track_Straight_03 (76)
+      objectReference: {fileID: 0}
+    - target: {fileID: 120332, guid: 62efdafbbf70e89468285f91436f1220, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 445904, guid: 62efdafbbf70e89468285f91436f1220, type: 3}
       propertyPath: m_RootOrder
@@ -42705,6 +42967,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SR_Env_Concrete_Track_Straight_03 (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 120332, guid: 62efdafbbf70e89468285f91436f1220, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 445904, guid: 62efdafbbf70e89468285f91436f1220, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -43035,6 +43301,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SR_Env_Concrete_Track_Straight_03 (31)
       objectReference: {fileID: 0}
+    - target: {fileID: 120332, guid: 62efdafbbf70e89468285f91436f1220, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 445904, guid: 62efdafbbf70e89468285f91436f1220, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -43133,6 +43403,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SR_Env_Concrete_Track_StartingGrid_01 (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 141574, guid: dfd08e397abbe184c92bd194c8ef68a9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 413908, guid: dfd08e397abbe184c92bd194c8ef68a9, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -43230,6 +43504,10 @@ PrefabInstance:
     - target: {fileID: 120332, guid: 62efdafbbf70e89468285f91436f1220, type: 3}
       propertyPath: m_Name
       value: SR_Env_Concrete_Track_Straight_03 (18)
+      objectReference: {fileID: 0}
+    - target: {fileID: 120332, guid: 62efdafbbf70e89468285f91436f1220, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 445904, guid: 62efdafbbf70e89468285f91436f1220, type: 3}
       propertyPath: m_RootOrder
@@ -47340,6 +47618,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SR_Env_Concrete_Track_CornerSmooth_Grass (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 139772, guid: b2512aadd28fca443982f66ee57ed5b4, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 425032, guid: b2512aadd28fca443982f66ee57ed5b4, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -49354,6 +49636,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SR_Env_Grass_Track_Blank (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 157198, guid: 7563027fd27f10e41b2bf18cf161c7da, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 443710, guid: 7563027fd27f10e41b2bf18cf161c7da, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -49887,6 +50173,10 @@ PrefabInstance:
     - target: {fileID: 120332, guid: 62efdafbbf70e89468285f91436f1220, type: 3}
       propertyPath: m_Name
       value: SR_Env_Concrete_Track_Straight_03 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 120332, guid: 62efdafbbf70e89468285f91436f1220, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 445904, guid: 62efdafbbf70e89468285f91436f1220, type: 3}
       propertyPath: m_RootOrder
@@ -51244,6 +51534,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SR_Env_Concrete_Track_CornerSmooth_Grass (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 139772, guid: b2512aadd28fca443982f66ee57ed5b4, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 425032, guid: b2512aadd28fca443982f66ee57ed5b4, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -51843,6 +52137,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SR_Env_Concrete_Track_Straight_03 (65)
       objectReference: {fileID: 0}
+    - target: {fileID: 120332, guid: 62efdafbbf70e89468285f91436f1220, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 445904, guid: 62efdafbbf70e89468285f91436f1220, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -52010,7 +52308,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1326140989
 Transform:
@@ -52364,6 +52662,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SR_Env_Concrete_Track_Straight_03 (35)
       objectReference: {fileID: 0}
+    - target: {fileID: 120332, guid: 62efdafbbf70e89468285f91436f1220, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 445904, guid: 62efdafbbf70e89468285f91436f1220, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -52528,6 +52830,10 @@ PrefabInstance:
     - target: {fileID: 157198, guid: 7563027fd27f10e41b2bf18cf161c7da, type: 3}
       propertyPath: m_Name
       value: SR_Env_Grass_Track_Blank (15)
+      objectReference: {fileID: 0}
+    - target: {fileID: 157198, guid: 7563027fd27f10e41b2bf18cf161c7da, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 443710, guid: 7563027fd27f10e41b2bf18cf161c7da, type: 3}
       propertyPath: m_RootOrder
@@ -53068,6 +53374,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SR_Env_Concrete_Track_Straight_03 (51)
       objectReference: {fileID: 0}
+    - target: {fileID: 120332, guid: 62efdafbbf70e89468285f91436f1220, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 445904, guid: 62efdafbbf70e89468285f91436f1220, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -53496,6 +53806,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SR_Env_Concrete_Track_Straight_03 (20)
       objectReference: {fileID: 0}
+    - target: {fileID: 120332, guid: 62efdafbbf70e89468285f91436f1220, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 445904, guid: 62efdafbbf70e89468285f91436f1220, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -53691,6 +54005,10 @@ PrefabInstance:
     - target: {fileID: 157198, guid: 7563027fd27f10e41b2bf18cf161c7da, type: 3}
       propertyPath: m_Name
       value: SR_Env_Grass_Track_Blank (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 157198, guid: 7563027fd27f10e41b2bf18cf161c7da, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 443710, guid: 7563027fd27f10e41b2bf18cf161c7da, type: 3}
       propertyPath: m_RootOrder
@@ -54453,6 +54771,10 @@ PrefabInstance:
     - target: {fileID: 120332, guid: 62efdafbbf70e89468285f91436f1220, type: 3}
       propertyPath: m_Name
       value: SR_Env_Concrete_Track_Straight_03 (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 120332, guid: 62efdafbbf70e89468285f91436f1220, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 445904, guid: 62efdafbbf70e89468285f91436f1220, type: 3}
       propertyPath: m_RootOrder
@@ -56016,6 +56338,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SR_Env_Grass_Track_Blank (17)
       objectReference: {fileID: 0}
+    - target: {fileID: 157198, guid: 7563027fd27f10e41b2bf18cf161c7da, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 443710, guid: 7563027fd27f10e41b2bf18cf161c7da, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -56761,6 +57087,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SR_Env_Concrete_Track_Straight_03 (73)
       objectReference: {fileID: 0}
+    - target: {fileID: 120332, guid: 62efdafbbf70e89468285f91436f1220, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 445904, guid: 62efdafbbf70e89468285f91436f1220, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -57091,6 +57421,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SR_Env_Grass_Track_Blank (14)
       objectReference: {fileID: 0}
+    - target: {fileID: 157198, guid: 7563027fd27f10e41b2bf18cf161c7da, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 443710, guid: 7563027fd27f10e41b2bf18cf161c7da, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -57331,6 +57665,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SR_Env_Concrete_Track_Straight_03 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 120332, guid: 62efdafbbf70e89468285f91436f1220, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 445904, guid: 62efdafbbf70e89468285f91436f1220, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -57562,6 +57900,10 @@ PrefabInstance:
     - target: {fileID: 120332, guid: 62efdafbbf70e89468285f91436f1220, type: 3}
       propertyPath: m_Name
       value: SR_Env_Concrete_Track_Straight_03 (50)
+      objectReference: {fileID: 0}
+    - target: {fileID: 120332, guid: 62efdafbbf70e89468285f91436f1220, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 445904, guid: 62efdafbbf70e89468285f91436f1220, type: 3}
       propertyPath: m_RootOrder
@@ -58321,6 +58663,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SR_Env_Concrete_Track_StartingGrid_03
       objectReference: {fileID: 0}
+    - target: {fileID: 127468, guid: 5e3bc91a4ba41ee448f654baaa3e1b68, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 407716, guid: 5e3bc91a4ba41ee448f654baaa3e1b68, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -58852,6 +59198,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SR_Env_Concrete_Track_Straight_03 (68)
       objectReference: {fileID: 0}
+    - target: {fileID: 120332, guid: 62efdafbbf70e89468285f91436f1220, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 445904, guid: 62efdafbbf70e89468285f91436f1220, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -59182,6 +59532,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SR_Env_Concrete_Track_Straight_03 (16)
       objectReference: {fileID: 0}
+    - target: {fileID: 120332, guid: 62efdafbbf70e89468285f91436f1220, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 445904, guid: 62efdafbbf70e89468285f91436f1220, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -59480,6 +59834,10 @@ PrefabInstance:
     - target: {fileID: 120332, guid: 62efdafbbf70e89468285f91436f1220, type: 3}
       propertyPath: m_Name
       value: SR_Env_Concrete_Track_Straight_03 (78)
+      objectReference: {fileID: 0}
+    - target: {fileID: 120332, guid: 62efdafbbf70e89468285f91436f1220, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 445904, guid: 62efdafbbf70e89468285f91436f1220, type: 3}
       propertyPath: m_RootOrder
@@ -60502,6 +60860,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SR_Env_Grass_Track_Blank (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 157198, guid: 7563027fd27f10e41b2bf18cf161c7da, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 443710, guid: 7563027fd27f10e41b2bf18cf161c7da, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -61080,6 +61442,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SR_Env_Concrete_Track_Straight_03 (66)
       objectReference: {fileID: 0}
+    - target: {fileID: 120332, guid: 62efdafbbf70e89468285f91436f1220, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 445904, guid: 62efdafbbf70e89468285f91436f1220, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -61244,6 +61610,10 @@ PrefabInstance:
     - target: {fileID: 139772, guid: b2512aadd28fca443982f66ee57ed5b4, type: 3}
       propertyPath: m_Name
       value: SR_Env_Concrete_Track_CornerSmooth_Grass (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 139772, guid: b2512aadd28fca443982f66ee57ed5b4, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 425032, guid: b2512aadd28fca443982f66ee57ed5b4, type: 3}
       propertyPath: m_RootOrder
@@ -61977,6 +62347,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SR_Env_Concrete_Track_Straight_03 (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 120332, guid: 62efdafbbf70e89468285f91436f1220, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 445904, guid: 62efdafbbf70e89468285f91436f1220, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -62209,6 +62583,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SR_Env_Concrete_Track_Straight_03 (62)
       objectReference: {fileID: 0}
+    - target: {fileID: 120332, guid: 62efdafbbf70e89468285f91436f1220, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 445904, guid: 62efdafbbf70e89468285f91436f1220, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -62306,6 +62684,10 @@ PrefabInstance:
     - target: {fileID: 139772, guid: b2512aadd28fca443982f66ee57ed5b4, type: 3}
       propertyPath: m_Name
       value: SR_Env_Concrete_Track_CornerSmooth_Grass (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 139772, guid: b2512aadd28fca443982f66ee57ed5b4, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 425032, guid: b2512aadd28fca443982f66ee57ed5b4, type: 3}
       propertyPath: m_RootOrder
@@ -62503,6 +62885,10 @@ PrefabInstance:
     - target: {fileID: 120332, guid: 62efdafbbf70e89468285f91436f1220, type: 3}
       propertyPath: m_Name
       value: SR_Env_Concrete_Track_Straight_03 (37)
+      objectReference: {fileID: 0}
+    - target: {fileID: 120332, guid: 62efdafbbf70e89468285f91436f1220, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 445904, guid: 62efdafbbf70e89468285f91436f1220, type: 3}
       propertyPath: m_RootOrder
@@ -63596,6 +63982,10 @@ PrefabInstance:
     - target: {fileID: 120332, guid: 62efdafbbf70e89468285f91436f1220, type: 3}
       propertyPath: m_Name
       value: SR_Env_Concrete_Track_Straight_03 (25)
+      objectReference: {fileID: 0}
+    - target: {fileID: 120332, guid: 62efdafbbf70e89468285f91436f1220, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 445904, guid: 62efdafbbf70e89468285f91436f1220, type: 3}
       propertyPath: m_RootOrder
@@ -65061,6 +65451,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SR_Env_Concrete_Track_Straight_03 (38)
       objectReference: {fileID: 0}
+    - target: {fileID: 120332, guid: 62efdafbbf70e89468285f91436f1220, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 445904, guid: 62efdafbbf70e89468285f91436f1220, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -65524,6 +65918,10 @@ PrefabInstance:
     - target: {fileID: 141574, guid: dfd08e397abbe184c92bd194c8ef68a9, type: 3}
       propertyPath: m_Name
       value: SR_Env_Concrete_Track_StartingGrid_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 141574, guid: dfd08e397abbe184c92bd194c8ef68a9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 413908, guid: dfd08e397abbe184c92bd194c8ef68a9, type: 3}
       propertyPath: m_RootOrder
@@ -66747,6 +67145,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SR_Env_Concrete_Track_Straight_03 (28)
       objectReference: {fileID: 0}
+    - target: {fileID: 120332, guid: 62efdafbbf70e89468285f91436f1220, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 445904, guid: 62efdafbbf70e89468285f91436f1220, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -67045,6 +67447,10 @@ PrefabInstance:
     - target: {fileID: 120332, guid: 62efdafbbf70e89468285f91436f1220, type: 3}
       propertyPath: m_Name
       value: SR_Env_Concrete_Track_Straight_03 (64)
+      objectReference: {fileID: 0}
+    - target: {fileID: 120332, guid: 62efdafbbf70e89468285f91436f1220, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 445904, guid: 62efdafbbf70e89468285f91436f1220, type: 3}
       propertyPath: m_RootOrder
@@ -68902,6 +69308,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SR_Env_Concrete_Track_StartingGrid_03 (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 127468, guid: 5e3bc91a4ba41ee448f654baaa3e1b68, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 407716, guid: 5e3bc91a4ba41ee448f654baaa3e1b68, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -69097,6 +69507,10 @@ PrefabInstance:
     - target: {fileID: 120332, guid: 62efdafbbf70e89468285f91436f1220, type: 3}
       propertyPath: m_Name
       value: SR_Env_Concrete_Track_Straight_03 (56)
+      objectReference: {fileID: 0}
+    - target: {fileID: 120332, guid: 62efdafbbf70e89468285f91436f1220, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 445904, guid: 62efdafbbf70e89468285f91436f1220, type: 3}
       propertyPath: m_RootOrder
@@ -69624,6 +70038,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SR_Env_Concrete_Track_Straight_03 (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 120332, guid: 62efdafbbf70e89468285f91436f1220, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 445904, guid: 62efdafbbf70e89468285f91436f1220, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -69855,6 +70273,10 @@ PrefabInstance:
     - target: {fileID: 157198, guid: 7563027fd27f10e41b2bf18cf161c7da, type: 3}
       propertyPath: m_Name
       value: SR_Env_Grass_Track_Blank (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 157198, guid: 7563027fd27f10e41b2bf18cf161c7da, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 443710, guid: 7563027fd27f10e41b2bf18cf161c7da, type: 3}
       propertyPath: m_RootOrder
@@ -70327,6 +70749,10 @@ PrefabInstance:
     - target: {fileID: 127468, guid: 5e3bc91a4ba41ee448f654baaa3e1b68, type: 3}
       propertyPath: m_Name
       value: SR_Env_Concrete_Track_StartingGrid_03 (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 127468, guid: 5e3bc91a4ba41ee448f654baaa3e1b68, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 407716, guid: 5e3bc91a4ba41ee448f654baaa3e1b68, type: 3}
       propertyPath: m_RootOrder
@@ -71735,6 +72161,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SR_Env_Grass_Track_Blank
       objectReference: {fileID: 0}
+    - target: {fileID: 157198, guid: 7563027fd27f10e41b2bf18cf161c7da, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 443710, guid: 7563027fd27f10e41b2bf18cf161c7da, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -72630,6 +73060,10 @@ PrefabInstance:
     - target: {fileID: 157198, guid: 7563027fd27f10e41b2bf18cf161c7da, type: 3}
       propertyPath: m_Name
       value: SR_Env_Grass_Track_Blank (12)
+      objectReference: {fileID: 0}
+    - target: {fileID: 157198, guid: 7563027fd27f10e41b2bf18cf161c7da, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 443710, guid: 7563027fd27f10e41b2bf18cf161c7da, type: 3}
       propertyPath: m_RootOrder
@@ -73721,6 +74155,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SR_Env_Concrete_Track_Straight_03 (54)
       objectReference: {fileID: 0}
+    - target: {fileID: 120332, guid: 62efdafbbf70e89468285f91436f1220, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 445904, guid: 62efdafbbf70e89468285f91436f1220, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -73818,6 +74256,10 @@ PrefabInstance:
     - target: {fileID: 120332, guid: 62efdafbbf70e89468285f91436f1220, type: 3}
       propertyPath: m_Name
       value: SR_Env_Concrete_Track_Straight_03 (46)
+      objectReference: {fileID: 0}
+    - target: {fileID: 120332, guid: 62efdafbbf70e89468285f91436f1220, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 445904, guid: 62efdafbbf70e89468285f91436f1220, type: 3}
       propertyPath: m_RootOrder
@@ -74309,6 +74751,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SR_Env_Concrete_Track_Straight_03 (30)
       objectReference: {fileID: 0}
+    - target: {fileID: 120332, guid: 62efdafbbf70e89468285f91436f1220, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 445904, guid: 62efdafbbf70e89468285f91436f1220, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -74473,6 +74919,10 @@ PrefabInstance:
     - target: {fileID: 120332, guid: 62efdafbbf70e89468285f91436f1220, type: 3}
       propertyPath: m_Name
       value: SR_Env_Concrete_Track_Straight_03 (74)
+      objectReference: {fileID: 0}
+    - target: {fileID: 120332, guid: 62efdafbbf70e89468285f91436f1220, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 445904, guid: 62efdafbbf70e89468285f91436f1220, type: 3}
       propertyPath: m_RootOrder
@@ -75397,6 +75847,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SR_Env_Concrete_Track_StartingGrid_01 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 141574, guid: dfd08e397abbe184c92bd194c8ef68a9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 413908, guid: dfd08e397abbe184c92bd194c8ef68a9, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -76222,6 +76676,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SR_Env_Concrete_Track_CornerSmooth_Grass (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 139772, guid: b2512aadd28fca443982f66ee57ed5b4, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 425032, guid: b2512aadd28fca443982f66ee57ed5b4, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -76754,6 +77212,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SR_Env_Concrete_Track_Straight_03 (55)
       objectReference: {fileID: 0}
+    - target: {fileID: 120332, guid: 62efdafbbf70e89468285f91436f1220, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 445904, guid: 62efdafbbf70e89468285f91436f1220, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -76949,6 +77411,10 @@ PrefabInstance:
     - target: {fileID: 120332, guid: 62efdafbbf70e89468285f91436f1220, type: 3}
       propertyPath: m_Name
       value: SR_Env_Concrete_Track_Straight_03 (72)
+      objectReference: {fileID: 0}
+    - target: {fileID: 120332, guid: 62efdafbbf70e89468285f91436f1220, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 445904, guid: 62efdafbbf70e89468285f91436f1220, type: 3}
       propertyPath: m_RootOrder
@@ -77883,6 +78349,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SR_Env_Concrete_Track_CornerSmooth_Grass (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 139772, guid: b2512aadd28fca443982f66ee57ed5b4, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 425032, guid: b2512aadd28fca443982f66ee57ed5b4, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -78615,6 +79085,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SR_Env_Concrete_Track_StartingGrid_01 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 141574, guid: dfd08e397abbe184c92bd194c8ef68a9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 413908, guid: dfd08e397abbe184c92bd194c8ef68a9, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -78810,6 +79284,10 @@ PrefabInstance:
     - target: {fileID: 120332, guid: 62efdafbbf70e89468285f91436f1220, type: 3}
       propertyPath: m_Name
       value: SR_Env_Concrete_Track_Straight_03 (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 120332, guid: 62efdafbbf70e89468285f91436f1220, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 445904, guid: 62efdafbbf70e89468285f91436f1220, type: 3}
       propertyPath: m_RootOrder
@@ -79074,6 +79552,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SR_Env_Grass_Track_Blank (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 157198, guid: 7563027fd27f10e41b2bf18cf161c7da, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 443710, guid: 7563027fd27f10e41b2bf18cf161c7da, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -79314,6 +79796,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SR_Env_Concrete_Track_CornerSmooth_Grass (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 139772, guid: b2512aadd28fca443982f66ee57ed5b4, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 425032, guid: b2512aadd28fca443982f66ee57ed5b4, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -79480,6 +79966,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SR_Env_Concrete_Track_CornerSmooth_Grass (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 139772, guid: b2512aadd28fca443982f66ee57ed5b4, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 425032, guid: b2512aadd28fca443982f66ee57ed5b4, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -79578,6 +80068,10 @@ PrefabInstance:
     - target: {fileID: 120332, guid: 62efdafbbf70e89468285f91436f1220, type: 3}
       propertyPath: m_Name
       value: SR_Env_Concrete_Track_Straight_03 (52)
+      objectReference: {fileID: 0}
+    - target: {fileID: 120332, guid: 62efdafbbf70e89468285f91436f1220, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 445904, guid: 62efdafbbf70e89468285f91436f1220, type: 3}
       propertyPath: m_RootOrder
@@ -80867,6 +81361,10 @@ PrefabInstance:
     - target: {fileID: 120332, guid: 62efdafbbf70e89468285f91436f1220, type: 3}
       propertyPath: m_Name
       value: SR_Env_Concrete_Track_Straight_03 (17)
+      objectReference: {fileID: 0}
+    - target: {fileID: 120332, guid: 62efdafbbf70e89468285f91436f1220, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 445904, guid: 62efdafbbf70e89468285f91436f1220, type: 3}
       propertyPath: m_RootOrder

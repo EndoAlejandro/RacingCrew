@@ -5,7 +5,6 @@ using System.Linq;
 using CarComponents;
 using CustomUtils;
 using UnityEngine;
-using Random = UnityEngine.Random;
 
 namespace RaceComponents
 {
@@ -15,31 +14,24 @@ namespace RaceComponents
         public event Action OnRaceOver;
 
         [SerializeField] private Car carPrefab;
-        [SerializeField] private CarData carData;
 
-        [SerializeField] private GameObject[] models;
-        [SerializeField] private PlayerControllerInput[] playerControllers;
+        [SerializeField] private Transform spawnPointsContainer;
         [SerializeField] private Transform[] spawnPoints;
 
-        // public List<Racer> Racers { get; private set; } = new List<Racer>();
         public List<Car> Cars { get; private set; } = new List<Car>();
 
-        private Dictionary<Racer, Car> _carRacer = new Dictionary<Racer, Car>();
+        // private Dictionary<Racer, Car> _carRacer = new Dictionary<Racer, Car>();
 
         private List<CheckPoint> _checkPoints;
-
-        private int _carsAmount = 10;
 
         protected override void Awake()
         {
             base.Awake();
-            // if (_carsAmount > spawnPoints.Length) _carsAmount = spawnPoints.Length;
             _checkPoints = transform.GetComponentsInChildren<CheckPoint>().ToList();
         }
 
         private void Start()
         {
-            // CreateRacersList();
             CreateVehicles();
             StartCoroutine(GoCountDown());
         }
@@ -65,7 +57,6 @@ namespace RaceComponents
                 Racers.Add(racer);
             }
         }*/
-
         private AiControllerInput CreateNewAiController(int index)
         {
             var controller = new GameObject("AIController_" + index).AddComponent<AiControllerInput>();
@@ -75,17 +66,16 @@ namespace RaceComponents
 
         private void CreateVehicles()
         {
-            Cars.Clear();
             var racers = CupManager.Instance.Racers;
+            
             for (int i = 0; i < racers.Count; i++)
             {
                 var spawnTransform = spawnPoints[i].transform;
                 var car = Instantiate(carPrefab, spawnTransform.position, spawnTransform.rotation);
                 car.name = "Car_" + i;
+                
                 var racer = racers[i];
-
                 car.Setup(racer);
-                racer.SetCar(car);
                 Cars.Add(car);
             }
         }
@@ -94,7 +84,7 @@ namespace RaceComponents
 
         public void CarThroughCheckPoint(CheckPoint checkPoint, Car car)
         {
-            var index = _checkPoints.IndexOf(checkPoint);
+            /*var index = _checkPoints.IndexOf(checkPoint);
             car.Racer.RacerPosition.SetLastPointIndex(index);
 
             foreach (var c in Cars)
@@ -104,7 +94,7 @@ namespace RaceComponents
                 c.Racer.RacerPosition.SetDistanceToNextPoint(distance);
             }
 
-            UpdatePositionsList();
+            UpdatePositionsList();*/
         }
 
         private IEnumerator GoCountDown()

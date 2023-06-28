@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using CustomUtils;
@@ -23,11 +24,18 @@ namespace CarComponents
 
         private List<float> _deltaPosition = new List<float>();
 
-        public void Setup(int index)
+        private void Awake()
         {
             TrackManager.Instance.OnGo += TrackManagerOnGo;
             TrackManager.Instance.OnRaceOver += TrackManagerOnRaceOver;
-            _index = index;
+            _car = GetComponent<Car>();
+        }
+
+        public void Setup(int index)
+        {
+            /*TrackManager.Instance.OnGo += TrackManagerOnGo;
+            TrackManager.Instance.OnRaceOver += TrackManagerOnRaceOver;
+            _index = index;*/
         }
 
         private void TrackManagerOnRaceOver() => _isPlaying = false;
@@ -50,7 +58,8 @@ namespace CarComponents
             }
             else
             {
-                var target = TrackManager.Instance.GetNextCheckPoint(_car.Racer.RacerPosition.LastPointIndex);
+                // var target = TrackManager.Instance.GetNextCheckPoint(_car.Racer.RacerPosition.LastPointIndex);
+                var target = TrackManager.Instance.GetNextCheckPoint(0);
                 var normalizedPosition =
                     NavigationRoute.Instance.GetSplineNormalizedPosition(target.transform.position);
                 NavigationRoute.Instance.EvaluateSpline(normalizedPosition, out float3 position, out float3 direction,

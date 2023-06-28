@@ -5,13 +5,33 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="89d28beb-5f3b-4b70-bf77-826042fca131" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/CupAssets/TestCup.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/CupAssets/TestCup.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.RacingCrew/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.RacingCrew/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Cup.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Cup.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/FirstCup/Greenwood.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/FirstCup/Greenwood.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/FirstCup/Greenwood.unity.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/FirstCup/Greenwood.unity.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/FirstCup/Penita.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/FirstCup/Penita.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/FirstCup/Penita.unity.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/FirstCup/Penita.unity.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/FirstCup/Summerton.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/FirstCup/Summerton.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/FirstCup/Summerton.unity.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/FirstCup/Summerton.unity.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/FirstCup/Velozia.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/FirstCup/Velozia.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/FirstCup/Velozia.unity.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/FirstCup/Velozia.unity.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainMenu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainMenu.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/CupAssets/AllCups.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/CupAssets/AllCups.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/CupAssets/FirstCup.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/CupAssets/FirstCup.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/CupAssets/TestCup2.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/CupAssets/TestCup2.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CarComponents/AiControllerInput.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CarComponents/AiControllerInput.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CarComponents/Car.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CarComponents/Car.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CarComponents/DummyCar.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CarComponents/DummyCar.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/CupManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CupManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CustomUtils/Constants.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CustomUtils/Constants.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Menu/HoverCupPreview.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Menu/HoverCupPreview.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Menu/ScriptableObjects/AllCupsAssets.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Menu/ScriptableObjects/AllCupsAssets.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Menu/ScriptableObjects/CupSelectionAssets.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Menu/ScriptableObjects/CupSelectionAssets.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/RaceComponents/Racer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/RaceComponents/Racer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/RaceComponents/RacerPosition.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/RaceComponents/RacerPosition.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/RaceComponents/TrackManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/RaceComponents/TrackManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UiTrackPositions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UiTrackPositions.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/VehicleInputReader.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/VehicleInputReader.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/SimpleRacer/Demo/SimpleRacerDemoSettings.lighting" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ThirdParty/SimpleRacer/Demo/SimpleRacerDemoSettings.lighting" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
     </list>
@@ -144,7 +164,7 @@
       <workItem from="1687691228584" duration="19650000" />
       <workItem from="1687770036293" duration="5527000" />
       <workItem from="1687851802352" duration="20211000" />
-      <workItem from="1687936961756" duration="7743000" />
+      <workItem from="1687936961756" duration="13855000" />
     </task>
     <servers />
   </component>

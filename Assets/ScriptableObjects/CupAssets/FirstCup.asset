@@ -12,18 +12,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37b98206d9434bb47bf815a01a7a5307, type: 3}
   m_Name: FirstCup
   m_EditorClassIdentifier: 
-  cupID: 0
   cupName: First Cup
   tracksData:
-  - sceneName: TestVehicles
-    displayName: Track 1
-    trackSprite: {fileID: 10901, guid: 0000000000000000f000000000000000, type: 0}
-  - sceneName: TestVehicles
-    displayName: Track 2
-    trackSprite: {fileID: 10901, guid: 0000000000000000f000000000000000, type: 0}
-  - sceneName: TestVehicles
-    displayName: Track 3
-    trackSprite: {fileID: 10901, guid: 0000000000000000f000000000000000, type: 0}
-  - sceneName: TestVehicles
-    displayName: Track 4
-    trackSprite: {fileID: 10901, guid: 0000000000000000f000000000000000, type: 0}
+  - sceneName: FirstCup/Greenwood
+    displayName: Greenwood Circuit
+    trackSprite: {fileID: 21300000, guid: c336adf9fb5111a4986fff25e2565a27, type: 3}
+  - sceneName: FirstCup/Penita
+    displayName: Penita Raceway
+    trackSprite: {fileID: 21300000, guid: e8e182fbbd1299f439b76a299f2a5bdf, type: 3}
+  - sceneName: FirstCup/Summerton
+    displayName: Summerton Circuit
+    trackSprite: {fileID: 21300000, guid: 111ca4e28bb44f44bb2b0bdcc05524cb, type: 3}
+  - sceneName: FirstCup/Velozia
+    displayName: Velozia Circuit
+    trackSprite: {fileID: 21300000, guid: 733901ac4d3bd9b45b66176e58c8d7e4, type: 3}
