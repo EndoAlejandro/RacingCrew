@@ -6,10 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="89d28beb-5f3b-4b70-bf77-826042fca131" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.RacingCrew/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.RacingCrew/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MainMenuInputReader.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MainMenuInputReader.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Menu/LobbyController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Menu/LobbyController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Menu/LobbyPlayer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Menu/LobbyPlayer.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayersManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayersManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2022.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2022.dwlt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -95,10 +94,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="38340">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" value="38340" />
+      <option name="pid" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
@@ -139,7 +138,8 @@
       <workItem from="1687622209739" duration="755000" />
       <workItem from="1687691228584" duration="19650000" />
       <workItem from="1687770036293" duration="5527000" />
-      <workItem from="1687851802352" duration="20159000" />
+      <workItem from="1687851802352" duration="20211000" />
+      <workItem from="1687936961756" duration="707000" />
     </task>
     <servers />
   </component>
@@ -154,32 +154,6 @@
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Scripts/PlayerInputSingle.cs</url>
-          <line>24</line>
-          <properties documentPath="C:\Users\alejo\Documents\GitHub\RacingCrew\Assets\Scripts\PlayerInputSingle.cs" initialLine="24" containingFunctionPresentation="Method 'Start'">
-            <startOffsets>
-              <option value="770" />
-            </startOffsets>
-            <endOffsets>
-              <option value="837" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="24" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Scripts/PlayerInputSingle.cs</url>
-          <line>30</line>
-          <properties documentPath="C:\Users\alejo\Documents\GitHub\RacingCrew\Assets\Scripts\PlayerInputSingle.cs" initialLine="30" containingFunctionPresentation="Method 'Start'">
-            <startOffsets>
-              <option value="1097" />
-            </startOffsets>
-            <endOffsets>
-              <option value="1147" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="25" />
-        </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/Scripts/Menu/LobbyController.cs</url>
           <line>62</line>
@@ -231,19 +205,6 @@
             </endOffsets>
           </properties>
           <option name="timeStamp" value="30" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Scripts/PlayerInputSingle.cs</url>
-          <line>60</line>
-          <properties documentPath="C:\Users\alejo\Documents\GitHub\RacingCrew\Assets\Scripts\PlayerInputSingle.cs" initialLine="60" containingFunctionPresentation="Method 'InputOnDeviceLost'">
-            <startOffsets>
-              <option value="2154" />
-            </startOffsets>
-            <endOffsets>
-              <option value="2196" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="31" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

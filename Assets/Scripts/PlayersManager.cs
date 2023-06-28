@@ -67,8 +67,9 @@ public class PlayersManager : Singleton<PlayersManager>
 
     public void OnPlayerRegained(PlayerInputSingle single)
     {
-        if (!PlayerInputs.Contains(single))
-            PlayerInputs.Add(single);
+        if (PlayerInputs.Contains(single)) return;
+        PlayerInputs.Add(single);
+        OnPlayerJoined?.Invoke(single);
     }
 
     public PlayerInputSingle GetPlayer(int index) =>

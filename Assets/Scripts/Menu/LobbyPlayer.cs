@@ -48,9 +48,9 @@ namespace Menu
 
         private void PlayerInputSingleOnInputTriggered()
         {
-            if (PlayerInputSingle.MainMenuInputReader.Select) 
+            if (PlayerInputSingle.MainMenuInputReader.Select)
                 SetLockSelection(true);
-            else if (PlayerInputSingle.MainMenuInputReader.Back) 
+            else if (PlayerInputSingle.MainMenuInputReader.Back)
                 SetLockSelection(false);
 
             if (IsPlayerReady) return;
@@ -70,6 +70,11 @@ namespace Menu
             _modelIndex = (_modelIndex + direction) % _models.Count;
             if (_modelIndex < 0) _modelIndex = _models.Count - 1;
             _models[_modelIndex].SetActive(true);
+        }
+
+        private void OnDestroy()
+        {
+            PlayerInputSingle.OnInputTriggered -= PlayerInputSingleOnInputTriggered;
         }
     }
 }
