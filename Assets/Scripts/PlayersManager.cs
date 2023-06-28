@@ -72,6 +72,6 @@ public class PlayersManager : Singleton<PlayersManager>
         OnPlayerJoined?.Invoke(single);
     }
 
-    public PlayerInputSingle GetPlayer(int index) =>
+    public PlayerInputSingle TryGetPlayerInputSingle(int index) =>
         PlayerInputs.FirstOrDefault(single => single.Input.playerIndex == index);
 }

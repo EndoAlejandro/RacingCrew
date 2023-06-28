@@ -1,33 +1,37 @@
 using System.Collections.Generic;
 using CarComponents;
+using CupComponents;
 using CustomUtils;
-using InGame;
 using Menu;
 using RaceComponents;
 using UnityEngine;
-using UnityEngine.InputSystem;
 
 public class CupManager : Singleton<CupManager>
 {
+    [Header("Loading")]
     [SerializeField] private GameObject loadingCanvas;
+
     [SerializeField] private Camera loadingCamera;
 
+    [Header("Controllers")]
+    [SerializeField] private PlayerControllerInput playerControllerInputPrefab;
 
-    private PlayerInputManager _inputManager;
-    private CupSelectionAssets _currentCup;
+    private List<CupRacer> _racers;
 
     private List<PlayerControllerInput> _playersController;
 
+    private CupSelectionAssets _currentCup;
     private bool _playerResponse;
 
-    public int CurrentRaceIndex { get; private set; }
     public List<Racer> Racers { get; private set; } = new List<Racer>();
+    public int CurrentRaceIndex { get; private set; }
 
     protected override void Awake()
     {
         base.Awake();
         DontDestroyOnLoad(gameObject);
-        _inputManager = GetComponent<PlayerInputManager>();
+
+        _racers = new List<CupRacer>();
     }
 
     private void Start()
@@ -35,6 +39,7 @@ public class CupManager : Singleton<CupManager>
         _currentCup = GameManager.Instance.CurrentCup;
         CurrentRaceIndex = 0;
 
+        CreateCupRacers();
         OnLoadingBegin();
         GameManager.Instance.LoadTrack(_currentCup.TracksData[0].sceneName, OnLoadingEnded);
     }
@@ -43,7 +48,7 @@ public class CupManager : Singleton<CupManager>
     {
         loadingCanvas.gameObject.SetActive(false);
         loadingCamera.enabled = false;
-
+        /*
         var racersAmount = GameManager.Instance.FixedRacersAmount;
         var carData = GameManager.Instance.DefaultCarData;
 
@@ -65,6 +70,7 @@ public class CupManager : Singleton<CupManager>
             racer.SetControllerInput(player);
             racer.SetCarModel(model);
         }
+        */
     }
 
     private AiControllerInput CreateNewAiController(int index)
@@ -76,21 +82,18 @@ public class CupManager : Singleton<CupManager>
 
     private void OnLoadingBegin()
     {
-        // CreatePlayersInput();
-        // var playerInput = PlayersManager.Instance.GetPlayer(0);
-        
         loadingCanvas.gameObject.SetActive(true);
         loadingCamera.enabled = true;
     }
 
-    private void CreatePlayersInput()
+    private void CreateCupRacers()
     {
-        var players = GameManager.Instance.PlayerCarInformation;
-        _inputManager.EnableJoining();
-
-        foreach (var player in players)
-            _inputManager.JoinPlayer(controlScheme: player.Scheme);
-
-        _inputManager.DisableJoining();
+        var racersAmount = GameManager.Instance.FixedRacersAmount;
+        for (int i = 0; i < racersAmount; i++)
+        {
+            var inputSingle = PlayersManager.Instance.TryGetPlayerInputSingle(i);
+            var racer = new CupRacer(i, inputSingle);
+            _racers.Add(racer);
+        }
     }
 }

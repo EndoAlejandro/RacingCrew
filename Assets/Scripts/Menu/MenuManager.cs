@@ -28,7 +28,7 @@ namespace Menu
 
         [SerializeField] private Toggle fullscreenToggle;
 
-        // LANGUAGE
+        // Localization
         private int _currentLocaleIndex;
         private int _selectedCupIndex;
 

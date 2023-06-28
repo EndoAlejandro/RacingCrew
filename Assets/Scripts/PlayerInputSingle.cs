@@ -1,18 +1,28 @@
 using System;
+using CarComponents;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
 [RequireComponent(typeof(PlayerInput))]
 public class PlayerInputSingle : MonoBehaviour
 {
+    [SerializeField] private CarData defaultCarData;
+
     public event Action OnInputTriggered;
     public PlayerInput Input { get; private set; }
     public MainMenuInputReader MainMenuInputReader { get; private set; } = new();
     public VehicleInputReader VehicleInputReader { get; private set; } = new();
-    private IInputReader _currentInputReader;
     public int PlayerIndex => Input != null ? Input.playerIndex : OnPlayerIndexNull();
+    public GameObject CarModel { get; private set; }
+    public CarStats CarStats { get; private set; }
 
-    private void Awake() => Input = GetComponent<PlayerInput>();
+    private IInputReader _currentInputReader;
+
+    private void Awake()
+    {
+        Input = GetComponent<PlayerInput>();
+        CarStats = defaultCarData.Stats;
+    }
 
     private int OnPlayerIndexNull()
     {
@@ -69,4 +79,7 @@ public class PlayerInputSingle : MonoBehaviour
         if (PlayersManager.Instance == null) return;
         PlayersManager.Instance.OnStateChanged -= PlayersManagerOnStateChanged;
     }
+
+    public void SetModelIndex(GameObject value) => CarModel = value;
+    public void SetCarData(CarStats value) => CarStats = value;
 }

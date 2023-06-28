@@ -59,6 +59,12 @@ namespace Menu
 
         private void SetLockSelection(bool lockSelection)
         {
+            if (lockSelection)
+            {
+                PlayerInputSingle.SetModelIndex(_models[_modelIndex]);
+                PlayerInputSingle.SetCarData(carData.Stats);
+            }
+
             IsPlayerReady = lockSelection;
             OnLobbyPlayerReady?.Invoke(lockSelection);
             readyText.SetActive(IsPlayerReady);
@@ -72,9 +78,6 @@ namespace Menu
             _models[_modelIndex].SetActive(true);
         }
 
-        private void OnDestroy()
-        {
-            PlayerInputSingle.OnInputTriggered -= PlayerInputSingleOnInputTriggered;
-        }
+        private void OnDestroy() => PlayerInputSingle.OnInputTriggered -= PlayerInputSingleOnInputTriggered;
     }
 }
