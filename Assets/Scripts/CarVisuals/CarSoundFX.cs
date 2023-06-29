@@ -1,41 +1,44 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class CarSoundFX : MonoBehaviour
+namespace CarVisuals
 {
-	[SerializeField] private CarSounds carSounds;
-	[SerializeField] private AudioSource audioSource;
-	[SerializeField] private float _speedVolumeTransitionUp;
-	[SerializeField] private float _speedVolumeTransitionDown;
+    [RequireComponent(typeof(AudioSource))]
+    public class CarSoundFX : MonoBehaviour
+    {
+        [SerializeField] private float speedVolumeTransitionUp = 0.25f;
+        [SerializeField] private float speedVolumeTransitionDown = 0.5f;
 
+        private AudioSource _audioSource;
+        private Rigidbody _rigidbody;
+        private float _tForVolume;
 
-	private Rigidbody _carRigidbody;
-	private float _tForVolume;
+        private void Awake()
+        {
+            _audioSource = GetComponent<AudioSource>();
+            _rigidbody = GetComponent<Rigidbody>();
+        }
 
-	private void Awake()
-	{
-		_carRigidbody = GetComponent<Rigidbody>();
-	}
-	private void Update()
-	{
+        private void Update()
+        {
+            if (_rigidbody.velocity.magnitude > 5)
+            {
+                if (_tForVolume <= 1)
+                {
+                    _tForVolume += Time.deltaTime * speedVolumeTransitionUp;
+                }
 
-		Debug.Log(_carRigidbody.velocity.magnitude);
-		if (_carRigidbody.velocity.magnitude > 5)
-		{
-			if (_tForVolume <= 1)
-			{
-				_tForVolume += Time.deltaTime * _speedVolumeTransitionUp;
-			}
-			audioSource.volume = Mathf.Lerp(0, 1, _tForVolume);
-		}
-		
-		if(_carRigidbody.velocity.magnitude < 20){
-			if (_tForVolume >= 0) { 
-				_tForVolume -= Time.deltaTime * _speedVolumeTransitionDown;
-			}
-			audioSource.volume = Mathf.Lerp(0, 1, _tForVolume);
-		}
-		
-	}
+                _audioSource.volume = Mathf.Lerp(0, 1, _tForVolume);
+            }
+
+            if (_rigidbody.velocity.magnitude < 20)
+            {
+                if (_tForVolume >= 0)
+                {
+                    _tForVolume -= Time.deltaTime * speedVolumeTransitionDown;
+                }
+
+                _audioSource.volume = Mathf.Lerp(0, 1, _tForVolume);
+            }
+        }
+    }
 }

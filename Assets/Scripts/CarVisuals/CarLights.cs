@@ -1,40 +1,18 @@
-using CarComponents;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class CarLights : MonoBehaviour
+namespace CarVisuals
 {
-	[Header("CAR")]
-	[SerializeField] private GameObject car;
-	[Header("LIGHTS")]
-	[SerializeField] private GameObject backLights;
+    public class CarLights : MonoBehaviour
+    {
+        [SerializeField] private GameObject backLights;
+        private Rigidbody _rigidbody;
+        private float _dotProduct;
+        private void Awake() => _rigidbody = GetComponent<Rigidbody>();
 
-	private Rigidbody _carRigidbody;
-	private float _dotProductResult;
-
-	private void Awake()
-	{
-		_carRigidbody = GetComponent<Rigidbody>();
-	}
-	private void Update()
-	{
-		_dotProductResult = Vector3.Dot(car.transform.forward.normalized, _carRigidbody.velocity.normalized);
-		if (_dotProductResult < -0.1)
-		{
-			ActivateBackLights();
-		}
-		else {
-			DesactivateBackLights();
-		}
-	}
-
-	public void ActivateBackLights() { 
-		backLights.SetActive(true);
-	}
-
-	public void DesactivateBackLights() { 
-		backLights.SetActive(false);
-	}
-
+        private void Update()
+        {
+            _dotProduct = Vector3.Dot(_rigidbody.transform.forward.normalized, _rigidbody.velocity.normalized);
+            backLights.SetActive(_dotProduct < -0.1);
+        }
+    }
 }

@@ -2,18 +2,20 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using CustomUtils;
+using UnityEngine;
 using UnityEngine.InputSystem;
 
 public class PlayersManager : Singleton<PlayersManager>
 {
     public enum State
-
     {
         WaitingFirstPlayer,
         UI,
         Lobby,
         Race,
     }
+
+    [SerializeField] private LayerMask[] cameraLayerMask;
 
     public event Action<State> OnStateChanged;
     public event Action<PlayerInputSingle> OnPlayerJoined;
@@ -74,4 +76,6 @@ public class PlayersManager : Singleton<PlayersManager>
 
     public PlayerInputSingle TryGetPlayerInputSingle(int index) =>
         PlayerInputs.FirstOrDefault(single => single.Input.playerIndex == index);
+
+    public void SetSplitScreen(bool isSplitScreen) => _inputManager.splitScreen = isSplitScreen;
 }

@@ -7103,6 +7103,31 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5015398851569419493, guid: ea5bdff67f5b32e498ffc09e6a6d189e,
+        type: 3}
+      propertyPath: cameraLayerMask.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5015398851569419493, guid: ea5bdff67f5b32e498ffc09e6a6d189e,
+        type: 3}
+      propertyPath: cameraLayerMask.Array.data[0].m_Bits
+      value: 4096
+      objectReference: {fileID: 0}
+    - target: {fileID: 5015398851569419493, guid: ea5bdff67f5b32e498ffc09e6a6d189e,
+        type: 3}
+      propertyPath: cameraLayerMask.Array.data[1].m_Bits
+      value: 256
+      objectReference: {fileID: 0}
+    - target: {fileID: 5015398851569419493, guid: ea5bdff67f5b32e498ffc09e6a6d189e,
+        type: 3}
+      propertyPath: cameraLayerMask.Array.data[2].m_Bits
+      value: 512
+      objectReference: {fileID: 0}
+    - target: {fileID: 5015398851569419493, guid: ea5bdff67f5b32e498ffc09e6a6d189e,
+        type: 3}
+      propertyPath: cameraLayerMask.Array.data[3].m_Bits
+      value: 1024
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

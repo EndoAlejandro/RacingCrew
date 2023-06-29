@@ -5,6 +5,7 @@ using System.Linq;
 using CarComponents;
 using CustomUtils;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace RaceComponents
 {
@@ -13,8 +14,12 @@ namespace RaceComponents
         public event Action OnGo;
         public event Action OnRaceOver;
 
-        [SerializeField] private int laps = 3;
         [SerializeField] private Car carPrefab;
+
+        [FormerlySerializedAs("playerCameraPrefab")] [SerializeField]
+        private PlayerViewController playerViewControllerPrefab;
+
+        [SerializeField] private int laps = 3;
         [SerializeField] private Transform[] spawnPoints;
 
         private List<CheckPoint> _checkPoints;
@@ -46,16 +51,29 @@ namespace RaceComponents
 
             for (int i = 0; i < racers.Count; i++)
             {
-                var spawnTransform = spawnPoints[i].transform;
-                var car = Instantiate(carPrefab, spawnTransform.position, spawnTransform.rotation);
-                car.transform.SetParent(transform, true);
-                car.name = "Car_" + i;
+                var car = CreateCar(i);
 
                 var racer = racers[i];
                 var position = new RacerPosition(racer, car);
                 car.Setup(racer, position);
                 RacersPositions.Add(position);
+
+                if (!racer.IsPlayer) continue;
+
+                var playerViewController = Instantiate(playerViewControllerPrefab, transform);
+                playerViewController.Setup(racer.PlayerInputSingle, car);
             }
+
+            PlayersManager.Instance.SetSplitScreen(true);
+        }
+
+        private Car CreateCar(int index)
+        {
+            var spawnTransform = spawnPoints[index].transform;
+            var car = Instantiate(carPrefab, spawnTransform.position, spawnTransform.rotation);
+            car.transform.SetParent(transform, true);
+            car.name = "Car_" + index;
+            return car;
         }
 
         public CheckPoint GetNextCheckPoint(int index) => _checkPoints[(index + 1) % _checkPoints.Count];
@@ -63,7 +81,7 @@ namespace RaceComponents
         public void CarThroughCheckPoint(CheckPoint checkPoint, Car car)
         {
             if (!_isRacing) return;
-            
+
             var index = _checkPoints.IndexOf(checkPoint);
             car.RacerPosition.SetLastPointIndex(index);
 
@@ -87,6 +105,7 @@ namespace RaceComponents
 
         private void EndRace()
         {
+            PlayersManager.Instance.SetSplitScreen(false);
             OnRaceOver?.Invoke();
 
             for (int i = 0; i < RacersPositions.Count; i++)

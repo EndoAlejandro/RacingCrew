@@ -1,48 +1,40 @@
-using CarComponents;
-using UnityEngine;
 using TMPro;
+using UnityEngine;
 
-[RequireComponent(typeof(Car))]
-public class CarSpeedometer : MonoBehaviour
+namespace CarVisuals
 {
-	[Header("SPEEDOMETER OBJECTS")]
-	[SerializeField] private RectTransform arrow;
-	[SerializeField] private TextMeshProUGUI textSpeed;
-	[Header("SPEEPDOMETER PARAMETERS")]
-	[SerializeField] private float minSpeedArrowAngle;
-	[SerializeField] private float maxSpeedArrowAngle;
+    [RequireComponent(typeof(PlayerViewController))]
+    public class CarSpeedometer : MonoBehaviour
+    {
+        [SerializeField] private RectTransform arrow;
+        [SerializeField] private TextMeshProUGUI textSpeed;
 
-	private Rigidbody carRigidbody;
-	private Car car;
-	private float _maxSpeed;
-	private float _speed = 0.0f;
+        [SerializeField] private float minSpeedArrowAngle;
+        [SerializeField] private float maxSpeedArrowAngle;
 
-	private void Awake()
-	{
-		carRigidbody = GetComponent<Rigidbody>();
-		car = GetComponent<Car>();		
-	}
+        private float _maxSpeed;
+        private float _speed = 0.0f;
 
-	private void Start()
-	{
-		_maxSpeed = car.Stats.MaxSpeed;
-		Debug.Log(_maxSpeed);
-		SetSpeedometerText();
-	}
+        private PlayerViewController _playerViewController;
+        private Rigidbody _carRigidbody;
 
-	private void Update()
-	{
-		_speed = carRigidbody.velocity.magnitude;
-		SetSpeedometerText();
-		arrow.localEulerAngles = new Vector3(0, 0, Mathf.Lerp(minSpeedArrowAngle,maxSpeedArrowAngle, _speed/_maxSpeed));
+        private void Awake() => _playerViewController = GetComponent<PlayerViewController>();
 
-	}
+        private void Start()
+        {
+            _carRigidbody = _playerViewController.Car.GetComponent<Rigidbody>();
+            _maxSpeed = _playerViewController.Car.Stats.MaxSpeed;
+            SetSpeedometerText();
+        }
 
-	private void SetSpeedometerText() {
-		textSpeed.text = (int)_speed + " km/h";
-	}
+        private void Update()
+        {
+            _speed = _carRigidbody.velocity.magnitude;
+            SetSpeedometerText();
+            arrow.localEulerAngles =
+                new Vector3(0, 0, Mathf.Lerp(minSpeedArrowAngle, maxSpeedArrowAngle, _speed / _maxSpeed));
+        }
 
-
-
-
+        private void SetSpeedometerText() => textSpeed.text = (int)_speed + " km/h";
+    }
 }

@@ -77,3 +77,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defaultCarData: {fileID: 11400000, guid: 2755c468669a79d419fe33bbd2a03cca, type: 2}
+  cameraLayerMask:
+    serializedVersion: 2
+    m_Bits: 256
