@@ -5,7 +5,6 @@ using System.Linq;
 using CarComponents;
 using CustomUtils;
 using UnityEngine;
-using UnityEngine.Splines;
 using Random = UnityEngine.Random;
 
 namespace RaceComponents
@@ -22,7 +21,7 @@ namespace RaceComponents
         [SerializeField] private PlayerControllerInput[] playerControllers;
         [SerializeField] private Transform[] spawnPoints;
 
-        public List<Racer> Racers { get; private set; } = new List<Racer>();
+        // public List<Racer> Racers { get; private set; } = new List<Racer>();
         public List<Car> Cars { get; private set; } = new List<Car>();
 
         private Dictionary<Racer, Car> _carRacer = new Dictionary<Racer, Car>();
@@ -34,28 +33,27 @@ namespace RaceComponents
         protected override void Awake()
         {
             base.Awake();
-            if (_carsAmount > spawnPoints.Length) _carsAmount = spawnPoints.Length;
+            // if (_carsAmount > spawnPoints.Length) _carsAmount = spawnPoints.Length;
             _checkPoints = transform.GetComponentsInChildren<CheckPoint>().ToList();
         }
 
-        [ContextMenu("Start")]
-        private void Star()
+        private void Start()
         {
-            CreateRacersList();
+            // CreateRacersList();
             CreateVehicles();
             StartCoroutine(GoCountDown());
         }
 
         public void UpdatePositionsList()
         {
-            Racers.Sort();
-            Racers.Reverse();
+            /*Racers.Sort();
+            Racers.Reverse();*/
         }
 
         /// <summary>
         /// This method must be replaced with getting the racers list from GameManager.
         /// </summary>
-        private void CreateRacersList()
+        /*private void CreateRacersList()
         {
             for (int i = 0; i < _carsAmount; i++)
             {
@@ -66,7 +64,7 @@ namespace RaceComponents
                 var racer = new Racer(carData, model, controllerInput);
                 Racers.Add(racer);
             }
-        }
+        }*/
 
         private AiControllerInput CreateNewAiController(int index)
         {
@@ -78,12 +76,13 @@ namespace RaceComponents
         private void CreateVehicles()
         {
             Cars.Clear();
-            for (int i = 0; i < Racers.Count; i++)
+            var racers = CupManager.Instance.Racers;
+            for (int i = 0; i < racers.Count; i++)
             {
                 var spawnTransform = spawnPoints[i].transform;
                 var car = Instantiate(carPrefab, spawnTransform.position, spawnTransform.rotation);
                 car.name = "Car_" + i;
-                var racer = Racers[i];
+                var racer = racers[i];
 
                 car.Setup(racer);
                 racer.SetCar(car);
