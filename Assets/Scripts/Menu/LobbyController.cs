@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
@@ -59,11 +60,11 @@ namespace Menu
 
         private void PlayersManagerOnPlayerDisconnected(PlayerInputSingle playerInput)
         {
-            if (playerInput.PlayerIndex < 0) 
+            if (playerInput.PlayerIndex < 0)
                 return;
             foreach (var lobbyPlayer in _lobbyPlayers)
             {
-                if (lobbyPlayer.PlayerInputSingle.PlayerIndex != playerInput.PlayerIndex) 
+                if (lobbyPlayer.PlayerInputSingle.PlayerIndex != playerInput.PlayerIndex)
                     continue;
 
                 RemoveLobbyPlayer(lobbyPlayer);
@@ -82,6 +83,14 @@ namespace Menu
         {
             _lobbyPlayers.Remove(lobbyPlayer);
             Destroy(lobbyPlayer.gameObject);
+        }
+
+        private void OnDestroy()
+        {
+            PlayersManager.Instance.OnPlayerJoined -= PlayersManagerOnPlayerJoined;
+            PlayersManager.Instance.OnPlayerDisconnected -= PlayersManagerOnPlayerDisconnected;
+
+            LobbyPlayer.OnLobbyPlayerReady -= LobbyPlayerOnLobbyPlayerReady;
         }
     }
 }

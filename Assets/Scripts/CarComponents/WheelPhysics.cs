@@ -1,7 +1,7 @@
-using CarComponents;
 using UnityEngine;
+using VehicleComponents;
 
-namespace VehicleComponents
+namespace CarComponents
 {
     public class WheelPhysics : MonoBehaviour
     {

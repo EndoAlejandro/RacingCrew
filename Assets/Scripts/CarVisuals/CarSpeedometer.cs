@@ -1,3 +1,4 @@
+using RaceComponents;
 using TMPro;
 using UnityEngine;
 
@@ -6,6 +7,8 @@ namespace CarVisuals
     [RequireComponent(typeof(PlayerViewController))]
     public class CarSpeedometer : MonoBehaviour
     {
+        [SerializeField] private TextMeshProUGUI positionText;
+
         [SerializeField] private RectTransform arrow;
         [SerializeField] private TextMeshProUGUI textSpeed;
 
@@ -29,10 +32,18 @@ namespace CarVisuals
 
         private void Update()
         {
+            SetPosition();
             _speed = _carRigidbody.velocity.magnitude;
             SetSpeedometerText();
             arrow.localEulerAngles =
                 new Vector3(0, 0, Mathf.Lerp(minSpeedArrowAngle, maxSpeedArrowAngle, _speed / _maxSpeed));
+        }
+
+        private void SetPosition()
+        {
+            var racersCount = TrackManager.Instance.RacersPositions.Count;
+            var position = TrackManager.Instance.GetPosition(_playerViewController.Car.RacerPosition);
+            positionText.SetText(position + "/" + racersCount);
         }
 
         private void SetSpeedometerText() => textSpeed.text = (int)_speed + " km/h";

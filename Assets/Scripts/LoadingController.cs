@@ -9,7 +9,7 @@ public class LoadingController : MonoBehaviour
 
     private void CupManagerOnLoading(bool isLoading)
     {
-        camera.gameObject.SetActive(isLoading);
+        // camera.gameObject.SetActive(isLoading);
         loadingCanvas.SetActive(isLoading);
     }
 

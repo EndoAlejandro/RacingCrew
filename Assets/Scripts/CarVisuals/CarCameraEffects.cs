@@ -1,3 +1,4 @@
+using System;
 using Cinemachine;
 using UnityEngine;
 
@@ -31,7 +32,7 @@ namespace CarVisuals
         private CinemachineTransposer _transposer;
 
         private Rigidbody _carRigidbody;
-        
+
         private float _tForNoise;
         private float _tForOffset;
         private float _tForFOV;
@@ -51,22 +52,14 @@ namespace CarVisuals
 
         private void Update()
         {
-            if (_carRigidbody.velocity.magnitude > speedToStartCameraEffects)
-            {
-                AddNoise();
-                AddCameraOffset();
-                AddCameraFOV();
-                _back = false;
-            }
-            else
-            {
-                if (!_back) _back = true;
+            _multiChannelPerlin.m_AmplitudeGain =
+                Mathf.Lerp(0, maxAmplitudeGain, _playerViewController.Car.NormalizedSpeed);
 
-                RemoveNoise();
-                RemoveCameraOffset();
-                RemoveCameraFOV();
-            }
+            _playerViewController.VirtualCamera.m_Lens.FieldOfView =
+                Mathf.Lerp(minFieldOfView, maxFieldOfView, _playerViewController.Car.NormalizedSpeed);
         }
+
+        #region Legacy
 
         private void AddNoise()
         {
@@ -130,17 +123,19 @@ namespace CarVisuals
 
         private void RemoveCameraFOV()
         {
-            if (_playerViewController.VirtualCamera.m_Lens.FieldOfView == maxFieldOfView) return;
+            if (Math.Abs(_playerViewController.VirtualCamera.m_Lens.FieldOfView - maxFieldOfView) < 0.1f) return;
 
             if (_tForFOV >= 0) _tForFOV -= Time.deltaTime * transitionSpeedFOV;
 
             _playerViewController.VirtualCamera.m_Lens.FieldOfView =
                 Mathf.Lerp(maxFieldOfView, minFieldOfView, _tForFOV);
 
-            if (_playerViewController.VirtualCamera.m_Lens.FieldOfView == maxFieldOfView)
+            if (Math.Abs(_playerViewController.VirtualCamera.m_Lens.FieldOfView - maxFieldOfView) < 0.1f)
             {
                 _tForFOV = 0;
             }
         }
+
+        #endregion
     }
 }

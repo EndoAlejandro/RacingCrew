@@ -119,6 +119,15 @@ namespace RaceComponents
             CupManager.Instance.OnTrackEnded();
         }
 
+        public int GetPosition(RacerPosition racerPosition)
+        {
+            for (int i = 0; i < RacersPositions.Count; i++)
+                if (racerPosition.CupRacer.RacerIndex == RacersPositions[i].CupRacer.RacerIndex)
+                    return i + 1;
+
+            return RacersPositions.Count;
+        }
+
         private IEnumerator GoCountDown()
         {
             var currentCountDown = 5;

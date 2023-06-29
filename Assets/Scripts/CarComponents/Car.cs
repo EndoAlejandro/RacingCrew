@@ -7,17 +7,23 @@ namespace CarComponents
     public class Car : MonoBehaviour
     {
         [SerializeField] private CarData defaultData;
-
-        private bool _canGo;
-        private IControllerInput _controller;
+        [SerializeField] private Transform carContainer;
 
         public CupRacer Racer { get; private set; }
         public Vector3 Input { get; private set; }
         public CarStats Stats => Racer?.Stats ?? defaultData.Stats;
-
         public RacerPosition RacerPosition { get; private set; }
+        public float NormalizedSpeed => _rigidbody.velocity.magnitude / Stats.MaxSpeed;
 
-        private void Awake() => Input = new Vector3();
+        private bool _canGo;
+        private IControllerInput _controller;
+        private Rigidbody _rigidbody;
+
+        private void Awake()
+        {
+            Input = new Vector3();
+            _rigidbody = GetComponent<Rigidbody>();
+        }
 
         public void Setup(CupRacer racer, RacerPosition racerPosition)
         {
@@ -35,7 +41,7 @@ namespace CarComponents
             else
                 _controller = gameObject.AddComponent<AiControllerInput>();
 
-            Instantiate(racer.CarModel, transform);
+            Instantiate(racer.CarModel, carContainer);
         }
 
         private void TrackManagerOnGo() => _canGo = true;
