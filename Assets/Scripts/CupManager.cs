@@ -10,12 +10,14 @@ public class CupManager : Singleton<CupManager>
 {
     public event Action<bool> OnLoading;
     public event Action TrackEnded;
-    public int CurrentRaceIndex { get; private set; }
+
     public List<CupRacer> CupRacers { get; private set; }
 
     private List<PlayerControllerInput> _playersController;
     private CupSelectionAssets _currentCup;
+
     private bool _playerResponse;
+    private int _currentRaceIndex;
 
     protected override void Awake()
     {
@@ -28,11 +30,16 @@ public class CupManager : Singleton<CupManager>
     private void Start()
     {
         _currentCup = GameManager.Instance.CurrentCup;
-        CurrentRaceIndex = 0;
+        _currentRaceIndex = 0;
 
         CreateCupRacers();
+        LoadTrack();
+    }
+
+    private void LoadTrack()
+    {
         OnLoadingBegin();
-        GameManager.Instance.LoadTrack(_currentCup.TracksData[0].sceneName, OnLoadingEnded);
+        GameManager.Instance.LoadTrack(_currentCup.TracksData[_currentRaceIndex].sceneName, OnLoadingEnded);
     }
 
     private void OnLoadingBegin() => OnLoading?.Invoke(true);
@@ -53,25 +60,16 @@ public class CupManager : Singleton<CupManager>
     {
         CupRacers.Sort();
         CupRacers.Reverse();
-
-        foreach (var cupRacer in CupRacers)
-        {
-            Debug.Log(cupRacer.Score);
-        }
-
         TrackEnded?.Invoke();
+        GameManager.Instance.LoadResultsScene();
     }
 
-    public static List<CupRacer> TempGetDummyList()
+    public void LoadNextTrack()
     {
-        var list = new List<CupRacer>();
-        var racersAmount = 8;
-        for (int i = 0; i < racersAmount; i++)
-        {
-            var racer = new CupRacer(i, null);
-            list.Add(racer);
-        }
-
-        return list;
+        _currentRaceIndex++;
+        if (_currentRaceIndex < _currentCup.TracksData.Length)
+            LoadTrack();
+        else
+            GameManager.Instance.LoadMainMenu();
     }
 }

@@ -1,14 +1,19 @@
-using UnityEngine;
 using TMPro;
+using UnityEngine;
 
-public class SetInfoCard : MonoBehaviour
+namespace ScoreTable
 {
-	[SerializeField] private TextMeshProUGUI _textPosition;
-	[SerializeField] private TextMeshProUGUI _textName;
-	[SerializeField] private TextMeshProUGUI _textScore;
-	public void SetInfo(string textPosition, string textName, string textScore) { 
-		_textPosition.text = textPosition;
-		_textName.text = textName;
-		_textScore.text = textScore;
-	}
+    public class SetInfoCard : MonoBehaviour
+    {
+        [SerializeField] private TextMeshProUGUI textPosition;
+        [SerializeField] private TextMeshProUGUI textName;
+        [SerializeField] private TextMeshProUGUI textScore;
+
+        public void SetInfo(int position, string racerName, int score)
+        {
+            textPosition.SetText(position.ToString());
+            textName.SetText(racerName);
+            textScore.SetText(score.ToString());
+        }
+    }
 }

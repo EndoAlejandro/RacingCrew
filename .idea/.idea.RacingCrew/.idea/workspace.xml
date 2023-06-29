@@ -5,20 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="89d28beb-5f3b-4b70-bf77-826042fca131" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/ScoreTable/ScoreTableManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.RacingCrew/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.RacingCrew/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Race/Car.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Race/Car.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/FirstCup/Greenwood.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/FirstCup/Greenwood.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/TestVehicles.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/TestVehicles.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CarComponents/AiControllerInput.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CarComponents/AiControllerInput.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CarComponents/Car.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CarComponents/Car.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CupComponents/CupRacer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CupComponents/CupRacer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Table/Background_Row.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Table/Background_Row.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/ScoreTable.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/ScoreTable.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/CupManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CupManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CustomUtils/Constants.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CustomUtils/Constants.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/RaceComponents/Racer.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/RaceComponents/Racer.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/RaceComponents/RacerPosition.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/RaceComponents/RacerPosition.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/RaceComponents/TrackManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/RaceComponents/TrackManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UiTrackPositions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UiTrackPositions.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ScoreTable/SetInfoCard.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ScoreTable/SetInfoCard.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ScoreTable/TableManager.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ScoreTable/TableManager.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ScoreTable/ScoreTableManager.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -106,10 +103,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="18628">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" value="18628" />
+      <option name="pid" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
@@ -152,6 +149,7 @@
       <workItem from="1687770036293" duration="5527000" />
       <workItem from="1687851802352" duration="20211000" />
       <workItem from="1687936961756" duration="22800000" />
+      <workItem from="1688023614336" duration="2389000" />
     </task>
     <servers />
   </component>
@@ -217,45 +215,6 @@
             </endOffsets>
           </properties>
           <option name="timeStamp" value="30" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Scripts/CupManager.cs</url>
-          <line>57</line>
-          <properties documentPath="C:\Users\alejo\Documents\GitHub\RacingCrew\Assets\Scripts\CupManager.cs" initialLine="57" containingFunctionPresentation="Method 'OnTrackEnded'">
-            <startOffsets>
-              <option value="1562" />
-            </startOffsets>
-            <endOffsets>
-              <option value="1588" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="32" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Scripts/RaceComponents/TrackManager.cs</url>
-          <line>90</line>
-          <properties documentPath="C:\Users\alejo\Documents\GitHub\RacingCrew\Assets\Scripts\RaceComponents\TrackManager.cs" initialLine="90" containingFunctionPresentation="Method 'EndRace'">
-            <startOffsets>
-              <option value="3049" />
-            </startOffsets>
-            <endOffsets>
-              <option value="3112" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="33" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Scripts/RaceComponents/TrackManager.cs</url>
-          <line>88</line>
-          <properties documentPath="C:\Users\alejo\Documents\GitHub\RacingCrew\Assets\Scripts\RaceComponents\TrackManager.cs" initialLine="88" containingFunctionPresentation="Method 'EndRace'">
-            <startOffsets>
-              <option value="2887" />
-            </startOffsets>
-            <endOffsets>
-              <option value="2945" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="34" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

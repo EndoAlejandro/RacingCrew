@@ -459,9 +459,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4579a1dd74a8d44d83d12a3fd0b6912, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _textPosition: {fileID: 7236291048031758333}
-  _textName: {fileID: 5052914372872441219}
-  _textScore: {fileID: 5088553642533837845}
+  textPosition: {fileID: 7236291048031758333}
+  textName: {fileID: 5052914372872441219}
+  textScore: {fileID: 5088553642533837845}
 --- !u!222 &225766104927626568
 CanvasRenderer:
   m_ObjectHideFlags: 0

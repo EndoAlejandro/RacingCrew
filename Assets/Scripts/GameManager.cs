@@ -5,6 +5,7 @@ using CustomUtils;
 using Menu;
 using Menu.ScriptableObjects;
 using UnityEngine;
+using UnityEngine.Android;
 using UnityEngine.SceneManagement;
 
 public class GameManager : Singleton<GameManager>
@@ -56,7 +57,7 @@ public class GameManager : Singleton<GameManager>
     {
         if (SceneManager.loadedSceneCount > 1)
         {
-            var last = SceneManager.GetSceneAt(SceneManager.loadedSceneCount);
+            var last = SceneManager.GetSceneAt(SceneManager.loadedSceneCount - 1);
             yield return SceneManager.UnloadSceneAsync(last);
         }
 
@@ -64,5 +65,23 @@ public class GameManager : Singleton<GameManager>
         callback?.Invoke();
     }
 
+    public void LoadResultsScene() => StartCoroutine(LoadResultsSceneAsync());
+
+    private IEnumerator LoadResultsSceneAsync()
+    {
+        if (SceneManager.loadedSceneCount > 1)
+        {
+            var last = SceneManager.GetSceneAt(SceneManager.loadedSceneCount - 1);
+            yield return SceneManager.UnloadSceneAsync(last);
+        }
+
+        yield return SceneManager.LoadSceneAsync("Scenes/ScoreTable", LoadSceneMode.Additive);
+    }
+
     public void SetCurrentCup(CupSelectionAssets cupSelectionAssets) => CurrentCup = cupSelectionAssets;
+
+    public void LoadMainMenu()
+    {
+        // TODO: Load Main menu.
+    }
 }

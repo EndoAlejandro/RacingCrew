@@ -20,6 +20,8 @@ namespace RaceComponents
         private List<CheckPoint> _checkPoints;
         public List<RacerPosition> RacersPositions { get; private set; } = new();
 
+        private bool _isRacing;
+
         protected override void Awake()
         {
             base.Awake();
@@ -32,7 +34,7 @@ namespace RaceComponents
             StartCoroutine(GoCountDown());
         }
 
-        public void UpdatePositionsList()
+        private void UpdatePositionsList()
         {
             RacersPositions.Sort();
             RacersPositions.Reverse();
@@ -60,6 +62,8 @@ namespace RaceComponents
 
         public void CarThroughCheckPoint(CheckPoint checkPoint, Car car)
         {
+            if (!_isRacing) return;
+            
             var index = _checkPoints.IndexOf(checkPoint);
             car.RacerPosition.SetLastPointIndex(index);
 
@@ -84,7 +88,7 @@ namespace RaceComponents
         private void EndRace()
         {
             OnRaceOver?.Invoke();
-            
+
             for (int i = 0; i < RacersPositions.Count; i++)
             {
                 var normalizedPosition = (float)i / RacersPositions.Count;
@@ -92,6 +96,7 @@ namespace RaceComponents
                 RacersPositions[i].CupRacer.AddScore(Mathf.RoundToInt(points));
             }
 
+            _isRacing = false;
             CupManager.Instance.OnTrackEnded();
         }
 
@@ -104,6 +109,7 @@ namespace RaceComponents
                 currentCountDown--;
             }
 
+            _isRacing = true;
             OnGo?.Invoke();
         }
     }
