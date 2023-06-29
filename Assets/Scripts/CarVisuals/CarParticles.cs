@@ -19,11 +19,10 @@ namespace CarVisuals
 
         private void Update()
         {
-            if (_car.NormalizedSpeed > 0.2f)
-            {
-                if (!airParticleSystemFront.isPlaying) airParticleSystemFront.Play();
-            }
-            else airParticleSystemFront.Stop();
+            if (_car.NormalizedSpeed < 0.1f && airParticleSystemFront.isPlaying)
+                airParticleSystemFront.Stop();
+            else
+                airParticleSystemFront.Play();
         }
     }
 }

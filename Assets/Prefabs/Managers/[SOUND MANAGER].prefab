@@ -177,7 +177,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   musicAudioSource: {fileID: 3734808471010162881}
   fxAudioSource: {fileID: 7397221571681821509}
-  uiAudioClip: {fileID: 0}
+  uiAudioClip: {fileID: 8300000, guid: c023606236bfaba43adfd5528f9573d0, type: 3}
 --- !u!1 &5149807058258258348
 GameObject:
   m_ObjectHideFlags: 0
