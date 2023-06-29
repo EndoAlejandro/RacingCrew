@@ -58,17 +58,16 @@ namespace CustomUtils
         /// <param name="One Axis"> myVector.With(y: valueY);</param>
         /// <param name="All Axis"> myVector.With(x: valueX, y: valueY);</param>
         /// <returns></returns>
-        public static Vector2 With(this Vector2 original, float? x = null, float? y = null)
-        {
-            return new Vector2(x ?? original.x, y ?? original.y);
-        }
+        public static Vector2 With(this Vector2 original, float? x = null, float? y = null) =>
+            new(x ?? original.x, y ?? original.y);
 
         /// <summary>
         /// Get a random float from a Vector2.
         /// </summary>
         /// <param name="original">x = min Value | y = max Value.</param>
         /// <returns></returns>
-        public static float GetRandomPointInRange(this Vector2 original) => Random.Range(original.x, original.y);
+        public static float GetRandomPointInRange(this Vector2 original) =>
+            Random.Range(original.x, original.y);
 
         /// <summary>
         /// Get a float value between a Vector2 axis.

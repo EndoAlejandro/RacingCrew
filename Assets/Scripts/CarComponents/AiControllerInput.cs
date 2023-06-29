@@ -7,9 +7,9 @@ using UnityEngine;
 
 namespace CarComponents
 {
-    public class AiControllerInput : MonoBehaviour, IControllerInput, IDirectionNavigator
+    public class AiControllerInput : MonoBehaviour, IControllerInput
     {
-        [SerializeField] private float refreshRate;
+        private readonly float _refreshRate = 2f;
         public float Acceleration { get; private set; }
 
         public float Break { get; private set; }
@@ -20,14 +20,15 @@ namespace CarComponents
         private int _index;
         private bool _isPlaying;
         private Car _car;
+        private Rigidbody _rigidbody;
 
         private List<float> _deltaPosition = new List<float>();
 
-        public void Setup(int index)
+        private void Awake()
         {
             TrackManager.Instance.OnGo += TrackManagerOnGo;
             TrackManager.Instance.OnRaceOver += TrackManagerOnRaceOver;
-            _index = index;
+            _car = GetComponent<Car>();
         }
 
         private void TrackManagerOnRaceOver() => _isPlaying = false;
@@ -38,34 +39,40 @@ namespace CarComponents
         {
             while (_isPlaying)
             {
-                yield return new WaitForSeconds(refreshRate);
+                var previousPosition = transform.position;
+                yield return new WaitForSeconds(_refreshRate);
+                var currentPosition = transform.position;
+
+                if (Vector3.Distance(previousPosition, currentPosition) > 1) continue;
+
+                _rigidbody.isKinematic = true;
+                var normalizedPosition = NavigationRoute.Instance.GetSplineNormalizedPosition(transform.position);
+                NavigationRoute.Instance.EvaluateSpline(normalizedPosition, out float3 position,
+                    out float3 direction, out float3 up);
+                transform.position = position;
+                transform.rotation = Quaternion.LookRotation(direction, up);
+                yield return null;
+                _rigidbody.isKinematic = false;
             }
         }
 
         private void Update()
         {
-            if (_car == null && TrackManager.Instance.Cars.Count > _index)
-            {
-                _car = TrackManager.Instance.Cars[_index];
-            }
-            else
-            {
-                var target = TrackManager.Instance.GetNextCheckPoint(_car.Racer.RacerPosition.LastPointIndex);
-                var normalizedPosition =
-                    NavigationRoute.Instance.GetSplineNormalizedPosition(target.transform.position);
-                NavigationRoute.Instance.EvaluateSpline(normalizedPosition, out float3 position, out float3 direction,
-                    out float3 up);
+            var target = TrackManager.Instance.GetNextCheckPoint(_car.RacerPosition.LastPointIndex + 1);
+            var normalizedPosition =
+                NavigationRoute.Instance.GetSplineNormalizedPosition(target.transform.position);
+            NavigationRoute.Instance.EvaluateSpline(normalizedPosition, out float3 position, out float3 direction,
+                out float3 up);
 
-                DesiredDirection = (((Vector3)position).With(y: 0f) - _car.transform.position.With(y: 0f)).normalized;
-            }
+            DesiredDirection = (((Vector3)position).With(y: 0f) - _car.transform.position.With(y: 0f)).normalized;
 
             var dot = Vector3.Dot(_car.transform.forward, DesiredDirection);
             var angle =
                 Vector3.SignedAngle(DesiredDirection, _car.transform.forward, Vector3.up) * -0.45f;
 
-            if (dot > 0 && Mathf.Abs(angle) < 60f)
+            if (dot > 0.25f)
             {
-                Acceleration = dot;
+                Acceleration = Mathf.Abs(angle) < 60f ? dot : 0;
                 Break = 0f;
             }
             else
@@ -77,11 +84,5 @@ namespace CarComponents
 
             Turn = Mathf.Clamp(angle, -1, 1);
         }
-    }
-
-    public interface IDirectionNavigator
-    {
-        Vector3 DesiredDirection { get; }
-        void Setup(int index);
     }
 }

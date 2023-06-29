@@ -1,96 +1,75 @@
+using System;
 using System.Collections.Generic;
 using CarComponents;
+using CupComponents;
 using CustomUtils;
-using InGame;
-using Menu;
-using RaceComponents;
+using Menu.ScriptableObjects;
 using UnityEngine;
-using UnityEngine.InputSystem;
 
 public class CupManager : Singleton<CupManager>
 {
-    [SerializeField] private GameObject loadingCanvas;
-    [SerializeField] private Camera loadingCamera;
+    public event Action<bool> OnLoading;
+    public event Action TrackEnded;
 
-
-    private PlayerInputManager _inputManager;
-    private CupSelectionAssets _currentCup;
+    public List<CupRacer> CupRacers { get; private set; }
 
     private List<PlayerControllerInput> _playersController;
+    private CupSelectionAssets _currentCup;
 
     private bool _playerResponse;
-
-    public int CurrentRaceIndex { get; private set; }
-    public List<Racer> Racers { get; private set; } = new List<Racer>();
+    private int _currentRaceIndex;
 
     protected override void Awake()
     {
         base.Awake();
         DontDestroyOnLoad(gameObject);
-        _inputManager = GetComponent<PlayerInputManager>();
+
+        CupRacers = new List<CupRacer>();
     }
 
     private void Start()
     {
         _currentCup = GameManager.Instance.CurrentCup;
-        CurrentRaceIndex = 0;
+        _currentRaceIndex = 0;
 
-        OnLoadingBegin();
-        GameManager.Instance.LoadTrack(_currentCup.TracksData[0].sceneName, OnLoadingEnded);
+        CreateCupRacers();
+        LoadTrack();
     }
 
-    private void OnLoadingEnded()
+    private void LoadTrack()
     {
-        loadingCanvas.gameObject.SetActive(false);
-        loadingCamera.enabled = false;
+        OnLoadingBegin();
+        GameManager.Instance.LoadTrack(_currentCup.TracksData[_currentRaceIndex].sceneName, OnLoadingEnded);
+    }
 
+    private void OnLoadingBegin() => OnLoading?.Invoke(true);
+    private void OnLoadingEnded() => OnLoading?.Invoke(false);
+
+    private void CreateCupRacers()
+    {
         var racersAmount = GameManager.Instance.FixedRacersAmount;
-        var carData = GameManager.Instance.DefaultCarData;
-
         for (int i = 0; i < racersAmount; i++)
         {
-            var model = carData.Models[Random.Range(0, carData.Models.Length)];
-            IControllerInput controllerInput = CreateNewAiController(i);
-
-            var racer = new Racer(carData, model, controllerInput);
-            Racers.Add(racer);
-        }
-
-        var players = FindObjectsOfType<PlayerControllerInput>();
-        foreach (var player in players)
-        {
-            var index = player.PlayerInput.playerIndex;
-            var racer = Racers[index];
-            var model = GameManager.Instance.PlayerCarInformation[index].CarModel;
-            racer.SetControllerInput(player);
-            racer.SetCarModel(model);
+            var inputSingle = PlayersManager.Instance.TryGetPlayerInputSingle(i);
+            var racer = new CupRacer(i, inputSingle);
+            CupRacers.Add(racer);
         }
     }
 
-    private AiControllerInput CreateNewAiController(int index)
+    public void OnTrackEnded()
     {
-        var controller = new GameObject("AIController_" + index).AddComponent<AiControllerInput>();
-        controller.Setup(index);
-        return controller;
+        CupRacers.Sort();
+        CupRacers.Reverse();
+        TrackEnded?.Invoke();
+        GameManager.Instance.LoadResultsScene();
     }
 
-    private void OnLoadingBegin()
+    public void LoadNextTrack()
     {
-        // CreatePlayersInput();
-        // var playerInput = PlayersManager.Instance.GetPlayer(0);
-        
-        loadingCanvas.gameObject.SetActive(true);
-        loadingCamera.enabled = true;
-    }
-
-    private void CreatePlayersInput()
-    {
-        var players = GameManager.Instance.PlayerCarInformation;
-        _inputManager.EnableJoining();
-
-        foreach (var player in players)
-            _inputManager.JoinPlayer(controlScheme: player.Scheme);
-
-        _inputManager.DisableJoining();
+        _currentRaceIndex++;
+        if (_currentRaceIndex < _currentCup.TracksData.Length)
+            LoadTrack();
+        else
+            GameManager.Instance.LoadMainMenu();
     }
 }

@@ -15,20 +15,22 @@ public class PlayersManager : Singleton<PlayersManager>
         Race,
     }
 
+    [SerializeField] private LayerMask[] cameraLayerMask;
+
     public event Action<State> OnStateChanged;
-    public event Action<PlayerInput> OnPlayerJoined;
-    public event Action<PlayerInput> OnPlayerDisconected;
+    public event Action<PlayerInputSingle> OnPlayerJoined;
+    public event Action<PlayerInputSingle> OnPlayerDisconnected;
 
     private PlayerInputManager _inputManager;
-    private List<PlayerInput> _inputs;
+    public List<PlayerInputSingle> PlayerInputs { get; private set; }
 
-    private State _state;
+    public State CurrentState { get; private set; }
 
     protected override void Awake()
     {
         base.Awake();
         DontDestroyOnLoad(gameObject);
-        _inputs = new List<PlayerInput>();
+        PlayerInputs = new List<PlayerInputSingle>();
         _inputManager = GetComponent<PlayerInputManager>();
     }
 
@@ -42,41 +44,38 @@ public class PlayersManager : Singleton<PlayersManager>
 
     public void SetState(State state)
     {
-        _state = state;
+        CurrentState = state;
 
-        if (_state is State.WaitingFirstPlayer or State.Lobby) _inputManager.EnableJoining();
+        if (CurrentState is State.Lobby) _inputManager.EnableJoining();
         else _inputManager.DisableJoining();
 
-        OnStateChanged?.Invoke(_state);
+        OnStateChanged?.Invoke(CurrentState);
     }
 
     private void InputManagerOnPlayerJoined(PlayerInput playerInput)
     {
-        _inputs.Add(playerInput);
-        OnPlayerJoined?.Invoke(playerInput);
-        playerInput.onActionTriggered += PlayerInputOnActionTriggered;
+        if (!playerInput.TryGetComponent(out PlayerInputSingle single)) return;
+        PlayerInputs.Add(single);
+        OnPlayerJoined?.Invoke(single);
 
-        // if (_state == State.WaitingFirstPlayer) SetState(State.UI);
+        if (CurrentState == State.WaitingFirstPlayer) SetState(State.UI);
     }
 
-    public void OnPlayerLost(PlayerInput playerInput)
+    public void OnPlayerLost(PlayerInputSingle single)
     {
-        _inputs.Remove(playerInput);
+        PlayerInputs.Remove(single);
+        OnPlayerDisconnected?.Invoke(single);
     }
 
-    public void OnPlayerRegained(PlayerInput playerInput)
+    public void OnPlayerRegained(PlayerInputSingle single)
     {
-        if (!_inputs.Contains(playerInput))
-        {
-            _inputs.Add(playerInput);
-        }
+        if (PlayerInputs.Contains(single)) return;
+        PlayerInputs.Add(single);
+        OnPlayerJoined?.Invoke(single);
     }
 
-    private void PlayerInputOnActionTriggered(UnityEngine.InputSystem.InputAction.CallbackContext context)
-    {
-        Debug.Log(context.action.name);
-    }
+    public PlayerInputSingle TryGetPlayerInputSingle(int index) =>
+        PlayerInputs.FirstOrDefault(single => single.Input.playerIndex == index);
 
-    public PlayerInput GetPlayer(int index) =>
-        _inputs.FirstOrDefault(input => input.playerIndex == index);
+    public void SetSplitScreen(bool isSplitScreen) => _inputManager.splitScreen = isSplitScreen;
 }

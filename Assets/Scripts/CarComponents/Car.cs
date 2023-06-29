@@ -1,3 +1,4 @@
+using CupComponents;
 using RaceComponents;
 using UnityEngine;
 
@@ -6,32 +7,48 @@ namespace CarComponents
     public class Car : MonoBehaviour
     {
         [SerializeField] private CarData defaultData;
-        public Racer Racer { get; private set; }
-        private IControllerInput _controller;
+        [SerializeField] private Transform carContainer;
+
+        public CupRacer Racer { get; private set; }
         public Vector3 Input { get; private set; }
-        public bool CanGo { get; private set; }
+        public CarStats Stats => Racer?.Stats ?? defaultData.Stats;
+        public RacerPosition RacerPosition { get; private set; }
+        public float NormalizedSpeed => _rigidbody.velocity.magnitude / Stats.MaxSpeed;
 
-        public CarStats Stats => Racer?.CarData != null ? Racer.CarData.Stats : defaultData.Stats;
+        private bool _canGo;
+        private IControllerInput _controller;
+        private Rigidbody _rigidbody;
 
-        private void Awake() => Input = new Vector3();
-
-        public void Setup(Racer racer)
+        private void Awake()
         {
+            Input = new Vector3();
+            _rigidbody = GetComponent<Rigidbody>();
+        }
+
+        public void Setup(CupRacer racer, RacerPosition racerPosition)
+        {
+            RacerPosition = racerPosition;
+
             if (TrackManager.Instance != null)
                 TrackManager.Instance.OnGo += TrackManagerOnGo;
             else
-                CanGo = true;
+                _canGo = true;
 
             Racer = racer;
-            _controller = Racer.ControllerInput;
-            Instantiate(racer.Model, transform);
+
+            if (Racer.PlayerInputSingle != null)
+                _controller = Racer.PlayerInputSingle.VehicleInputReader;
+            else
+                _controller = gameObject.AddComponent<AiControllerInput>();
+
+            Instantiate(racer.CarModel, carContainer);
         }
 
-        private void TrackManagerOnGo() => CanGo = true;
+        private void TrackManagerOnGo() => _canGo = true;
 
         private void Update()
         {
-            if (!CanGo) return;
+            if (!_canGo) return;
             Input = new Vector3(_controller.Acceleration, _controller.Turn, _controller.Break);
         }
 

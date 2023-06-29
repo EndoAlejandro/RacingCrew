@@ -16,12 +16,12 @@ TagManager:
   - UI
   - Ground
   - Vehicle
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Player1
+  - Player2
+  - Player3
+  - Player4
+  - Player0
+  - Loading
   - 
   - 
   - 
@@ -43,4 +43,7 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Front
+    uniqueID: 3827680289
     locked: 0
