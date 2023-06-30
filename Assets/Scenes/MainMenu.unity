@@ -9968,11 +9968,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3734808471010162881, guid: 70333229bf1920e43b83e4545353cd3f,
+        type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 9a989fc990ee46b42be532830257d42b, type: 3}
     - target: {fileID: 4042498152979869638, guid: 70333229bf1920e43b83e4545353cd3f,
         type: 3}
       propertyPath: m_Name
       value: '[SOUND MANAGER]'
       objectReference: {fileID: 0}
+    - target: {fileID: 5060766169061444999, guid: 70333229bf1920e43b83e4545353cd3f,
+        type: 3}
+      propertyPath: uiAudioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 2352d2130854f06449e464fdb697ca94, type: 3}
     - target: {fileID: 5060766169061444999, guid: 70333229bf1920e43b83e4545353cd3f,
         type: 3}
       propertyPath: fxAudioSource
