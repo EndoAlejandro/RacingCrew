@@ -15,11 +15,11 @@ namespace PlayerView
         [SerializeField] private float minSpeedArrowAngle;
         [SerializeField] private float maxSpeedArrowAngle;
 
-        private float _maxSpeed;
-        private float _speed = 0.0f;
-
         private PlayerViewController _playerViewController;
         private Rigidbody _carRigidbody;
+
+        private float _maxSpeed;
+        private float _speed;
 
         private void Awake() => _playerViewController = GetComponent<PlayerViewController>();
 

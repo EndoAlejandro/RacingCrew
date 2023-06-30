@@ -1,8 +1,6 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-namespace Menu {
+namespace Menu.ScriptableObjects {
 	[CreateAssetMenu(menuName = "Scriptable Objects/ Car Assets", order = 2)]
 	public class CarAssets : ScriptableObject
 	{
