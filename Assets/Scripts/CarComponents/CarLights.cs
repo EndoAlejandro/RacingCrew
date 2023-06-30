@@ -5,14 +5,8 @@ namespace CarComponents
     public class CarLights : MonoBehaviour
     {
         [SerializeField] private GameObject backLights;
-        private Rigidbody _rigidbody;
-        private float _dotProduct;
-        private void Awake() => _rigidbody = GetComponent<Rigidbody>();
-
-        private void Update()
-        {
-            _dotProduct = Vector3.Dot(_rigidbody.transform.forward.normalized, _rigidbody.velocity.normalized);
-            backLights.SetActive(_dotProduct < -0.1);
-        }
+        private Car _car;
+        private void Awake() => _car = GetComponent<Car>();
+        private void Update() => backLights.SetActive(_car.Input.z > 0);
     }
 }

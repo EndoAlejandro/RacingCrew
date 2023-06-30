@@ -326,6 +326,17 @@
                 },
                 {
                     "name": "",
+                    "id": "338c14f5-f95e-4880-8dd4-ce8a83165111",
+                    "path": "<Keyboard>/space",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "KeyboardAndMouse",
+                    "action": "Break",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "17c1c62c-c0a1-44f0-b7ca-226895f8e19d",
                     "path": "<Gamepad>/leftStick/x",
                     "interactions": "",

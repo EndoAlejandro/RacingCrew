@@ -1,6 +1,9 @@
-public interface ICarControllerInput
+namespace InputManagement
 {
-    float Acceleration { get; }
-    float Break { get; }
-    float Turn { get; }
+    public interface ICarControllerInput
+    {
+        float Acceleration { get; }
+        float Break { get; }
+        float Turn { get; }
+    }
 }

@@ -46,9 +46,9 @@ MonoBehaviour:
     turnRadius: {x: 5, y: 50}
     rearTrack: 2.5
     wheelBase: 4.62
-    suspensionForce: 125
-    suspensionDistance: 1.225
-    damp: 2.5
+    suspensionForce: 100
+    suspensionDistance: 1
+    damp: 5
   models:
   - {fileID: 6652437609419938593, guid: 0343afcf6fb2c3d43937ac57f0472eab, type: 3}
   - {fileID: 883344635444528942, guid: b5d2562e3be1baf469c8a910d3d12aa9, type: 3}

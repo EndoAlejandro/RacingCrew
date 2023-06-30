@@ -104,14 +104,14 @@ namespace Menu
             UpdateLocale();
         }
 
-        public void UpdateLocale()
+        private void UpdateLocale()
         {
             LocalizationSettings.SelectedLocale = LocalizationSettings.AvailableLocales.Locales[_currentLocaleIndex];
             PlayerPrefs.SetInt("Language", _currentLocaleIndex);
             UpdateUILanguage();
         }
 
-        public void UpdateUILanguage()
+        private void UpdateUILanguage()
         {
             switch (_currentLocaleIndex)
             {
@@ -136,7 +136,7 @@ namespace Menu
             PlayerPrefs.SetFloat("SoundFXVolume", value);
         }
 
-        public void OnGlobalVolumeChange(float value)
+        private void OnGlobalVolumeChange(float value)
         {
             audioMixer.SetFloat("GlobalVolume", Mathf.Log(value) * 20);
             PlayerPrefs.SetFloat("GlobalVolume", value);

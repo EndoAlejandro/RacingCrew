@@ -1,4 +1,4 @@
-namespace VehicleComponents
+namespace CarComponents
 {
     public enum WheelPosition
     {

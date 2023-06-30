@@ -14,7 +14,7 @@ namespace CustomUtils
         public const string BREAK = "Break";
     }
 
-    public class Constants
+    public static class Constants
     {
         public const int RACE_POINTS = 15;
     }

@@ -1,29 +1,31 @@
 using CustomUtils;
-using InputManagement;
 using UnityEngine;
 
-public class MainMenuInputReader : IInputReader
+namespace InputManagement
 {
-    public int Navigation { get; private set; }
-    public bool Select { get; private set; }
-    public bool Back { get; private set; }
-
-    public void ReadInput(string actionName, UnityEngine.InputSystem.InputAction.CallbackContext context)
+    public class MainMenuInputReader : IInputReader
     {
-        switch (actionName)
+        public int Navigation { get; private set; }
+        public bool Select { get; private set; }
+        public bool Back { get; private set; }
+
+        public void ReadInput(string actionName, UnityEngine.InputSystem.InputAction.CallbackContext context)
         {
-            case MainMenuInput.SELECT: // button.
-                Select = context.action.WasPerformedThisFrame();
-                break;
-            case MainMenuInput.NAVIGATION: // Vector2.
-                Navigation = Mathf.RoundToInt(context.ReadValue<float>());
-                break;
-            case MainMenuInput.BACK: // button.
-                Back = context.ReadValueAsButton();
-                break;
-            default:
-                Debug.LogError($"The action '{actionName}' is not supported.");
-                break;
+            switch (actionName)
+            {
+                case MainMenuInput.SELECT: // button.
+                    Select = context.action.WasPerformedThisFrame();
+                    break;
+                case MainMenuInput.NAVIGATION: // Vector2.
+                    Navigation = Mathf.RoundToInt(context.ReadValue<float>());
+                    break;
+                case MainMenuInput.BACK: // button.
+                    Back = context.ReadValueAsButton();
+                    break;
+                default:
+                    Debug.LogError($"The action '{actionName}' is not supported.");
+                    break;
+            }
         }
     }
 }
