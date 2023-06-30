@@ -16,7 +16,12 @@ namespace CarComponents
 
         private void Start()
         {
-            if (!car.Racer.IsPlayer) _audioSource.enabled = false;
+            if (!car.Racer.IsPlayer)
+            {
+                _audioSource.enabled = false;
+                return;
+            }
+
             _audioSource.loop = true;
             _audioSource.Play();
         }
