@@ -5,11 +5,16 @@ using UnityEngine;
 namespace PlayerView
 {
     [RequireComponent(typeof(PlayerViewController))]
-    public class CarSpeedometer : MonoBehaviour
+    public class PlayerTrackUI : MonoBehaviour
     {
+        [Header("Track")]
+        [SerializeField] private TextMeshProUGUI lapText;
+
         [SerializeField] private TextMeshProUGUI positionText;
 
+        [Header("Speedometer")]
         [SerializeField] private RectTransform arrow;
+
         [SerializeField] private TextMeshProUGUI textSpeed;
 
         [SerializeField] private float minSpeedArrowAngle;

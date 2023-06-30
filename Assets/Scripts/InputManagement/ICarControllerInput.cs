@@ -1,4 +1,4 @@
-public interface IControllerInput
+public interface ICarControllerInput
 {
     float Acceleration { get; }
     float Break { get; }

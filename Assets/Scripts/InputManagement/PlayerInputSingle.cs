@@ -1,7 +1,9 @@
 using System;
 using CarComponents;
+using InputManagement;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using InputAction = InputManagement.InputAction;
 
 [RequireComponent(typeof(PlayerInput))]
 public class PlayerInputSingle : MonoBehaviour

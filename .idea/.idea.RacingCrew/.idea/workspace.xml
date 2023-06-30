@@ -5,12 +5,51 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="89d28beb-5f3b-4b70-bf77-826042fca131" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CupComponents/PlayerCarSelection.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CupComponents/PlayerCarSelection.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Menu/LobbySelection.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Menu/LobbySelection.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Menu/ScriptableObjects/AllCupsAssets.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Menu/ScriptableObjects/AllCupsAssets.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Menu/ScriptableObjects/CarAssets.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Menu/ScriptableObjects/CarAssets.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerView/CarSpeedometer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerView/CarSpeedometer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.RacingCrew/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.RacingCrew/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/MainMenu/Car1.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/MainMenu/Car1.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/MainMenu/Car2.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/MainMenu/Car2.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/MainMenu/Car3.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/MainMenu/Car3.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/MainMenu/Car4.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/MainMenu/Car4.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/MainMenu/PlayerInGame.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/MainMenu/PlayerInGame.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CarComponents/AiControllerInput.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CarComponents/AiCarControllerInput.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CarComponents/AiControllerInput.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CarComponents/AiCarControllerInput.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CarComponents/Car.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CarComponents/Car.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CupComponents/PlayerCameraSettings.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CupComponents/PlayerCameraSettings.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CupComponents/PlayerCarSelection.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CupComponents/PlayerCarSelection.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CupManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CupComponents/CupManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CupManager.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CupComponents/CupManager.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/IControllerInput.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/InputManagement/ICarControllerInput.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/IControllerInput.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/InputManagement/ICarControllerInput.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/IInputReader.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/InputManagement/IInputReader.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/IInputReader.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/InputManagement/IInputReader.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/InputAction.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/InputManagement/InputAction.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/InputAction.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/InputManagement/InputAction.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/InputManagement/MainMenuInputReader.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/InputManagement/MainMenuInputReader.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/InputManagement/PlayerInputSingle.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/InputManagement/PlayerInputSingle.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/InputManagement/VehicleInputReader.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/InputManagement/VehicleInputReader.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/LoadingController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/LoadingController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Menu/HoverCupPreview.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Menu/HoverCupPreview.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerView/CarSpeedometer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerView/PlayerTrackUI.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerView/CarSpeedometer.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerView/PlayerTrackUI.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerView/PlayerViewController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerView/PlayerViewController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/RaceComponents/TrackManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/RaceComponents/TrackManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ScoreTable/ScoreTableManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ScoreTable/ScoreTableManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Templates.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Templates/ISample.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Templates/ISample.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Templates/SampleChild.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Templates/SampleChild.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Templates/SampleComponent.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Templates/SampleComponent.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Templates/SampleParent.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Templates/SampleParent.cs.meta" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -154,7 +193,7 @@
       <workItem from="1687851802352" duration="20211000" />
       <workItem from="1687936961756" duration="22800000" />
       <workItem from="1688023614336" duration="17579000" />
-      <workItem from="1688113545329" duration="2037000" />
+      <workItem from="1688113545329" duration="2913000" />
     </task>
     <servers />
   </component>

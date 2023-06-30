@@ -7,7 +7,7 @@ using UnityEngine;
 
 namespace CarComponents
 {
-    public class AiControllerInput : MonoBehaviour, IControllerInput
+    public class AiCarControllerInput : MonoBehaviour, ICarControllerInput
     {
         private readonly float _refreshRate = 2f;
         public float Acceleration { get; private set; }

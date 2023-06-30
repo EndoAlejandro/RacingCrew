@@ -1,7 +1,8 @@
 using CustomUtils;
+using InputManagement;
 using UnityEngine;
 
-public class VehicleInputReader : IInputReader, IControllerInput
+public class VehicleInputReader : IInputReader, ICarControllerInput
 {
     public float Acceleration { get; private set; }
     public float Turn { get; private set; }

@@ -2,38 +2,41 @@ using CarComponents;
 using Cinemachine;
 using UnityEngine;
 
-public class PlayerViewController : MonoBehaviour
+namespace PlayerView
 {
-    private Camera _camera;
-    private Canvas _canvas;
-    public CinemachineVirtualCamera VirtualCamera { get; private set; }
-    public Car Car { get; private set; }
-
-    private void Awake()
+    public class PlayerViewController : MonoBehaviour
     {
-        _canvas = GetComponent<Canvas>();
-        _camera = GetComponentInChildren<Camera>();
-        VirtualCamera = GetComponentInChildren<CinemachineVirtualCamera>();
-    }
+        private Camera _camera;
+        private Canvas _canvas;
+        public CinemachineVirtualCamera VirtualCamera { get; private set; }
+        public Car Car { get; private set; }
 
-    public void Setup(PlayerInputSingle playerInputSingle, Car car)
-    {
-        playerInputSingle.Input.camera = _camera;
+        private void Awake()
+        {
+            _canvas = GetComponent<Canvas>();
+            _camera = GetComponentInChildren<Camera>();
+            VirtualCamera = GetComponentInChildren<CinemachineVirtualCamera>();
+        }
 
-        Car = car;
+        public void Setup(PlayerInputSingle playerInputSingle, Car car)
+        {
+            playerInputSingle.Input.camera = _camera;
 
-        VirtualCamera.m_Follow = car.transform;
-        VirtualCamera.m_LookAt = car.transform;
+            Car = car;
 
-        SetLayerMask(playerInputSingle);
-    }
+            VirtualCamera.m_Follow = car.transform;
+            VirtualCamera.m_LookAt = car.transform;
 
-    private void SetLayerMask(PlayerInputSingle playerInputSingle)
-    {
-        var cullingMask = LayerMask.NameToLayer("Player" + playerInputSingle.Input.playerIndex);
-        var layer = LayerMask.NameToLayer("Player" + playerInputSingle.Input.playerIndex);
-        VirtualCamera.gameObject.layer = layer;
-        _camera.gameObject.layer = layer;
-        _camera.cullingMask |= 1 << cullingMask;
+            SetLayerMask(playerInputSingle);
+        }
+
+        private void SetLayerMask(PlayerInputSingle playerInputSingle)
+        {
+            var cullingMask = LayerMask.NameToLayer("Player" + playerInputSingle.Input.playerIndex);
+            var layer = LayerMask.NameToLayer("Player" + playerInputSingle.Input.playerIndex);
+            VirtualCamera.gameObject.layer = layer;
+            _camera.gameObject.layer = layer;
+            _camera.cullingMask |= 1 << cullingMask;
+        }
     }
 }

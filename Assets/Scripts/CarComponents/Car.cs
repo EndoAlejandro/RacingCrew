@@ -16,7 +16,7 @@ namespace CarComponents
         public float NormalizedSpeed => _rigidbody.velocity.magnitude / Stats.MaxSpeed;
 
         private bool _canGo;
-        private IControllerInput _controller;
+        private ICarControllerInput _carController;
         private Rigidbody _rigidbody;
 
         private void Awake()
@@ -37,9 +37,9 @@ namespace CarComponents
             Racer = racer;
 
             if (Racer.PlayerInputSingle != null)
-                _controller = Racer.PlayerInputSingle.VehicleInputReader;
+                _carController = Racer.PlayerInputSingle.VehicleInputReader;
             else
-                _controller = gameObject.AddComponent<AiControllerInput>();
+                _carController = gameObject.AddComponent<AiCarControllerInput>();
 
             Instantiate(racer.CarModel, carContainer);
         }
@@ -49,7 +49,7 @@ namespace CarComponents
         private void Update()
         {
             if (!_canGo) return;
-            Input = new Vector3(_controller.Acceleration, _controller.Turn, _controller.Break);
+            Input = new Vector3(_carController.Acceleration, _carController.Turn, _carController.Break);
         }
 
         private void OnDestroy()
