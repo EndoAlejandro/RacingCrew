@@ -68,7 +68,10 @@ namespace CupComponents
             if (_currentRaceIndex < _currentCup.TracksData.Length)
                 LoadTrack();
             else
+            {
                 GameManager.Instance.LoadMainMenu();
+                Destroy(gameObject);
+            }
         }
     }
 }
