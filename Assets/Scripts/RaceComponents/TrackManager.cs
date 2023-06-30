@@ -29,6 +29,9 @@ namespace RaceComponents
         public List<RacerPosition> RacersPositions { get; private set; } = new();
 
         private bool _isRacing;
+        private List<PlayerViewController> _playerViewControllers = new();
+
+        public int Laps => laps;
 
         protected override void Awake()
         {
@@ -65,6 +68,7 @@ namespace RaceComponents
 
                 var playerViewController = Instantiate(playerViewControllerPrefab, transform);
                 playerViewController.Setup(racer.PlayerInputSingle, car);
+                _playerViewControllers.Add(playerViewController);
             }
 
             PlayersManager.Instance.SetSplitScreen(true);
@@ -136,12 +140,30 @@ namespace RaceComponents
             var currentCountDown = 5;
             while (currentCountDown > 0)
             {
-                yield return new WaitForSeconds(1f);
+                BroadcastToAllPlayers(currentCountDown.ToString(), .75f);
+                yield return new WaitForSeconds(1.5f);
                 currentCountDown--;
             }
 
             _isRacing = true;
+            BroadcastToAllPlayers("GO!", 1.5f);
             OnGo?.Invoke();
+        }
+
+        private void BroadcastToAllPlayers(string text, float duration)
+        {
+            foreach (var playerViewController in _playerViewControllers)
+                playerViewController.PlayTextAnimation(text, duration);
+        }
+
+        public void BroadcastToSinglePlayer(Car car, string text, float duration)
+        {
+            foreach (var playerViewController in _playerViewControllers.Where(playerViewController =>
+                         playerViewController.Car == car))
+            {
+                playerViewController.PlayTextAnimation(text, duration);
+                break;
+            }
         }
     }
 }

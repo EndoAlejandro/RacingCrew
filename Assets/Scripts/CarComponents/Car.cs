@@ -14,16 +14,16 @@ namespace CarComponents
         public Vector3 Input { get; private set; }
         public CarStats Stats => Racer?.Stats ?? defaultData.Stats;
         public RacerPosition RacerPosition { get; private set; }
-        public float NormalizedSpeed => _rigidbody.velocity.magnitude / Stats.MaxSpeed;
+        public float NormalizedSpeed => Rigidbody.velocity.magnitude / Stats.MaxSpeed;
 
         private bool _canGo;
         private ICarControllerInput _carController;
-        private Rigidbody _rigidbody;
+        public Rigidbody Rigidbody { get; private set; }
 
         private void Awake()
         {
             Input = new Vector3();
-            _rigidbody = GetComponent<Rigidbody>();
+            Rigidbody = GetComponent<Rigidbody>();
         }
 
         public void Setup(CupRacer racer, RacerPosition racerPosition)

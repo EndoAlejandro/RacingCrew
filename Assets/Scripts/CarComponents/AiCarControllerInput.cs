@@ -8,7 +8,7 @@ using UnityEngine;
 
 namespace CarComponents
 {
-    public class AiCarControllerInput : MonoBehaviour, ICarControllerInput
+    public class AiCarControllerInput : CarComponent, ICarControllerInput
     {
         private readonly float _refreshRate = 2f;
         public float Acceleration { get; private set; }
@@ -20,16 +20,15 @@ namespace CarComponents
 
         private int _index;
         private bool _isPlaying;
-        private Car _car;
         private Rigidbody _rigidbody;
 
         private List<float> _deltaPosition = new List<float>();
 
-        private void Awake()
+        protected override void Awake()
         {
+            base.Awake();
             TrackManager.Instance.OnGo += TrackManagerOnGo;
             TrackManager.Instance.OnRaceOver += TrackManagerOnRaceOver;
-            _car = GetComponent<Car>();
         }
 
         private void TrackManagerOnRaceOver() => _isPlaying = false;
@@ -59,17 +58,17 @@ namespace CarComponents
 
         private void Update()
         {
-            var target = TrackManager.Instance.GetNextCheckPoint(_car.RacerPosition.LastPointIndex + 1);
+            var target = TrackManager.Instance.GetNextCheckPoint(car.RacerPosition.LastPointIndex + 1);
             var normalizedPosition =
                 NavigationRoute.Instance.GetSplineNormalizedPosition(target.transform.position);
             NavigationRoute.Instance.EvaluateSpline(normalizedPosition, out float3 position, out float3 direction,
                 out float3 up);
 
-            DesiredDirection = (((Vector3)position).With(y: 0f) - _car.transform.position.With(y: 0f)).normalized;
+            DesiredDirection = (((Vector3)position).With(y: 0f) - car.transform.position.With(y: 0f)).normalized;
 
-            var dot = Vector3.Dot(_car.transform.forward, DesiredDirection);
+            var dot = Vector3.Dot(transform.forward, DesiredDirection);
             var angle =
-                Vector3.SignedAngle(DesiredDirection, _car.transform.forward, Vector3.up) * -0.45f;
+                Vector3.SignedAngle(DesiredDirection, transform.forward, Vector3.up) * -0.45f;
 
             if (dot > 0.25f)
             {

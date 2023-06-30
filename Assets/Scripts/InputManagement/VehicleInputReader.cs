@@ -8,6 +8,7 @@ namespace InputManagement
         public float Acceleration { get; private set; }
         public float Turn { get; private set; }
         public float Break { get; private set; }
+        public bool ResetPosition { get; private set; }
 
         public void ReadInput(string actionName, UnityEngine.InputSystem.InputAction.CallbackContext context)
         {
@@ -21,6 +22,9 @@ namespace InputManagement
                     break;
                 case VehicleInput.BREAK: // button.
                     Break = context.ReadValue<float>();
+                    break;
+                case VehicleInput.RESET_POSITION:
+                    ResetPosition = context.ReadValueAsButton();
                     break;
                 default:
                     Debug.LogError($"The action '{actionName}' is not supported.");
