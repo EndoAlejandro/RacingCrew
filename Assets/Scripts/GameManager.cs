@@ -83,11 +83,7 @@ public class GameManager : Singleton<GameManager>
 
     public void LoadMainMenu()
     {
-<<<<<<< Updated upstream
-        // TODO: Load Main menu.
-=======
         PlayersManager.Instance.SetState(PlayersManager.State.WaitingFirstPlayer);
         SceneManager.LoadSceneAsync("Scenes/MainMenu");
->>>>>>> Stashed changes
     }
 }
