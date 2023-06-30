@@ -26,22 +26,22 @@ namespace PlayerView
 
             Car = car;
 
-            VirtualCamera.m_Follow = car.transform;
-            VirtualCamera.m_LookAt = car.transform;
+            var t = car.transform;
+            VirtualCamera.m_Follow = t;
+            VirtualCamera.m_LookAt = t;
 
             SetLayerMask(playerInputSingle);
         }
 
         private void SetLayerMask(PlayerInputSingle playerInputSingle)
         {
-            var cullingMask = LayerMask.NameToLayer("Player" + playerInputSingle.Input.playerIndex);
             var layer = LayerMask.NameToLayer("Player" + playerInputSingle.Input.playerIndex);
 
             VirtualCamera.gameObject.layer = layer;
             _camera.gameObject.layer = layer;
             playerBanner.SetLayer(layer);
 
-            _camera.cullingMask |= 1 << cullingMask;
+            _camera.cullingMask |= 1 << layer;
         }
 
         public void PlayTextAnimation(string text, float duration) => playerBanner.PlayAnimation(text, duration);

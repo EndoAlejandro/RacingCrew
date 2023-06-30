@@ -33781,6 +33781,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SR_Prop_DangerSign
       objectReference: {fileID: 0}
+    - target: {fileID: 158940, guid: f5ce0df76ddfe3741b44eecec4ded6e5, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 479700, guid: f5ce0df76ddfe3741b44eecec4ded6e5, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -41033,6 +41037,10 @@ PrefabInstance:
     - target: {fileID: 158940, guid: f5ce0df76ddfe3741b44eecec4ded6e5, type: 3}
       propertyPath: m_Name
       value: SR_Prop_DangerSign (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 158940, guid: f5ce0df76ddfe3741b44eecec4ded6e5, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 479700, guid: f5ce0df76ddfe3741b44eecec4ded6e5, type: 3}
       propertyPath: m_RootOrder

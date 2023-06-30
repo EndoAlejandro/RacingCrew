@@ -18,5 +18,6 @@ namespace CustomUtils
     public static class Constants
     {
         public const int RACE_POINTS = 15;
+        public const int COUNT_DOWN = 3;
     }
 }

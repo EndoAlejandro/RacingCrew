@@ -52,6 +52,8 @@ namespace CupComponents
                 var racer = new CupRacer(i, inputSingle);
                 CupRacers.Add(racer);
             }
+
+            CupRacers.Reverse();
         }
 
         public void OnTrackEnded()

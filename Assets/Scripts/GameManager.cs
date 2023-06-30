@@ -3,10 +3,8 @@ using System.Collections;
 using CarComponents;
 using CustomUtils;
 using InputManagement;
-using Menu;
 using Menu.ScriptableObjects;
 using UnityEngine;
-using UnityEngine.Android;
 using UnityEngine.SceneManagement;
 
 public class GameManager : Singleton<GameManager>

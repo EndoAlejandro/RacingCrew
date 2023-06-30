@@ -137,7 +137,7 @@ namespace RaceComponents
 
         private IEnumerator GoCountDown()
         {
-            var currentCountDown = 5;
+            var currentCountDown = Constants.COUNT_DOWN;
             while (currentCountDown > 0)
             {
                 BroadcastToAllPlayers(currentCountDown.ToString(), .75f);

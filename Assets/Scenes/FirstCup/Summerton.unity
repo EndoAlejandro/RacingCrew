@@ -4716,6 +4716,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SR_Prop_DangerSign
       objectReference: {fileID: 0}
+    - target: {fileID: 158940, guid: f5ce0df76ddfe3741b44eecec4ded6e5, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 479700, guid: f5ce0df76ddfe3741b44eecec4ded6e5, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -15327,6 +15331,10 @@ PrefabInstance:
     - target: {fileID: 180368, guid: 85c88763633c2384a9c3c6177da44e65, type: 3}
       propertyPath: m_Name
       value: SR_Prop_Arch_Black
+      objectReference: {fileID: 0}
+    - target: {fileID: 180368, guid: 85c88763633c2384a9c3c6177da44e65, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 411934, guid: 85c88763633c2384a9c3c6177da44e65, type: 3}
       propertyPath: m_RootOrder
@@ -57967,6 +57975,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SR_Prop_Arch_Blue
       objectReference: {fileID: 0}
+    - target: {fileID: 144026, guid: ca457a132a42f17458e1f05307d33e98, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 485774, guid: ca457a132a42f17458e1f05307d33e98, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -79569,6 +79581,10 @@ PrefabInstance:
     - target: {fileID: 100228, guid: e23b51172ccdaf347912f33425fc971e, type: 3}
       propertyPath: m_Name
       value: SR_Prop_Arch_Red
+      objectReference: {fileID: 0}
+    - target: {fileID: 100228, guid: e23b51172ccdaf347912f33425fc971e, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 430618, guid: e23b51172ccdaf347912f33425fc971e, type: 3}
       propertyPath: m_RootOrder

@@ -5,8 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="89d28beb-5f3b-4b70-bf77-826042fca131" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.RacingCrew/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.RacingCrew/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/FirstCup/Greenwood.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/FirstCup/Greenwood.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/FirstCup/Penita.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/FirstCup/Penita.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/FirstCup/Summerton.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/FirstCup/Summerton.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/FirstCup/Velozia.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/FirstCup/Velozia.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/Muscle.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/Muscle.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CarComponents/AiCarControllerInput.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CarComponents/AiCarControllerInput.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/CupComponents/CupManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CupComponents/CupManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/LoadingController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/LoadingController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CustomUtils/Constants.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CustomUtils/Constants.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerView/PlayerViewController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerView/PlayerViewController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/RaceComponents/TrackManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/RaceComponents/TrackManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -50,28 +62,28 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;track-management&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "better-ai",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;rider.external.source.directories&quot;: [
-      &quot;C:\\Users\\alejo\\AppData\\Roaming\\JetBrains\\Rider2023.1\\resharper-host\\DecompilerCache&quot;,
-      &quot;C:\\Users\\alejo\\AppData\\Roaming\\JetBrains\\Rider2023.1\\resharper-host\\SourcesCache&quot;,
-      &quot;C:\\Users\\alejo\\AppData\\Local\\Symbols\\src&quot;
+  "keyToStringList": {
+    "rider.external.source.directories": [
+      "C:\\Users\\alejo\\AppData\\Roaming\\JetBrains\\Rider2023.1\\resharper-host\\DecompilerCache",
+      "C:\\Users\\alejo\\AppData\\Roaming\\JetBrains\\Rider2023.1\\resharper-host\\SourcesCache",
+      "C:\\Users\\alejo\\AppData\\Local\\Symbols\\src"
     ]
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Standalone Player" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="$PROJECT_DIR$/Builds\RacingCrew.exe" />
@@ -107,10 +119,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="39440">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" />
+      <option name="pid" value="39440" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
@@ -155,6 +167,7 @@
       <workItem from="1687936961756" duration="22800000" />
       <workItem from="1688023614336" duration="17579000" />
       <workItem from="1688113545329" duration="16039000" />
+      <workItem from="1688147995101" duration="7964000" />
     </task>
     <servers />
   </component>
@@ -165,24 +178,5 @@
   <component name="UnityUnitTestConfiguration" currentTestLauncher="Both" />
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Scripts/GameManager.cs</url>
-          <line>58</line>
-          <properties documentPath="C:\Users\alejo\Documents\GitHub\RacingCrew\Assets\Scripts\GameManager.cs" initialLine="58" containingFunctionPresentation="Method 'LoadTrackAsync'">
-            <startOffsets>
-              <option value="1505" />
-            </startOffsets>
-            <endOffsets>
-              <option value="1543" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>
