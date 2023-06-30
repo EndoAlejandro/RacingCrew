@@ -1,10 +1,8 @@
 using System;
 using System.Collections.Generic;
-using CarComponents;
 using CupComponents;
 using CustomUtils;
 using Menu.ScriptableObjects;
-using UnityEngine;
 
 public class CupManager : Singleton<CupManager>
 {
@@ -13,9 +11,7 @@ public class CupManager : Singleton<CupManager>
 
     public List<CupRacer> CupRacers { get; private set; }
 
-    private List<PlayerControllerInput> _playersController;
     private CupSelectionAssets _currentCup;
-
     private bool _playerResponse;
     private int _currentRaceIndex;
 

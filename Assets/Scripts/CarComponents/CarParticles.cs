@@ -1,7 +1,6 @@
-using CarComponents;
 using UnityEngine;
 
-namespace CarVisuals
+namespace CarComponents
 {
     public class CarParticles : MonoBehaviour
     {

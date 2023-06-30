@@ -2,7 +2,7 @@ using RaceComponents;
 using TMPro;
 using UnityEngine;
 
-namespace CarVisuals
+namespace PlayerView
 {
     [RequireComponent(typeof(PlayerViewController))]
     public class CarSpeedometer : MonoBehaviour

@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace CarVisuals
+namespace CarComponents
 {
     public class CarLights : MonoBehaviour
     {
