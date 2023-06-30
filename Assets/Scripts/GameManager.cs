@@ -83,6 +83,6 @@ public class GameManager : Singleton<GameManager>
 
     public void LoadMainMenu()
     {
-        // TODO: Load Main menu.
+        SceneManager.LoadSceneAsync("Scenes/MainMenu");
     }
 }
