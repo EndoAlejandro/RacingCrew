@@ -16,6 +16,7 @@ namespace InputManagement
         public VehicleInputReader VehicleInputReader { get; private set; } = new();
         public int PlayerIndex => Input != null ? Input.playerIndex : OnPlayerIndexNull();
         public GameObject CarModel { get; private set; }
+        public int ModelIndex { get; private set; }
         public CarStats CarStats { get; private set; }
 
         private IInputReader _currentInputReader;
@@ -82,7 +83,13 @@ namespace InputManagement
             PlayersManager.Instance.OnStateChanged -= PlayersManagerOnStateChanged;
         }
 
-        public void SetModelIndex(GameObject value) => CarModel = value;
+        public void SetModelIndex(GameObject value, int index)
+        {
+            CarModel = value;
+            ModelIndex = index;
+        }
+
+
         public void SetCarData(CarStats value) => CarStats = value;
     }
 }

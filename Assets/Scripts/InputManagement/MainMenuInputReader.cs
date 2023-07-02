@@ -17,7 +17,9 @@ namespace InputManagement
                     Select = context.action.WasPerformedThisFrame();
                     break;
                 case MainMenuInput.NAVIGATION: // Vector2.
-                    Navigation = Mathf.RoundToInt(context.ReadValue<float>());
+                    Navigation = context.action.WasPerformedThisFrame()
+                        ? Mathf.RoundToInt(context.ReadValue<float>())
+                        : 0;
                     break;
                 case MainMenuInput.BACK: // button.
                     Back = context.ReadValueAsButton();

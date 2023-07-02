@@ -24,9 +24,10 @@ namespace CupComponents
 
             var defaultData = GameManager.Instance.DefaultCarData;
 
-            if (playerInputSingle != null && playerInputSingle.CarModel != null)
+            if (playerInputSingle != null)
             {
-                CarModel = playerInputSingle.CarModel;
+                // CarModel = playerInputSingle.CarModel;
+                CarModel = defaultData.Models[playerInputSingle.ModelIndex];
             }
             else
             {
