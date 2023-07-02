@@ -94,7 +94,7 @@ GameObject:
   - component: {fileID: 3428867806567035258}
   - component: {fileID: 136019821923301955}
   - component: {fileID: 3601375863166314400}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Back_Light_Right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -225,7 +225,7 @@ GameObject:
   - component: {fileID: 3093065858111206766}
   - component: {fileID: 7102667655729951500}
   - component: {fileID: 4424979011870432305}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: FrontLight_Center
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -603,7 +603,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2518929207015418790}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Lights
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -684,7 +684,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3355769062084728769}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: BackLights
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -725,7 +725,7 @@ GameObject:
   - component: {fileID: 4183696968309061589}
   - component: {fileID: 140082913186916452}
   - component: {fileID: 791534873627440328}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Car
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1137,7 +1137,7 @@ GameObject:
   - component: {fileID: 1276666314795551895}
   - component: {fileID: 52163019788486169}
   - component: {fileID: 6121920643694017630}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Back_Light_Left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1218,7 +1218,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4398712224362291664}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: FrontLights
   m_TagString: Untagged
   m_Icon: {fileID: 0}

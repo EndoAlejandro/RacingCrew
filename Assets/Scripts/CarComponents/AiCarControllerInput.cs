@@ -4,7 +4,6 @@ using CustomUtils;
 using InputManagement;
 using RaceComponents;
 using Unity.Mathematics;
-using Unity.VisualScripting;
 using UnityEngine;
 
 namespace CarComponents
@@ -38,22 +37,25 @@ namespace CarComponents
 
         private IEnumerator RecordDistance()
         {
-            while (_isPlaying)
+            while (true)
             {
-                var previousPosition = transform.position;
-                yield return new WaitForSeconds(_refreshRate);
-                var currentPosition = transform.position;
+                var previousSpeed = car.Rigidbody.velocity;
+                yield return new WaitForSeconds(5f);
+                var currentPosition = car.Rigidbody.velocity;
+                var magnitudes = previousSpeed.magnitude + currentPosition.magnitude;
 
-                if (Vector3.Distance(previousPosition, currentPosition) > 1) continue;
+                if (magnitudes / 2 < 2f && !car.OnReset)
+                    yield return car.ResetPositionAsync();
 
-                _rigidbody.isKinematic = true;
+
+                /*_rigidbody.isKinematic = true;
                 var normalizedPosition = NavigationRoute.Instance.GetSplineNormalizedPosition(transform.position);
                 NavigationRoute.Instance.EvaluateSpline(normalizedPosition, out float3 position,
                     out float3 direction, out float3 up);
                 transform.position = position;
                 transform.rotation = Quaternion.LookRotation(direction, up);
                 yield return null;
-                _rigidbody.isKinematic = false;
+                _rigidbody.isKinematic = false;*/
             }
         }
 

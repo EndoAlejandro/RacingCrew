@@ -20,7 +20,7 @@ namespace CarComponents
         public float NormalizedSpeed => Rigidbody.velocity.magnitude / Stats.MaxSpeed;
 
         private bool _canGo;
-        private bool _onReset;
+        public bool OnReset { get; private set; }
 
         private ICarControllerInput _carController;
         public Rigidbody Rigidbody { get; private set; }
@@ -48,20 +48,23 @@ namespace CarComponents
                 Racer.PlayerInputSingle.OnInputTriggered += PlayerInputSingleOnInputTriggered;
             }
             else
+            {
                 _carController = gameObject.AddComponent<AiCarControllerInput>();
+            }
 
             Instantiate(racer.CarModel, carContainer);
         }
 
         private void PlayerInputSingleOnInputTriggered()
         {
-            if (((VehicleInputReader)_carController).ResetPosition && !_onReset)
+            if (((VehicleInputReader)_carController).ResetPosition && !OnReset)
                 StartCoroutine(ResetPositionAsync());
         }
 
-        private IEnumerator ResetPositionAsync()
+        public IEnumerator ResetPositionAsync()
         {
-            _onReset = true;
+            gameObject.layer = LayerMask.NameToLayer("AvoidCars");
+            OnReset = true;
             Rigidbody.isKinematic = true;
             yield return null;
             var checkPoint = TrackManager.Instance.GetNextCheckPoint(RacerPosition.LastPointIndex - 1);
@@ -76,7 +79,9 @@ namespace CarComponents
             transform.rotation = Quaternion.LookRotation(checkPointRotation, checkPointUp);
             yield return null;
             Rigidbody.isKinematic = false;
-            _onReset = false;
+            yield return new WaitForSeconds(2f);
+            OnReset = false;
+            gameObject.layer = LayerMask.NameToLayer("Vehicle");
         }
 
         private void TrackManagerOnGo() => _canGo = true;
