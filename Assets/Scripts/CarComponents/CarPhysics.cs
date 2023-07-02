@@ -4,18 +4,18 @@ using UnityEngine;
 namespace CarComponents
 {
     [RequireComponent(typeof(Car))]
-    public class CarPhysics : MonoBehaviour
+    public class CarPhysics : CarComponent
     {
-        public Car Car { get; private set; }
+        public Car Car => car;
         public float AckermannLeftAngle { get; private set; }
         public float AckermannRightAngle { get; private set; }
         public Rigidbody Rigidbody { get; private set; }
         public CarStats Stats => Car.Stats;
         private Vector3 FlatVelocity => Rigidbody.velocity.With(y: 0f);
 
-        private void Awake()
+        protected override void Awake()
         {
-            Car = GetComponent<Car>();
+            base.Awake();
             Rigidbody = GetComponent<Rigidbody>();
         }
 

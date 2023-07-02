@@ -1,11 +1,11 @@
 using System;
 using System.Collections;
 using CarComponents;
+using CupComponents;
 using CustomUtils;
-using Menu;
+using InputManagement;
 using Menu.ScriptableObjects;
 using UnityEngine;
-using UnityEngine.Android;
 using UnityEngine.SceneManagement;
 
 public class GameManager : Singleton<GameManager>
@@ -18,6 +18,7 @@ public class GameManager : Singleton<GameManager>
     public CupSelectionAssets CurrentCup { get; private set; }
     public int FixedRacersAmount => fixedRacersAmount;
     public CarData DefaultCarData => defaultCarData;
+    public static bool IsGamePaused;
 
     protected override void Awake()
     {
@@ -30,12 +31,14 @@ public class GameManager : Singleton<GameManager>
     public void PauseGame()
     {
         OnGamePaused?.Invoke(true);
+        IsGamePaused = true;
         Time.timeScale = 0;
     }
 
-    public void ContinueRace()
+    public void UnpauseGame()
     {
         OnGamePaused?.Invoke(false);
+        IsGamePaused = false;
         Time.timeScale = 1;
     }
 
@@ -82,6 +85,8 @@ public class GameManager : Singleton<GameManager>
 
     public void LoadMainMenu()
     {
-        // TODO: Load Main menu.
+        if (CupManager.Instance != null) Destroy(CupManager.Instance.gameObject);
+        PlayersManager.Instance.SetState(PlayersManager.State.WaitingFirstPlayer);
+        SceneManager.LoadSceneAsync("Scenes/MainMenu");
     }
 }

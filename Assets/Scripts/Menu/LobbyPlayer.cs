@@ -1,6 +1,7 @@
 using System;
 using CarComponents;
 using System.Collections.Generic;
+using InputManagement;
 using TMPro;
 using UnityEngine;
 
@@ -40,7 +41,7 @@ namespace Menu
         public void Setup(PlayerInputSingle playerInputSingle)
         {
             PlayerInputSingle = playerInputSingle;
-            playerDisplayText.text = "Player " + playerInputSingle.PlayerIndex;
+            playerDisplayText.text = "Player " + (playerInputSingle.PlayerIndex + 1);
             CreateModels();
 
             PlayerInputSingle.OnInputTriggered += PlayerInputSingleOnInputTriggered;
@@ -61,7 +62,7 @@ namespace Menu
         {
             if (lockSelection)
             {
-                PlayerInputSingle.SetModelIndex(_models[_modelIndex]);
+                PlayerInputSingle.SetModelIndex(_models[_modelIndex], _modelIndex);
                 PlayerInputSingle.SetCarData(carData.Stats);
             }
 
@@ -73,8 +74,11 @@ namespace Menu
         private void ChangeSelectedCar(int direction)
         {
             _models[_modelIndex].SetActive(false);
-            _modelIndex = (_modelIndex + direction) % _models.Count;
+
+            _modelIndex += direction;
             if (_modelIndex < 0) _modelIndex = _models.Count - 1;
+            else if (_modelIndex >= _models.Count) _modelIndex = 0;
+
             _models[_modelIndex].SetActive(true);
         }
 

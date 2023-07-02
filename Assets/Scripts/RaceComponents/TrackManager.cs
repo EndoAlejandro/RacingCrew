@@ -3,7 +3,10 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using CarComponents;
+using CupComponents;
 using CustomUtils;
+using InputManagement;
+using PlayerView;
 using UnityEngine;
 using UnityEngine.Serialization;
 
@@ -26,6 +29,9 @@ namespace RaceComponents
         public List<RacerPosition> RacersPositions { get; private set; } = new();
 
         private bool _isRacing;
+        private readonly List<PlayerViewController> _playerViewControllers = new();
+
+        public int Laps => laps;
 
         protected override void Awake()
         {
@@ -62,6 +68,7 @@ namespace RaceComponents
 
                 var playerViewController = Instantiate(playerViewControllerPrefab, transform);
                 playerViewController.Setup(racer.PlayerInputSingle, car);
+                _playerViewControllers.Add(playerViewController);
             }
 
             PlayersManager.Instance.SetSplitScreen(true);
@@ -83,7 +90,9 @@ namespace RaceComponents
             if (!_isRacing) return;
 
             var index = _checkPoints.IndexOf(checkPoint);
-            car.RacerPosition.SetLastPointIndex(index);
+            if (index > car.RacerPosition.LastPointIndex ||
+                (car.RacerPosition.LastPointIndex + 1 >= _checkPoints.Count && index == 0))
+                car.RacerPosition.SetLastPointIndex(index);
 
             var currentPlayersFinished = 0;
             foreach (var racerPosition in RacersPositions)
@@ -130,15 +139,33 @@ namespace RaceComponents
 
         private IEnumerator GoCountDown()
         {
-            var currentCountDown = 5;
+            var currentCountDown = Constants.COUNT_DOWN;
             while (currentCountDown > 0)
             {
-                yield return new WaitForSeconds(1f);
+                BroadcastToAllPlayers(currentCountDown.ToString(), .75f);
+                yield return new WaitForSeconds(1.5f);
                 currentCountDown--;
             }
 
             _isRacing = true;
+            BroadcastToAllPlayers("GO!", 1.5f);
             OnGo?.Invoke();
+        }
+
+        private void BroadcastToAllPlayers(string text, float duration)
+        {
+            foreach (var playerViewController in _playerViewControllers)
+                playerViewController.PlayTextAnimation(text, duration);
+        }
+
+        public void BroadcastToSinglePlayer(Car car, string text, float duration)
+        {
+            foreach (var playerViewController in _playerViewControllers.Where(playerViewController =>
+                         playerViewController.Car == car))
+            {
+                playerViewController.PlayTextAnimation(text, duration);
+                break;
+            }
         }
     }
 }

@@ -16,6 +16,7 @@ namespace RaceComponents
         {
             CupRacer = cupRacer;
             Car = car;
+            Laps++;
         }
 
         public void SetLastPointIndex(int value)
@@ -25,7 +26,16 @@ namespace RaceComponents
         }
 
         public void SetDistanceToNextPoint(float value) => DistanceToNextPoint = value;
-        private void AddLap() => Laps++;
+
+        private void AddLap()
+        {
+            Laps++;
+            if (Laps > TrackManager.Instance.Laps)
+                TrackManager.Instance.BroadcastToSinglePlayer(Car,
+                    $"Position: {TrackManager.Instance.GetPosition(this)}", 5f);
+            else
+                TrackManager.Instance.BroadcastToSinglePlayer(Car, $"{Laps}/{TrackManager.Instance.Laps}", 1.5f);
+        }
 
         public bool Equals(RacerPosition other) =>
             other != null && CupRacer.RacerIndex.Equals(other.CupRacer.RacerIndex);

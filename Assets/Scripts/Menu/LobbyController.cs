@@ -1,6 +1,6 @@
-using System;
 using System.Collections.Generic;
 using System.Linq;
+using InputManagement;
 using UnityEngine;
 
 namespace Menu

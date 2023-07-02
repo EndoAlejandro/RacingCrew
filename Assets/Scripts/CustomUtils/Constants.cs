@@ -12,10 +12,13 @@ namespace CustomUtils
         public const string ACCELERATION = "Acceleration";
         public const string TURNING = "Turning";
         public const string BREAK = "Break";
+        public const string RESET_POSITION = "ResetPosition";
+        public const string PAUSE = "Pause";
     }
 
-    public class Constants
+    public static class Constants
     {
         public const int RACE_POINTS = 15;
+        public const int COUNT_DOWN = 3;
     }
 }

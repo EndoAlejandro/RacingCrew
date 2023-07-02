@@ -1,5 +1,4 @@
 using UnityEngine;
-using VehicleComponents;
 
 namespace CarComponents
 {
@@ -32,7 +31,7 @@ namespace CarComponents
 
         private void Update()
         {
-            WheelRotationDisplay();
+            WheelRotation();
             WheelPositionSmooth();
         }
 
@@ -45,14 +44,15 @@ namespace CarComponents
         /// <summary>
         /// Rotate the wheel based on the ackermann calculation made from the vehicle physics.
         /// </summary>
-        private void WheelRotationDisplay()
+        private void WheelRotation()
         {
-            transform.localRotation = wheelPosition switch
+            var targetRotation = wheelPosition switch
             {
                 WheelPosition.FrontLeft => Quaternion.Euler(Vector3.up * _carPhysics.AckermannLeftAngle),
                 WheelPosition.FrontRight => Quaternion.Euler(Vector3.up * _carPhysics.AckermannRightAngle),
                 _ => transform.localRotation
             };
+            transform.localRotation = Quaternion.Lerp(transform.localRotation, targetRotation, Time.deltaTime * 5f);
         }
 
         private void FixedUpdate()
@@ -61,8 +61,10 @@ namespace CarComponents
                     out _hit,
                     _carPhysics.Stats.SuspensionDistance + wheelRadius))
             {
-                _targetPosition = _initialPosition + Vector3.up * (wheelRadius - _carPhysics.Stats.SuspensionDistance);
-                GravityForce();
+                // _targetPosition = _initialPosition + Vector3.up * (wheelRadius - _carPhysics.Stats.SuspensionDistance);
+                _targetPosition =
+                    _initialPosition + Vector3.down * (wheelRadius - _carPhysics.Stats.SuspensionDistance);
+                // GravityForce();
                 return;
             }
 
