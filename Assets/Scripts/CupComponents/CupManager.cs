@@ -15,7 +15,7 @@ namespace CupComponents
 
         private CupSelectionAssets _currentCup;
         private bool _playerResponse;
-        private int _currentRaceIndex;
+        public int CurrentRaceIndex { get; private set; }
 
         protected override void Awake()
         {
@@ -28,7 +28,7 @@ namespace CupComponents
         private void Start()
         {
             _currentCup = GameManager.Instance.CurrentCup;
-            _currentRaceIndex = 0;
+            CurrentRaceIndex = 0;
 
             CreateCupRacers();
             LoadTrack();
@@ -37,7 +37,7 @@ namespace CupComponents
         private void LoadTrack()
         {
             OnLoadingBegin();
-            GameManager.Instance.LoadTrack(_currentCup.TracksData[_currentRaceIndex].sceneName, OnLoadingEnded);
+            GameManager.Instance.LoadTrack(_currentCup.TracksData[CurrentRaceIndex].sceneName, OnLoadingEnded);
         }
 
         private void OnLoadingBegin() => OnLoading?.Invoke(true);
@@ -66,13 +66,13 @@ namespace CupComponents
 
         public void LoadNextTrack()
         {
-            _currentRaceIndex++;
-            if (_currentRaceIndex < _currentCup.TracksData.Length)
+            CurrentRaceIndex++;
+            if (CurrentRaceIndex < _currentCup.TracksData.Length)
                 LoadTrack();
             else
             {
                 GameManager.Instance.LoadMainMenu();
-                Destroy(gameObject);
+                // Destroy(gameObject);
             }
         }
     }

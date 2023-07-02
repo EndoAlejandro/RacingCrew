@@ -29,7 +29,7 @@ namespace RaceComponents
         public List<RacerPosition> RacersPositions { get; private set; } = new();
 
         private bool _isRacing;
-        private List<PlayerViewController> _playerViewControllers = new();
+        private readonly List<PlayerViewController> _playerViewControllers = new();
 
         public int Laps => laps;
 

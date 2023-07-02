@@ -13,6 +13,7 @@ namespace CustomUtils
         public const string TURNING = "Turning";
         public const string BREAK = "Break";
         public const string RESET_POSITION = "ResetPosition";
+        public const string PAUSE = "Pause";
     }
 
     public static class Constants
