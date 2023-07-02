@@ -10,8 +10,9 @@ namespace RaceComponents
 
         private void OnTriggerEnter(Collider other)
         {
-            if (other.TryGetComponent(out Car car))
-                TrackManager.Instance.CarThroughCheckPoint(this, car);
+            if (!other.TryGetComponent(out Car car)) return;
+            var dot = Vector3.Dot(car.transform.forward, transform.forward);
+            if (dot > 0) TrackManager.Instance.CarThroughCheckPoint(this, car);
         }
     }
 }

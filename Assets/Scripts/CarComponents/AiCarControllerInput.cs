@@ -79,9 +79,7 @@ namespace CarComponents
             var normalizedClosestPosition = NavigationRoute.Instance.GetSplineNormalizedPosition(t);
 
             var targetPointDirection = Utils.NormalizedFlatDirection(nextTarget.transform.position, t);
-            // DesiredDirection = (((Vector3)position).With(y:0) - transform.position).normalized;
-
-            DesiredDirection = /*distanceToClosestPoint < 3f ? closestPointDirection :*/ targetPointDirection;
+            DesiredDirection = targetPointDirection;
 
             var targetDot = Vector3.Dot(transform.forward, targetPointDirection);
             var pointsDot = 1 - Mathf.Abs(Vector3.Dot(((Vector3)targetDirection).normalized,

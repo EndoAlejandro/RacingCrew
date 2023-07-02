@@ -90,7 +90,9 @@ namespace RaceComponents
             if (!_isRacing) return;
 
             var index = _checkPoints.IndexOf(checkPoint);
-            car.RacerPosition.SetLastPointIndex(index);
+            if (index > car.RacerPosition.LastPointIndex ||
+                (car.RacerPosition.LastPointIndex + 1 >= _checkPoints.Count && index == 0))
+                car.RacerPosition.SetLastPointIndex(index);
 
             var currentPlayersFinished = 0;
             foreach (var racerPosition in RacersPositions)

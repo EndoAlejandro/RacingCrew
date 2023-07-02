@@ -16,6 +16,7 @@ namespace RaceComponents
         {
             CupRacer = cupRacer;
             Car = car;
+            Laps++;
         }
 
         public void SetLastPointIndex(int value)
@@ -29,7 +30,6 @@ namespace RaceComponents
         private void AddLap()
         {
             Laps++;
-            if (Laps <= 1) return;
             if (Laps > TrackManager.Instance.Laps)
                 TrackManager.Instance.BroadcastToSinglePlayer(Car,
                     $"Position: {TrackManager.Instance.GetPosition(this)}", 5f);

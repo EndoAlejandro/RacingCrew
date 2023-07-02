@@ -41,7 +41,7 @@ MonoBehaviour:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    grip: 0.15
+    grip: 0.2
     tireMass: 0.2
     turnRadius: {x: 5, y: 50}
     rearTrack: 2.5
