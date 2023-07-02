@@ -11,6 +11,7 @@ namespace Menu
         [SerializeField] private CupSelectionAssets cupSelectionAssets;
         [SerializeField] private Image[] racetracksImage = new Image[4];
 
+        private TMP_Text[] racetracksName = new TMP_Text[4];
         private Button _cupButton;
         private TextMeshProUGUI _buttonText;
         private TextMeshProUGUI _cupNameText;
@@ -23,6 +24,11 @@ namespace Menu
 
             _cupButton = GetComponent<Button>();
 
+            for (int i = 0; i < racetracksImage.Length; i++)
+            {
+                racetracksName[i] = racetracksImage[i].GetComponentInChildren<TMP_Text>();
+            }
+
             UpdateCupInfoInScreen();
         }
 
@@ -33,6 +39,7 @@ namespace Menu
             for (int i = 0; i < racetracksImage.Length; i++)
             {
                 racetracksImage[i].sprite = cupSelectionAssets.TracksData[i].trackSprite;
+                racetracksName[i].text = cupSelectionAssets.TracksData[i].displayName;
             }
         }
 

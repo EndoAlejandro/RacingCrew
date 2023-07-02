@@ -41,7 +41,7 @@ namespace Menu
         public void Setup(PlayerInputSingle playerInputSingle)
         {
             PlayerInputSingle = playerInputSingle;
-            playerDisplayText.text = "Player " + playerInputSingle.PlayerIndex;
+            playerDisplayText.text = "Player " + (playerInputSingle.PlayerIndex + 1);
             CreateModels();
 
             PlayerInputSingle.OnInputTriggered += PlayerInputSingleOnInputTriggered;

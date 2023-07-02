@@ -31,7 +31,11 @@ namespace CarComponents
             TrackManager.Instance.OnRaceOver += TrackManagerOnRaceOver;
         }
 
-        private void TrackManagerOnRaceOver() => _isPlaying = false;
+        private void TrackManagerOnRaceOver()
+        {
+            _isPlaying = false;
+            StopAllCoroutines();
+        }
 
         private void TrackManagerOnGo() => StartCoroutine(RecordDistance());
 
@@ -46,16 +50,6 @@ namespace CarComponents
 
                 if (magnitudes / 2 < 2f && !car.OnReset)
                     yield return car.ResetPositionAsync();
-
-
-                /*_rigidbody.isKinematic = true;
-                var normalizedPosition = NavigationRoute.Instance.GetSplineNormalizedPosition(transform.position);
-                NavigationRoute.Instance.EvaluateSpline(normalizedPosition, out float3 position,
-                    out float3 direction, out float3 up);
-                transform.position = position;
-                transform.rotation = Quaternion.LookRotation(direction, up);
-                yield return null;
-                _rigidbody.isKinematic = false;*/
             }
         }
 
