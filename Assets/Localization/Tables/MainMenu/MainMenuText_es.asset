@@ -66,6 +66,18 @@ MonoBehaviour:
     m_Localized: PANTALLA COMPLETA
     m_Metadata:
       m_Items: []
+  - m_Id: 7207864403705856
+    m_Localized: "PR\xD3XIMAMENTE"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7209288235696128
+    m_Localized: "PRESIONA EL BOT\xD3N SELECCIONAR PARA EMPEZAR"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7211964897902592
+    m_Localized: REGRESAR
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

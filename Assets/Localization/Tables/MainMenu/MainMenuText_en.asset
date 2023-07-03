@@ -66,6 +66,18 @@ MonoBehaviour:
     m_Localized: FULLSCREEN
     m_Metadata:
       m_Items: []
+  - m_Id: 7207864403705856
+    m_Localized: COMING SOON
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7209288235696128
+    m_Localized: PRESS SELECT BUTTON TO START
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7211964897902592
+    m_Localized: BACK
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []
