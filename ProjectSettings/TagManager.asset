@@ -3,7 +3,10 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - SoundFX
+  - Music
+  - Manager
   layers:
   - Default
   - TransparentFX
@@ -13,14 +16,14 @@ TagManager:
   - UI
   - Ground
   - Vehicle
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Player1
+  - Player2
+  - Player3
+  - Player4
+  - Player0
+  - Loading
+  - WheelObstacle
+  - AvoidCars
   - 
   - 
   - 
@@ -40,4 +43,7 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Front
+    uniqueID: 3827680289
     locked: 0
