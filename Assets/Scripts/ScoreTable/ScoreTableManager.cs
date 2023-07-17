@@ -8,7 +8,6 @@ namespace ScoreTable
     {
         [SerializeField] private Transform parent;
         [SerializeField] private SetInfoCard prefabCard;
-
         [SerializeField] private Button continueButton;
 
         private void Start()
@@ -20,7 +19,7 @@ namespace ScoreTable
                 var card = Instantiate(prefabCard, parent);
                 var racer = racers[i];
                 var racerName = racer.IsPlayer ? "Player " : "Racer ";
-                card.SetInfo((i + 1), racerName + racer.RacerIndex, racer.Score);
+                card.SetInfo((i + 1), racerName + (racer.RacerIndex + 1), racer.Score);
             }
 
             continueButton.onClick.AddListener(() => CupManager.Instance.LoadNextTrack());

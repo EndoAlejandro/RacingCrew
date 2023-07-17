@@ -63,6 +63,18 @@ MonoBehaviour:
     m_Key: Fullscreen
     m_Metadata:
       m_Items: []
+  - m_Id: 7207864403705856
+    m_Key: ComingSoon
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7209288235696128
+    m_Key: SelectToStart
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7211964897902592
+    m_Key: Back
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

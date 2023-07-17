@@ -2,7 +2,6 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using CustomUtils;
-using UnityEngine;
 using UnityEngine.InputSystem;
 
 namespace InputManagement
@@ -16,8 +15,6 @@ namespace InputManagement
             Lobby,
             Race,
         }
-
-        [SerializeField] private LayerMask[] cameraLayerMask;
 
         public event Action<State> OnStateChanged;
         public event Action<PlayerInputSingle> OnPlayerJoined;
@@ -41,8 +38,6 @@ namespace InputManagement
             SetState(State.WaitingFirstPlayer);
             _inputManager.onPlayerJoined += InputManagerOnPlayerJoined;
         }
-
-        public void OnLobby() => SetState(State.Lobby);
 
         public void SetState(State state)
         {

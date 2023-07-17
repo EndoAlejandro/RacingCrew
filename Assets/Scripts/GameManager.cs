@@ -86,7 +86,9 @@ public class GameManager : Singleton<GameManager>
     public void LoadMainMenu()
     {
         if (CupManager.Instance != null) Destroy(CupManager.Instance.gameObject);
-        PlayersManager.Instance.SetState(PlayersManager.State.WaitingFirstPlayer);
+        if (PlayersManager.Instance != null) Destroy(PlayersManager.Instance.gameObject);
+        
+        // PlayersManager.Instance.SetState(PlayersManager.State.WaitingFirstPlayer);
         SceneManager.LoadSceneAsync("Scenes/MainMenu");
     }
 }
